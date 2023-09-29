@@ -69,22 +69,22 @@ namespace wardrobe
                 // itemsStyle.Add(l = new ListItem { Name = "fghdsgfh" , Id = 1, IsChecked = false });
                 Ids = new();
                 PictureFill();
-                listView1.Columns.Add("верх", 300);
-                listView2.Columns.Add("низ", 300);
-                listView3.Columns.Add("платье/костюм", 300);
-                listView4.Columns.Add("обувь", 300);
+                //  listView1.Columns.Add("верх", 300);
+                //  listView2.Columns.Add("низ", 300);
+                //  listView3.Columns.Add("платье/костюм", 300);
+                //  listView4.Columns.Add("обувь", 300);
                 // listView5.Columns.Add("наим", 100);
                 ImageList largeImageList = new ImageList();
-                largeImageList.ImageSize = new Size(32, 32);
+                largeImageList.ImageSize = new Size(48, 48);
                 listView5.LargeImageList = largeImageList;
                 ImageList largeImageList1 = new ImageList();
-                largeImageList1.ImageSize = new Size(32, 32);
+                largeImageList1.ImageSize = new Size(48, 48);
                 listView6.LargeImageList = largeImageList1;
                 ImageList largeImageList2 = new ImageList();
-                largeImageList2.ImageSize = new Size(32, 32);
+                largeImageList2.ImageSize = new Size(48, 48);
                 listView7.LargeImageList = largeImageList2;
                 ImageList largeImageList3 = new ImageList();
-                largeImageList3.ImageSize = new Size(32, 32);
+                largeImageList3.ImageSize = new Size(48, 48);
                 listView8.LargeImageList = largeImageList3;
 
             }
@@ -113,72 +113,72 @@ namespace wardrobe
             //  FilterStyleBox.ValueMember = "Id";      // Значение элемента (Id)
             //  FilterStyleBox.CheckOnClick = true;
         }
-        public void SetTypeUpToWardrobe(string s)
-        {
-            bool q = true;
-            foreach (ListViewItem item in listView1.Items)
-            {
-                if (item.Text == s) q = false;
-            }
-            if (q)
-            {
-                listView1.Items.Add(s);
-            }
-        }
+        /* public void SetTypeUpToWardrobe(string s)
+         {
+             bool q = true;
+             foreach (ListViewItem item in listView5.Items)
+             {
+                 if (item.Text == s) q = false;
+             }
+             if (q)
+             {
+                 listView5.Items.Add(s);
+             }
+         }*/
         public void ClearUp()
         {
-            listView1.Items.Clear();
+            listView5.Items.Clear();
         }
-        public void SetTypeBottomToWardrobe(string s)
-        {
-            bool q = true;
-            foreach (ListViewItem item in listView2.Items)
-            {
-                if (item.Text == s) q = false;
-            }
-            if (q)
-            {
-                ListViewItem item1 = new ListViewItem(s);
-                listView2.Items.Add(item1);
-            }
-        }
+        /* public void SetTypeBottomToWardrobe(string s)
+         {
+             bool q = true;
+             foreach (ListViewItem item in listView6.Items)
+             {
+                 if (item.Text == s) q = false;
+             }
+             if (q)
+             {
+                 ListViewItem item1 = new ListViewItem(s);
+                 listView6.Items.Add(item1);
+             }
+         }*/
         public void ClearBottom()
         {
-            listView2.Items.Clear();
+            listView6.Items.Clear();
         }
-        public void SetTypeSuitToWardrobe(string s)
-        {
-            bool q = true;
-            foreach (ListViewItem item in listView3.Items)
-            {
-                if (item.Text == s) q = false;
-            }
-            if (q)
-            {
-                ListViewItem item1 = new ListViewItem(s);
-                listView3.Items.Add(item1);
-            }
-        }
+        /*  public void SetTypeSuitToWardrobe(string s)
+          {
+              bool q = true;
+              foreach (ListViewItem item in listView7.Items)
+              {
+                  if (item.Text == s) q = false;
+              }
+              if (q)
+              {
+                  ListViewItem item1 = new ListViewItem(s);
+                  listView7.Items.Add(item1);
+              }
+          }*/
         public void ClearSuit()
         {
-            listView3.Items.Clear();
+            listView7.Items.Clear();
         }
-        public void SetTypeShoeToWardrobe(string s)
-        {
-            bool q = true;
-            foreach (ListViewItem item in listView4.Items)
-            {
-                if (item.Text == s) q = false;
-            }
-            if (q)
-            {
-                ListViewItem item1 = new ListViewItem(s);
-                listView4.Items.Add(item1);
-            }
-        }
+        /* public void SetTypeShoeToWardrobe(string s)
+         {
+             bool q = true;
+             foreach (ListViewItem item in listView8.Items)
+             {
+                 if (item.Text == s) q = false;
+             }
+             if (q)
+             {
+                 ListViewItem item1 = new ListViewItem(s);
+                 listView8.Items.Add(item1);
+             }
+         }*/
         public void ClearShoe()
         {
-            listView4.Items.Clear();
+            listView8.Items.Clear();
         }
         public void SetColorToWardrobe(string s, int i)
         {
@@ -293,9 +293,9 @@ namespace wardrobe
                     see_clothe = new Form3();
                     NewF3?.Invoke(this, EventArgs.Empty);
                 }
-                if (listView2.SelectedItems.Count > 0)
+                if (listView6.SelectedItems.Count > 0)
                 {
-                    ListViewItem selectedItem = listView2.SelectedItems[0];
+                    ListViewItem selectedItem = listView6.SelectedItems[0];
                     string s = selectedItem.Text;
                     string[] s1 = s.Split('.');
                     setId = int.Parse(s1[0]);
@@ -315,9 +315,9 @@ namespace wardrobe
                     see_clothe = new Form3();
                     NewF3?.Invoke(this, EventArgs.Empty);
                 }
-                if (listView3.SelectedItems.Count > 0)
+                if (listView7.SelectedItems.Count > 0)
                 {
-                    ListViewItem selectedItem = listView3.SelectedItems[0];
+                    ListViewItem selectedItem = listView7.SelectedItems[0];
                     string s = selectedItem.Text;
                     string[] s1 = s.Split('.');
                     setId = int.Parse(s1[0]);
@@ -337,9 +337,9 @@ namespace wardrobe
                     see_clothe = new Form3();
                     NewF3?.Invoke(this, EventArgs.Empty);
                 }
-                if (listView4.SelectedItems.Count > 0)
+                if (listView8.SelectedItems.Count > 0)
                 {
-                    ListViewItem selectedItem = listView4.SelectedItems[0];
+                    ListViewItem selectedItem = listView8.SelectedItems[0];
                     string s = selectedItem.Text;
                     string[] s1 = s.Split('.');
                     setId = int.Parse(s1[0]);
@@ -980,7 +980,7 @@ namespace wardrobe
                 }
             }
         }
-        public void ListViewUpInput(string puth, string name)
+        public void SetTypeUpToWardrobe(string puth, string name)
         {
             Image im = Image.FromFile(puth);
             ListViewItem l = new ListViewItem(name);
@@ -989,7 +989,7 @@ namespace wardrobe
             listView5.Items.Add(l);
 
         }
-        public void ListViewBottomInput(string puth, string name)
+        public void SetTypeBottomToWardrobe(string puth, string name)
         {
             Image im = Image.FromFile(puth);
             ListViewItem l = new ListViewItem(name);
@@ -998,7 +998,7 @@ namespace wardrobe
             listView6.Items.Add(l);
 
         }
-        public void ListViewSuitInput(string puth, string name)
+        public void SetTypeSuitToWardrobe(string puth, string name)
         {
             Image im = Image.FromFile(puth);
             ListViewItem l = new ListViewItem(name);
@@ -1007,13 +1007,18 @@ namespace wardrobe
             listView7.Items.Add(l);
 
         }
-        public void ListViewShoeInput(string puth, string name)
+        public void SetTypeShoeToWardrobe(string puth, string name)
         {
             Image im = Image.FromFile(puth);
             ListViewItem l = new ListViewItem(name);
             l.ImageKey = name;
             listView8.LargeImageList.Images.Add(name, im);
             listView8.Items.Add(l);
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
 
         }
     }

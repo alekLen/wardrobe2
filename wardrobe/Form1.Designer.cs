@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            listView1 = new ListView();
             pictureBox1 = new PictureBox();
             menuStrip1 = new MenuStrip();
             editToolStripMenuItem2 = new ToolStripMenuItem();
@@ -58,15 +57,12 @@
             pictureBox4 = new PictureBox();
             listBox3 = new ListBox();
             listBox4 = new ListBox();
-            listView2 = new ListView();
-            listView4 = new ListView();
             button4 = new Button();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             button5 = new Button();
             button6 = new Button();
-            listView3 = new ListView();
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
@@ -92,26 +88,17 @@
             listView6 = new ListView();
             listView7 = new ListView();
             listView8 = new ListView();
+            label21 = new Label();
+            label22 = new Label();
+            label23 = new Label();
+            label24 = new Label();
+            label25 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
-            // 
-            // listView1
-            // 
-            listView1.AccessibleRole = AccessibleRole.ScrollBar;
-            listView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            listView1.FullRowSelect = true;
-            listView1.GridLines = true;
-            listView1.Location = new Point(227, 378);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(314, 49);
-            listView1.TabIndex = 0;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
-            listView1.SelectedIndexChanged += Load_see_formUp;
             // 
             // pictureBox1
             // 
@@ -128,7 +115,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { editToolStripMenuItem2, wardrobeToolStripMenuItem, statisticToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1924, 28);
+            menuStrip1.Size = new Size(1615, 28);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -276,9 +263,9 @@
             // 
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 20;
-            listBox1.Location = new Point(314, 353);
+            listBox1.Location = new Point(342, 353);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(176, 24);
+            listBox1.Size = new Size(176, 64);
             listBox1.TabIndex = 6;
             listBox1.SelectedIndexChanged += selectUp;
             listBox1.DoubleClick += del_Choosen_Up;
@@ -314,9 +301,9 @@
             // 
             listBox3.FormattingEnabled = true;
             listBox3.ItemHeight = 20;
-            listBox3.Location = new Point(1009, 352);
+            listBox3.Location = new Point(1033, 351);
             listBox3.Name = "listBox3";
-            listBox3.Size = new Size(191, 24);
+            listBox3.Size = new Size(180, 64);
             listBox3.TabIndex = 11;
             listBox3.SelectedIndexChanged += selectSuit;
             listBox3.DoubleClick += del_chosen_suit;
@@ -325,36 +312,12 @@
             // 
             listBox4.FormattingEnabled = true;
             listBox4.ItemHeight = 20;
-            listBox4.Location = new Point(1356, 353);
+            listBox4.Location = new Point(1379, 348);
             listBox4.Name = "listBox4";
-            listBox4.Size = new Size(182, 24);
+            listBox4.Size = new Size(182, 64);
             listBox4.TabIndex = 12;
             listBox4.SelectedIndexChanged += selectShoe;
             listBox4.DoubleClick += del_chosen_shoe;
-            // 
-            // listView2
-            // 
-            listView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            listView2.GridLines = true;
-            listView2.Location = new Point(573, 378);
-            listView2.Name = "listView2";
-            listView2.Size = new Size(314, 49);
-            listView2.TabIndex = 13;
-            listView2.UseCompatibleStateImageBehavior = false;
-            listView2.View = View.Details;
-            listView2.SelectedIndexChanged += Load_see_formBottom;
-            // 
-            // listView4
-            // 
-            listView4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            listView4.GridLines = true;
-            listView4.Location = new Point(1270, 378);
-            listView4.Name = "listView4";
-            listView4.Size = new Size(314, 49);
-            listView4.TabIndex = 15;
-            listView4.UseCompatibleStateImageBehavior = false;
-            listView4.View = View.Details;
-            listView4.SelectedIndexChanged += Load_see_formShoe;
             // 
             // button4
             // 
@@ -412,18 +375,6 @@
             button6.Text = "Фильтровать";
             button6.UseVisualStyleBackColor = true;
             button6.Click += filter_Start;
-            // 
-            // listView3
-            // 
-            listView3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            listView3.GridLines = true;
-            listView3.Location = new Point(922, 378);
-            listView3.Name = "listView3";
-            listView3.Size = new Size(314, 49);
-            listView3.TabIndex = 14;
-            listView3.UseCompatibleStateImageBehavior = false;
-            listView3.View = View.Details;
-            listView3.SelectedIndexChanged += Load_see_formSuit;
             // 
             // label5
             // 
@@ -501,11 +452,12 @@
             label4.Size = new Size(124, 20);
             label4.TabIndex = 42;
             label4.Text = "Фильтровать по:";
+            label4.Click += label4_Click;
             // 
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(496, 356);
+            label13.Location = new Point(524, 355);
             label13.Name = "label13";
             label13.Size = new Size(17, 20);
             label13.TabIndex = 43;
@@ -514,7 +466,7 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(853, 355);
+            label14.Location = new Point(870, 353);
             label14.Name = "label14";
             label14.Size = new Size(17, 20);
             label14.TabIndex = 44;
@@ -523,7 +475,7 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(1206, 356);
+            label15.Location = new Point(1219, 348);
             label15.Name = "label15";
             label15.Size = new Size(17, 20);
             label15.TabIndex = 45;
@@ -532,7 +484,7 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(1544, 356);
+            label16.Location = new Point(1567, 349);
             label16.Name = "label16";
             label16.Size = new Size(17, 20);
             label16.TabIndex = 46;
@@ -542,7 +494,7 @@
             // 
             label17.AutoSize = true;
             label17.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label17.Location = new Point(228, 356);
+            label17.Location = new Point(256, 348);
             label17.Name = "label17";
             label17.Size = new Size(80, 19);
             label17.TabIndex = 47;
@@ -552,7 +504,7 @@
             // 
             label18.AutoSize = true;
             label18.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label18.Location = new Point(575, 355);
+            label18.Location = new Point(592, 348);
             label18.Name = "label18";
             label18.Size = new Size(80, 19);
             label18.TabIndex = 48;
@@ -562,7 +514,7 @@
             // 
             label19.AutoSize = true;
             label19.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label19.Location = new Point(923, 356);
+            label19.Location = new Point(947, 348);
             label19.Name = "label19";
             label19.Size = new Size(80, 19);
             label19.TabIndex = 49;
@@ -572,7 +524,7 @@
             // 
             label20.AutoSize = true;
             label20.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label20.Location = new Point(1270, 355);
+            label20.Location = new Point(1293, 348);
             label20.Name = "label20";
             label20.Size = new Size(80, 19);
             label20.TabIndex = 50;
@@ -582,9 +534,9 @@
             // 
             listBox2.FormattingEnabled = true;
             listBox2.ItemHeight = 20;
-            listBox2.Location = new Point(661, 350);
+            listBox2.Location = new Point(678, 352);
             listBox2.Name = "listBox2";
-            listBox2.Size = new Size(186, 24);
+            listBox2.Size = new Size(186, 64);
             listBox2.TabIndex = 51;
             listBox2.SelectedIndexChanged += selectBottom;
             listBox2.DoubleClick += del_chosen_bottom;
@@ -619,42 +571,100 @@
             // 
             // listView5
             // 
-            listView5.Location = new Point(228, 433);
+            listView5.Location = new Point(228, 423);
             listView5.Name = "listView5";
-            listView5.Size = new Size(262, 300);
+            listView5.Size = new Size(313, 310);
             listView5.TabIndex = 55;
             listView5.UseCompatibleStateImageBehavior = false;
             listView5.SelectedIndexChanged += Load_see_formUp;
             // 
             // listView6
             // 
-            listView6.Location = new Point(575, 433);
+            listView6.Location = new Point(573, 424);
             listView6.Name = "listView6";
-            listView6.Size = new Size(272, 299);
+            listView6.Size = new Size(312, 309);
             listView6.TabIndex = 56;
             listView6.UseCompatibleStateImageBehavior = false;
+            listView6.SelectedIndexChanged += Load_see_formBottom;
             // 
             // listView7
             // 
-            listView7.Location = new Point(923, 433);
+            listView7.Location = new Point(923, 423);
             listView7.Name = "listView7";
-            listView7.Size = new Size(277, 299);
+            listView7.Size = new Size(313, 309);
             listView7.TabIndex = 57;
             listView7.UseCompatibleStateImageBehavior = false;
+            listView7.SelectedIndexChanged += Load_see_formSuit;
             // 
             // listView8
             // 
-            listView8.Location = new Point(1270, 433);
+            listView8.Location = new Point(1270, 423);
             listView8.Name = "listView8";
-            listView8.Size = new Size(268, 300);
+            listView8.Size = new Size(314, 310);
             listView8.TabIndex = 58;
             listView8.UseCompatibleStateImageBehavior = false;
+            listView8.SelectedIndexChanged += Load_see_formShoe;
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label21.Location = new Point(239, 387);
+            label21.Name = "label21";
+            label21.Size = new Size(54, 28);
+            label21.TabIndex = 59;
+            label21.Text = "Верх";
+            // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label22.Location = new Point(592, 387);
+            label22.Name = "label22";
+            label22.Size = new Size(47, 28);
+            label22.TabIndex = 60;
+            label22.Text = "Низ";
+            // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label23.Location = new Point(923, 369);
+            label23.Name = "label23";
+            label23.Size = new Size(83, 28);
+            label23.TabIndex = 61;
+            label23.Text = "Платье/";
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label24.Location = new Point(1282, 387);
+            label24.Name = "label24";
+            label24.Size = new Size(70, 28);
+            label24.TabIndex = 62;
+            label24.Text = "Обувь";
+            // 
+            // label25
+            // 
+            label25.AutoSize = true;
+            label25.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label25.Location = new Point(931, 392);
+            label25.Name = "label25";
+            label25.Size = new Size(83, 28);
+            label25.TabIndex = 63;
+            label25.Text = "Костюм";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1924, 744);
+            ClientSize = new Size(1615, 755);
+            Controls.Add(label25);
+            Controls.Add(label24);
+            Controls.Add(label23);
+            Controls.Add(label22);
+            Controls.Add(label21);
             Controls.Add(listView8);
             Controls.Add(listView7);
             Controls.Add(listView6);
@@ -686,9 +696,6 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(button4);
-            Controls.Add(listView4);
-            Controls.Add(listView3);
-            Controls.Add(listView2);
             Controls.Add(listBox4);
             Controls.Add(listBox3);
             Controls.Add(pictureBox4);
@@ -696,7 +703,6 @@
             Controls.Add(pictureBox2);
             Controls.Add(listBox1);
             Controls.Add(pictureBox1);
-            Controls.Add(listView1);
             Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
@@ -714,8 +720,6 @@
         }
 
         #endregion
-
-        private ListView listView1;
         private PictureBox pictureBox1;
         private MenuStrip menuStrip1;
         private ListBox listBox1;
@@ -724,15 +728,12 @@
         private PictureBox pictureBox4;
         private ListBox listBox3;
         private ListBox listBox4;
-        private ListView listView2;
-        private ListView listView4;
         private Button button4;
         private Label label1;
         private Label label2;
         private Label label3;
         private Button button5;
         private Button button6;
-        private ListView listView3;
         private Label label5;
         private Label label6;
         private Label label7;
@@ -778,5 +779,10 @@
         private ListView listView6;
         private ListView listView7;
         private ListView listView8;
+        private Label label21;
+        private Label label22;
+        private Label label23;
+        private Label label24;
+        private Label label25;
     }
 }

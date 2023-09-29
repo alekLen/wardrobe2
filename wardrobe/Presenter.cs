@@ -157,8 +157,8 @@ namespace wardrobe
                     foreach (var i in query)
                     {
                         string[] st = i.Split('*');
-                        form.SetTypeUpToWardrobe(st[0]);                        
-                        form.ListViewUpInput(st[1], st[0]);
+                        form.SetTypeUpToWardrobe(st[1], st[0]);                        
+                      //  form.ListViewUpInput(st[1], st[0]);
                     }
                 }
             }
@@ -181,8 +181,8 @@ namespace wardrobe
                     {
                         // form.SetTypeBottomToWardrobe(i);
                         string[] st = i.Split('*');
-                        form.SetTypeBottomToWardrobe(st[0]);
-                        form.ListViewBottomInput(st[1], st[0]);
+                        form.SetTypeBottomToWardrobe(st[1], st[0]);
+                       // form.ListViewBottomInput(st[1], st[0]);
                     }
                 }
             }
@@ -205,8 +205,8 @@ namespace wardrobe
                     {
                         //form.SetTypeSuitToWardrobe(i);
                         string[] st = i.Split('*');
-                        form.SetTypeSuitToWardrobe(st[0]);
-                        form.ListViewSuitInput(st[1], st[0]);
+                        form.SetTypeSuitToWardrobe(st[1], st[0]);
+                       // form.ListViewSuitInput(st[1], st[0]);
                     }
                 }
             }
@@ -229,8 +229,9 @@ namespace wardrobe
                     {
                         // form.SetTypeShoeToWardrobe(i);
                         string[] st = i.Split('*');
-                        form.SetTypeShoeToWardrobe(st[0]);
-                        form.ListViewShoeInput(st[1], st[0]);
+                       // form.SetTypeShoeToWardrobe(st[0]);
+                        form.SetTypeShoeToWardrobe(st[1], st[0]);
+                       // form.ListViewShoeInput(st[1], st[0]);
                     }
                 }
             }
@@ -1587,22 +1588,27 @@ namespace wardrobe
                         {
                                 // string f = reader["Clothes_Item_name"].ToString();
                                int type = int.Parse(reader["typeId"].ToString());
-                                string id = reader["id"].ToString(); 
-                                string name= reader["Clothes_Item_name"].ToString();
+                                string id = reader["id"].ToString();
+                                // string name= reader["Clothes_Item_name"].ToString();
+                                string name =id+"."+ reader["Clothes_Item_name"].ToString();
                                 int st= int.Parse(reader["styleId"].ToString());
                                 int col = int.Parse(reader["colorId"].ToString());
                                 int se = int.Parse(reader["seasonId"].ToString());
                                 string color = GetColor(db, col);
                                 string season = GetSeason(db, se);
                                 string style = GetStyle(db, st);
-                                if (type==1)
-                                    form.SetTypeUpToWardrobe(id+ "." + name + "___" + color + "___" + style + "___" +  season );
+                                if (type == 1)
+                                    // form.SetTypeUpToWardrobe(id+ "." + name + "___" + color + "___" + style + "___" +  season );
+                                    form.SetTypeUpToWardrobe( reader["photo"].ToString(),name);
                                 if (type == 2)
-                                    form.SetTypeBottomToWardrobe(id + "." + name + "___" + color + "___" + style + "___" + season);
+                                    // form.SetTypeBottomToWardrobe(id + "." + name + "___" + color + "___" + style + "___" + season);
+                                    form.SetTypeBottomToWardrobe(reader["photo"].ToString(), name);
                                 if (type == 3)
-                                    form.SetTypeSuitToWardrobe(id + "." + name + "___" + color + "___" + style + "___" + season);
+                                    // form.SetTypeSuitToWardrobe(id + "." + name + "___" + color + "___" + style + "___" + season);
+                                    form.SetTypeSuitToWardrobe(reader["photo"].ToString(), name);
                                 if (type == 4)
-                                    form.SetTypeShoeToWardrobe(id + "." + name + "___" + color + "___" + style + "___" + season);
+                                    // form.SetTypeShoeToWardrobe(id + "." + name + "___" + color + "___" + style + "___" + season);
+                                    form.SetTypeShoeToWardrobe(reader["photo"].ToString(), name);
 
                         }
                     }

@@ -16,10 +16,10 @@ namespace wardrobe
         public List<ListItem> itemsColor { set; get; }
         public void SetSeasonToWardrobe(string s,int i);
         public void SetStyleToWardrobe(string s,int i);
-        public void SetTypeUpToWardrobe(string s);
-        public void SetTypeBottomToWardrobe(string s);
-        public void SetTypeSuitToWardrobe(string s);
-        public void SetTypeShoeToWardrobe(string s);
+        public void SetTypeUpToWardrobe(string puth, string name);
+        public void SetTypeBottomToWardrobe(string puth, string name);
+        public void SetTypeSuitToWardrobe(string puth, string name);
+        public void SetTypeShoeToWardrobe(string puth, string name);
         public void SetColorToWardrobe(string s, int i);
         public void ClearUp();
         public void ClearBottom();
@@ -78,10 +78,10 @@ namespace wardrobe
         public List<int> f_color1 { get; set; }
         public List<int> f_style1 { get; set; } 
         public List<int> f_season1 { get; set; }
-        void ListViewUpInput(string puth, string name);
-        void ListViewBottomInput(string puth, string name);
-        void ListViewSuitInput(string puth, string name);
-        void ListViewShoeInput(string puth, string name);
+       // void ListViewUpInput(string puth, string name);
+       // void ListViewBottomInput(string puth, string name);
+       // void ListViewSuitInput(string puth, string name);
+        //void ListViewShoeInput(string puth, string name);
     }
 
     public class ListItem
