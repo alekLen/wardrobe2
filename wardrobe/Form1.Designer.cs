@@ -583,7 +583,7 @@
             listView5.Size = new Size(313, 310);
             listView5.TabIndex = 55;
             listView5.UseCompatibleStateImageBehavior = false;
-            listView5.SelectedIndexChanged += Load_see_formUp;
+            listView5.ItemActivate += Load_see_formUp;
             // 
             // listView6
             // 
@@ -592,7 +592,7 @@
             listView6.Size = new Size(312, 309);
             listView6.TabIndex = 56;
             listView6.UseCompatibleStateImageBehavior = false;
-            listView6.SelectedIndexChanged += Load_see_formBottom;
+            listView6.ItemActivate += Load_see_formBottom;
             // 
             // listView7
             // 
@@ -601,7 +601,7 @@
             listView7.Size = new Size(313, 309);
             listView7.TabIndex = 57;
             listView7.UseCompatibleStateImageBehavior = false;
-            listView7.SelectedIndexChanged += Load_see_formSuit;
+            listView7.ItemActivate += Load_see_formSuit;
             // 
             // listView8
             // 
@@ -610,7 +610,7 @@
             listView8.Size = new Size(314, 310);
             listView8.TabIndex = 58;
             listView8.UseCompatibleStateImageBehavior = false;
-            listView8.SelectedIndexChanged += Load_see_formShoe;
+            listView8.ItemActivate += Load_see_formShoe;
             // 
             // label21
             // 

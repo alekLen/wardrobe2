@@ -21,7 +21,7 @@ namespace wardrobe
     internal class Presenter
     {
         private readonly IForm1 form;
-        string targetFilePath;
+        string targetFilePath="";
                
         public Presenter(IForm1 f)
         {
@@ -1531,7 +1531,7 @@ namespace wardrobe
         {
             try
             {
-                form.ClearUp();
+                 form.ClearUp();
                  form.ClearBottom();
                  form.ClearSuit();
                  form.ClearShoe();            

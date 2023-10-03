@@ -23,12 +23,10 @@ namespace wardrobe
         public Form6 complects_show_form { get; set; } = new Form6();
         public int setId { get; set; }
         public List<int> Ids { get; set; } = new();
-        //  public List<string> f_color { get; set; } = new();
         public List<int> f_color1 { get; set; } = new();
         public List<int> f_style1 { get; set; } = new();
         public List<int> f_season1 { get; set; } = new();
-        //  public List<string> f_style { get; set; } = new();
-        //   public List<string> f_season { get; set; } = new();
+
         public int point { get; set; }
         public int categoryId { get; set; }
         public string nameCategory { get; set; }
@@ -66,14 +64,8 @@ namespace wardrobe
             complect_form.F5Close += new EventHandler<EventArgs>(F5Close);
             try
             {
-                // itemsStyle.Add(l = new ListItem { Name = "fghdsgfh" , Id = 1, IsChecked = false });
                 Ids = new();
                 PictureFill();
-                //  listView1.Columns.Add("верх", 300);
-                //  listView2.Columns.Add("низ", 300);
-                //  listView3.Columns.Add("платье/костюм", 300);
-                //  listView4.Columns.Add("обувь", 300);
-                // listView5.Columns.Add("наим", 100);
                 ImageList largeImageList = new ImageList();
                 largeImageList.ImageSize = new Size(48, 48);
                 listView5.LargeImageList = largeImageList;
@@ -266,7 +258,7 @@ namespace wardrobe
         {
             try
             {
-                if (see_clothe.IsDisposed )//|| see_clothe.Visible)
+                if (see_clothe.IsDisposed)//|| see_clothe.Visible)
                 {
                     see_clothe = new Form3();
                     NewF3?.Invoke(this, EventArgs.Empty);
@@ -290,7 +282,7 @@ namespace wardrobe
         {
             try
             {
-                if (see_clothe.IsDisposed )
+                if (see_clothe.IsDisposed)
                 {
                     see_clothe = new Form3();
                     NewF3?.Invoke(this, EventArgs.Empty);
@@ -313,7 +305,7 @@ namespace wardrobe
         {
             try
             {
-                if (see_clothe.IsDisposed )
+                if (see_clothe.IsDisposed)
                 {
                     see_clothe = new Form3();
                     NewF3?.Invoke(this, EventArgs.Empty);
@@ -336,7 +328,7 @@ namespace wardrobe
         {
             try
             {
-                if (see_clothe.IsDisposed )
+                if (see_clothe.IsDisposed)
                 {
                     see_clothe = new Form3();
                     NewF3?.Invoke(this, EventArgs.Empty);
