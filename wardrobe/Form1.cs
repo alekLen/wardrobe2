@@ -243,6 +243,7 @@ namespace wardrobe
                 Form1Color();
                 Form1Style();
                 Form1Season();
+                ClearFiltrBox();
             }
             catch (Exception ex)
             {
@@ -1033,6 +1034,25 @@ namespace wardrobe
 
         private void label4_Click(object sender, EventArgs e)
         {
+
+        }
+        public void ClearFiltrBox()
+        {
+            for (int i = 0; i < FilterColorBox.Items.Count; i++)
+            {
+                FilterColorBox.SetItemChecked(i, false);
+            }
+            FilterColorBox.SelectedIndex = -1;
+            for (int i = 0; i < FilterSeasonBox.Items.Count; i++)
+            {
+                FilterSeasonBox.SetItemChecked(i, false);
+            }
+            FilterSeasonBox.SelectedIndex = -1;
+            for (int i = 0; i < FilterStyleBox.Items.Count; i++)
+            {
+                FilterStyleBox.SetItemChecked(i, false);
+            }
+            FilterStyleBox.SelectedIndex = -1;
 
         }
     }

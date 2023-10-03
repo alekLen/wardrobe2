@@ -358,6 +358,7 @@ namespace wardrobe
                     Load_Suit(sender, e);
                     form.ClearShoe();
                     Load_Shoe(sender, e);
+                   form.ClearFiltrBox();
             }
             catch (Exception ex)
             {

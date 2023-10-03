@@ -25,6 +25,7 @@ namespace wardrobe
         public void ClearBottom();
         public void ClearSuit();
         public void ClearShoe();
+        public void ClearFiltrBox();
         public int setId { get; set; }
         public List<int> Ids { get; set; }
        // public List<string> f_color { get; set; }
