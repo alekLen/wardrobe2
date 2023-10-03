@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
 namespace wardrobe
 {
@@ -125,7 +126,9 @@ namespace wardrobe
 
         private void edit_item(object sender, EventArgs e)
         {
-            buttonEdit.Enabled = false;
+            buttonEdit.Text = "Сохранить";
+            buttonEdit.Click -= edit_item;
+            buttonEdit.Click += SaveIt;
             button2.Enabled = true;
             MainForm.see_clothe = this;
             textBoxName.Enabled = true;
@@ -255,6 +258,11 @@ namespace wardrobe
             newDate = textBoxDate.Text;
             newPlace = textBoxPlace.Text;
             newSize = textBoxSize.Text;
+        }
+
+        private void Cancel(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

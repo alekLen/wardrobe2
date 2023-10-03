@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             textBoxName = new TextBox();
             pictureBox1 = new PictureBox();
             textBoxStyle = new TextBox();
@@ -53,17 +54,17 @@
             // 
             textBoxName.Enabled = false;
             textBoxName.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxName.Location = new Point(7, 12);
+            textBoxName.Location = new Point(21, 12);
             textBoxName.Name = "textBoxName";
-            textBoxName.Size = new Size(392, 47);
+            textBoxName.Size = new Size(333, 47);
             textBoxName.TabIndex = 0;
             // 
             // pictureBox1
             // 
-            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            pictureBox1.Location = new Point(405, 12);
+            pictureBox1.BackColor = SystemColors.ControlLightLight;
+            pictureBox1.Location = new Point(382, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(663, 653);
+            pictureBox1.Size = new Size(404, 453);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -94,9 +95,9 @@
             // 
             // button1
             // 
-            button1.Location = new Point(63, 301);
+            button1.Location = new Point(63, 315);
             button1.Name = "button1";
-            button1.Size = new Size(232, 43);
+            button1.Size = new Size(248, 54);
             button1.TabIndex = 5;
             button1.Text = "добвить в комплект";
             button1.UseVisualStyleBackColor = true;
@@ -114,7 +115,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(28, 106);
+            label2.Location = new Point(24, 102);
             label2.Name = "label2";
             label2.Size = new Size(40, 20);
             label2.TabIndex = 7;
@@ -132,7 +133,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(31, 168);
+            label4.Location = new Point(24, 168);
             label4.Name = "label4";
             label4.Size = new Size(39, 20);
             label4.TabIndex = 10;
@@ -141,7 +142,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(3, 201);
+            label5.Location = new Point(10, 201);
             label5.Name = "label5";
             label5.Size = new Size(67, 20);
             label5.TabIndex = 11;
@@ -166,7 +167,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(7, 234);
+            label6.Location = new Point(16, 234);
             label6.Name = "label6";
             label6.Size = new Size(61, 20);
             label6.TabIndex = 14;
@@ -182,9 +183,9 @@
             // 
             // buttonDelete
             // 
-            buttonDelete.Location = new Point(63, 636);
+            buttonDelete.Location = new Point(63, 436);
             buttonDelete.Name = "buttonDelete";
-            buttonDelete.Size = new Size(232, 29);
+            buttonDelete.Size = new Size(248, 29);
             buttonDelete.TabIndex = 16;
             buttonDelete.Text = "удалить из гардероба";
             buttonDelete.UseVisualStyleBackColor = true;
@@ -192,9 +193,9 @@
             // 
             // buttonEdit
             // 
-            buttonEdit.Location = new Point(63, 555);
+            buttonEdit.Location = new Point(63, 375);
             buttonEdit.Name = "buttonEdit";
-            buttonEdit.Size = new Size(123, 61);
+            buttonEdit.Size = new Size(248, 42);
             buttonEdit.TabIndex = 17;
             buttonEdit.Text = "редактировать";
             buttonEdit.UseVisualStyleBackColor = true;
@@ -202,20 +203,19 @@
             // 
             // button2
             // 
-            button2.Enabled = false;
-            button2.Location = new Point(187, 555);
+            button2.Location = new Point(63, 267);
             button2.Name = "button2";
-            button2.Size = new Size(108, 61);
+            button2.Size = new Size(108, 42);
             button2.TabIndex = 18;
-            button2.Text = "сохранить";
+            button2.Text = "Отмена";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += SaveIt;
+            button2.Click += Cancel;
             // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1080, 688);
+            ClientSize = new Size(812, 485);
             Controls.Add(button2);
             Controls.Add(buttonEdit);
             Controls.Add(buttonDelete);
@@ -234,6 +234,9 @@
             Controls.Add(textBoxStyle);
             Controls.Add(pictureBox1);
             Controls.Add(textBoxName);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "Form3";
             Text = "Предмет одежды";
             TopMost = true;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form6));
             SuspendLayout();
             // 
             // Form6
@@ -37,6 +38,8 @@
             AutoScroll = true;
             BackColor = SystemColors.Control;
             ClientSize = new Size(1079, 450);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "Form6";
             Text = "комплекты";
             Load += LoadF6;

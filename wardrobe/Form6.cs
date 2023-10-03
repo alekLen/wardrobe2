@@ -56,7 +56,7 @@ namespace wardrobe
                         pictureBox.Width = 100;
                         pictureBox.Height = 100;
                         pictureBox.Location = new System.Drawing.Point(250 + i1 * 120, y);
-                        pictureBox.BackColor = System.Drawing.Color.Gray;
+                        pictureBox.BackColor = System.Drawing.Color.White;
                         TakePhoto?.Invoke(this, new EventArgs());
                         pictureBox.Image = Image.FromFile(s);
                         pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
@@ -81,7 +81,7 @@ namespace wardrobe
         private void Button_Click(object sender, EventArgs e)
         {
             Button clickedButton = sender as Button;
-            string s= clickedButton.Name;
+            string s = clickedButton.Name;
             string[] s1 = s.Split('.');
             n = int.Parse(s1[1]);
             DialogResult result = MessageBox.Show("уверены , что хотите удалить комплект ?", "подтвердите", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);

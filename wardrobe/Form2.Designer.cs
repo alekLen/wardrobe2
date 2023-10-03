@@ -105,6 +105,7 @@
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pictureBox1.BackColor = SystemColors.ControlLightLight;
             pictureBox1.Location = new Point(379, 28);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(338, 334);
@@ -183,12 +184,13 @@
             // button2
             // 
             button2.Anchor = AnchorStyles.Bottom;
+            button2.BackColor = SystemColors.Info;
             button2.Location = new Point(202, 333);
             button2.Name = "button2";
             button2.Size = new Size(151, 29);
             button2.TabIndex = 19;
             button2.Text = "Добавить";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += saveClothe;
             // 
             // comboBox1
@@ -233,12 +235,13 @@
             // 
             // button3
             // 
+            button3.BackColor = SystemColors.Info;
             button3.Location = new Point(34, 333);
             button3.Name = "button3";
             button3.Size = new Size(151, 29);
             button3.TabIndex = 25;
             button3.Text = "Отмена";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             // 
             // Form2
             // 

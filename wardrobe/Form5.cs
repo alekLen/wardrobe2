@@ -46,17 +46,17 @@ namespace wardrobe
 
         private void Save_Complect(object sender, EventArgs e)
         {
-            if(textBox1.Text != "")
+            if (textBox1.Text != "")
             {
-                Path=textBox1.Text;
+                Path = textBox1.Text;
                 SaveComplect?.Invoke(this, new EventArgs());
-                if(sucses)
-                   MessageBox.Show("комплект сохранен!");
+                if (sucses)
+                    MessageBox.Show("комплект сохранен!");
                 else
                     MessageBox.Show("ошибка сохранения!");
                 F5Close.Invoke(this, new EventArgs());
-                this.Close(); 
-                
+                this.Close();
+
             }
             else
             {

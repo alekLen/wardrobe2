@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             label1 = new Label();
             comboBox1 = new ComboBox();
             button1 = new Button();
@@ -56,12 +57,13 @@
             // 
             // button1
             // 
-            button1.Location = new Point(214, 116);
+            button1.BackColor = SystemColors.Info;
+            button1.Location = new Point(214, 106);
             button1.Name = "button1";
-            button1.Size = new Size(138, 29);
+            button1.Size = new Size(191, 29);
             button1.TabIndex = 5;
             button1.Text = "изменить";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
@@ -83,13 +85,14 @@
             AcceptButton = button1;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(428, 183);
+            ClientSize = new Size(428, 163);
             Controls.Add(label2);
             Controls.Add(textBox1);
             Controls.Add(button1);
             Controls.Add(comboBox1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "Form4";
             Text = "Form4";

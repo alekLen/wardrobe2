@@ -231,7 +231,7 @@ namespace wardrobe
             pictureBox4.Image = Image.FromFile(s);
         }
 
-        private async void LoadForm(object sender, EventArgs e)
+        private void LoadForm(object sender, EventArgs e)
         {
             try
             {
@@ -265,12 +265,12 @@ namespace wardrobe
         {
             try
             {
-                if (see_clothe.IsDisposed || see_clothe.Visible)
+                if (see_clothe.IsDisposed )//|| see_clothe.Visible)
                 {
                     see_clothe = new Form3();
                     NewF3?.Invoke(this, EventArgs.Empty);
                 }
-                if (listView5.SelectedItems.Count > 0)
+                if (listView5.SelectedItems.Count > 0 && !see_clothe.Visible)
                 {
                     ListViewItem selectedItem = listView5.SelectedItems[0];
                     // string s = selectedItem.Text;
@@ -278,7 +278,8 @@ namespace wardrobe
                     string[] s1 = s.Split('.');
                     setId = int.Parse(s1[0]);
                     see_clothe.MainForm = this;
-                    see_clothe.Show();
+                    listView5.SelectedIndices.Clear();
+                    see_clothe.ShowDialog();
                 }
             }
             catch { MessageBox.Show("opsup"); }
@@ -288,19 +289,20 @@ namespace wardrobe
         {
             try
             {
-                if (see_clothe.IsDisposed || see_clothe.Visible)
+                if (see_clothe.IsDisposed )
                 {
                     see_clothe = new Form3();
                     NewF3?.Invoke(this, EventArgs.Empty);
                 }
-                if (listView6.SelectedItems.Count > 0)
+                if (listView6.SelectedItems.Count > 0 && !see_clothe.Visible)
                 {
                     ListViewItem selectedItem = listView6.SelectedItems[0];
                     string s = selectedItem.Text;
                     string[] s1 = s.Split('.');
                     setId = int.Parse(s1[0]);
                     see_clothe.MainForm = this;
-                    see_clothe.Show();
+                    listView6.SelectedIndices.Clear();
+                    see_clothe.ShowDialog();
                 }
             }
             catch { MessageBox.Show("opsbottom"); }
@@ -310,19 +312,20 @@ namespace wardrobe
         {
             try
             {
-                if (see_clothe.IsDisposed || see_clothe.Visible)
+                if (see_clothe.IsDisposed )
                 {
                     see_clothe = new Form3();
                     NewF3?.Invoke(this, EventArgs.Empty);
                 }
-                if (listView7.SelectedItems.Count > 0)
+                if (listView7.SelectedItems.Count > 0 && !see_clothe.Visible)
                 {
                     ListViewItem selectedItem = listView7.SelectedItems[0];
                     string s = selectedItem.Text;
                     string[] s1 = s.Split('.');
                     setId = int.Parse(s1[0]);
                     see_clothe.MainForm = this;
-                    see_clothe.Show();
+                    listView7.SelectedIndices.Clear();
+                    see_clothe.ShowDialog();
                 }
             }
             catch { MessageBox.Show("opssuit"); }
@@ -332,19 +335,20 @@ namespace wardrobe
         {
             try
             {
-                if (see_clothe.IsDisposed || see_clothe.Visible)
+                if (see_clothe.IsDisposed )
                 {
                     see_clothe = new Form3();
                     NewF3?.Invoke(this, EventArgs.Empty);
                 }
-                if (listView8.SelectedItems.Count > 0)
+                if (listView8.SelectedItems.Count > 0 && !see_clothe.Visible)
                 {
                     ListViewItem selectedItem = listView8.SelectedItems[0];
                     string s = selectedItem.Text;
                     string[] s1 = s.Split('.');
                     setId = int.Parse(s1[0]);
                     see_clothe.MainForm = this;
-                    see_clothe.Show();
+                    listView8.SelectedIndices.Clear();
+                    see_clothe.ShowDialog();
                 }
             }
             catch { MessageBox.Show("opsshoe"); }
@@ -770,6 +774,8 @@ namespace wardrobe
         private void color_statistic(object sender, EventArgs e)
         {
             Form statisticsForm = new Form();
+            Icon myIcon = new Icon("Icons/wardrobe_4486.ico");
+            statisticsForm.Icon = myIcon;
             statisticsForm.Text = "Статистика цветов одежды";
             statisticsForm.Width = 600;
             statisticsForm.Height = 500;
@@ -806,6 +812,8 @@ namespace wardrobe
         private void season_statistic(object sender, EventArgs e)
         {
             Form statisticsForm = new Form();
+            Icon myIcon = new Icon("Icons/wardrobe_4486.ico");
+            statisticsForm.Icon = myIcon;
             statisticsForm.Text = "Статистика сезонов одежды";
             statisticsForm.Width = 600;
             statisticsForm.Height = 500;
@@ -842,6 +850,8 @@ namespace wardrobe
         private void style_statistic(object sender, EventArgs e)
         {
             Form statisticsForm = new Form();
+            Icon myIcon = new Icon("Icons/wardrobe_4486.ico");
+            statisticsForm.Icon = myIcon;
             statisticsForm.Text = "Статистика стилей одежды";
             statisticsForm.Width = 600;
             statisticsForm.Height = 500;
@@ -878,6 +888,10 @@ namespace wardrobe
         void PictureFill()
         {
             pictureBox1.Image = Image.FromFile("Photos/up.png");
+            // pictureBox1.Image = Image.FromFile("Photos/camera.png");
+            // pictureBox2.Image = Image.FromFile("Photos/camera.png");
+            // pictureBox3.Image = Image.FromFile("Photos/camera.png");
+            // pictureBox4.Image = Image.FromFile("Photos/camera.png");
             pictureBox2.Image = Image.FromFile("Photos/bottom.png");
             pictureBox3.Image = Image.FromFile("Photos/dress.png");
             pictureBox4.Image = Image.FromFile("Photos/shoe.jpg");

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
             textBox1 = new TextBox();
             label2 = new Label();
             button1 = new Button();
@@ -63,10 +64,12 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(768, 450);
             Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(textBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "Form5";
             Text = "добаление комплекта в альбом";
             Load += LoadF5;

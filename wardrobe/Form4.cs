@@ -216,6 +216,6 @@ namespace wardrobe
                 this.Close();
                 MessageBox.Show("цвет удален!");
             }
-        }     
+        }
     }
 }

@@ -102,7 +102,8 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(227, 38);
+            pictureBox1.BackColor = SystemColors.ControlLightLight;
+            pictureBox1.Location = new Point(227, 73);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(314, 272);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -263,16 +264,17 @@
             // 
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 20;
-            listBox1.Location = new Point(342, 353);
+            listBox1.Location = new Point(365, 373);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(176, 64);
+            listBox1.Size = new Size(176, 44);
             listBox1.TabIndex = 6;
             listBox1.SelectedIndexChanged += selectUp;
             listBox1.DoubleClick += del_Choosen_Up;
             // 
             // pictureBox2
             // 
-            pictureBox2.Location = new Point(573, 38);
+            pictureBox2.BackColor = SystemColors.ControlLightLight;
+            pictureBox2.Location = new Point(573, 73);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(314, 272);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -281,7 +283,8 @@
             // 
             // pictureBox3
             // 
-            pictureBox3.Location = new Point(922, 38);
+            pictureBox3.BackColor = SystemColors.ControlLightLight;
+            pictureBox3.Location = new Point(923, 73);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(314, 272);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -290,7 +293,8 @@
             // 
             // pictureBox4
             // 
-            pictureBox4.Location = new Point(1270, 38);
+            pictureBox4.BackColor = SystemColors.ControlLightLight;
+            pictureBox4.Location = new Point(1270, 73);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(314, 272);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
@@ -301,9 +305,9 @@
             // 
             listBox3.FormattingEnabled = true;
             listBox3.ItemHeight = 20;
-            listBox3.Location = new Point(1033, 351);
+            listBox3.Location = new Point(1056, 374);
             listBox3.Name = "listBox3";
-            listBox3.Size = new Size(180, 64);
+            listBox3.Size = new Size(180, 44);
             listBox3.TabIndex = 11;
             listBox3.SelectedIndexChanged += selectSuit;
             listBox3.DoubleClick += del_chosen_suit;
@@ -312,21 +316,22 @@
             // 
             listBox4.FormattingEnabled = true;
             listBox4.ItemHeight = 20;
-            listBox4.Location = new Point(1379, 348);
+            listBox4.Location = new Point(1402, 371);
             listBox4.Name = "listBox4";
-            listBox4.Size = new Size(182, 64);
+            listBox4.Size = new Size(182, 44);
             listBox4.TabIndex = 12;
             listBox4.SelectedIndexChanged += selectShoe;
             listBox4.DoubleClick += del_chosen_shoe;
             // 
             // button4
             // 
+            button4.BackColor = SystemColors.Info;
             button4.Location = new Point(31, 682);
             button4.Name = "button4";
             button4.Size = new Size(158, 51);
             button4.TabIndex = 20;
             button4.Text = "Добавить комплект";
-            button4.UseVisualStyleBackColor = true;
+            button4.UseVisualStyleBackColor = false;
             button4.Click += Add_Complect;
             // 
             // label1
@@ -358,28 +363,30 @@
             // 
             // button5
             // 
+            button5.BackColor = SystemColors.Info;
             button5.Location = new Point(31, 631);
             button5.Name = "button5";
             button5.Size = new Size(158, 29);
             button5.TabIndex = 29;
             button5.Text = "Сбросить фильтр";
-            button5.UseVisualStyleBackColor = true;
+            button5.UseVisualStyleBackColor = false;
             button5.Click += clear_filter;
             // 
             // button6
             // 
+            button6.BackColor = SystemColors.Info;
             button6.Location = new Point(31, 596);
             button6.Name = "button6";
             button6.Size = new Size(158, 29);
             button6.TabIndex = 30;
             button6.Text = "Фильтровать";
-            button6.UseVisualStyleBackColor = true;
+            button6.UseVisualStyleBackColor = false;
             button6.Click += filter_Start;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(339, 313);
+            label5.Location = new Point(256, 397);
             label5.Name = "label5";
             label5.Size = new Size(42, 20);
             label5.TabIndex = 34;
@@ -388,7 +395,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(708, 313);
+            label6.Location = new Point(613, 397);
             label6.Name = "label6";
             label6.Size = new Size(36, 20);
             label6.TabIndex = 35;
@@ -397,7 +404,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(999, 313);
+            label7.Location = new Point(923, 397);
             label7.Name = "label7";
             label7.Size = new Size(118, 20);
             label7.TabIndex = 36;
@@ -406,7 +413,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(1366, 313);
+            label8.Location = new Point(1305, 397);
             label8.Name = "label8";
             label8.Size = new Size(52, 20);
             label8.TabIndex = 37;
@@ -457,7 +464,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(524, 355);
+            label13.Location = new Point(339, 369);
             label13.Name = "label13";
             label13.Size = new Size(17, 20);
             label13.TabIndex = 43;
@@ -466,7 +473,7 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(870, 353);
+            label14.Location = new Point(676, 371);
             label14.Name = "label14";
             label14.Size = new Size(17, 20);
             label14.TabIndex = 44;
@@ -475,7 +482,7 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(1219, 348);
+            label15.Location = new Point(1033, 370);
             label15.Name = "label15";
             label15.Size = new Size(17, 20);
             label15.TabIndex = 45;
@@ -484,7 +491,7 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(1567, 349);
+            label16.Location = new Point(1379, 369);
             label16.Name = "label16";
             label16.Size = new Size(17, 20);
             label16.TabIndex = 46;
@@ -494,7 +501,7 @@
             // 
             label17.AutoSize = true;
             label17.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label17.Location = new Point(256, 348);
+            label17.Location = new Point(256, 371);
             label17.Name = "label17";
             label17.Size = new Size(80, 19);
             label17.TabIndex = 47;
@@ -504,7 +511,7 @@
             // 
             label18.AutoSize = true;
             label18.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label18.Location = new Point(592, 348);
+            label18.Location = new Point(590, 371);
             label18.Name = "label18";
             label18.Size = new Size(80, 19);
             label18.TabIndex = 48;
@@ -514,7 +521,7 @@
             // 
             label19.AutoSize = true;
             label19.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label19.Location = new Point(947, 348);
+            label19.Location = new Point(941, 371);
             label19.Name = "label19";
             label19.Size = new Size(80, 19);
             label19.TabIndex = 49;
@@ -524,7 +531,7 @@
             // 
             label20.AutoSize = true;
             label20.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label20.Location = new Point(1293, 348);
+            label20.Location = new Point(1292, 371);
             label20.Name = "label20";
             label20.Size = new Size(80, 19);
             label20.TabIndex = 50;
@@ -534,9 +541,9 @@
             // 
             listBox2.FormattingEnabled = true;
             listBox2.ItemHeight = 20;
-            listBox2.Location = new Point(678, 352);
+            listBox2.Location = new Point(699, 374);
             listBox2.Name = "listBox2";
-            listBox2.Size = new Size(186, 64);
+            listBox2.Size = new Size(186, 44);
             listBox2.TabIndex = 51;
             listBox2.SelectedIndexChanged += selectBottom;
             listBox2.DoubleClick += del_chosen_bottom;
@@ -609,7 +616,7 @@
             // 
             label21.AutoSize = true;
             label21.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label21.Location = new Point(239, 387);
+            label21.Location = new Point(339, 39);
             label21.Name = "label21";
             label21.Size = new Size(54, 28);
             label21.TabIndex = 59;
@@ -619,7 +626,7 @@
             // 
             label22.AutoSize = true;
             label22.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label22.Location = new Point(592, 387);
+            label22.Location = new Point(699, 38);
             label22.Name = "label22";
             label22.Size = new Size(47, 28);
             label22.TabIndex = 60;
@@ -629,7 +636,7 @@
             // 
             label23.AutoSize = true;
             label23.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label23.Location = new Point(923, 369);
+            label23.Location = new Point(991, 39);
             label23.Name = "label23";
             label23.Size = new Size(83, 28);
             label23.TabIndex = 61;
@@ -639,7 +646,7 @@
             // 
             label24.AutoSize = true;
             label24.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label24.Location = new Point(1282, 387);
+            label24.Location = new Point(1379, 38);
             label24.Name = "label24";
             label24.Size = new Size(70, 28);
             label24.TabIndex = 62;
@@ -649,7 +656,7 @@
             // 
             label25.AutoSize = true;
             label25.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label25.Location = new Point(931, 392);
+            label25.Location = new Point(1069, 39);
             label25.Name = "label25";
             label25.Size = new Size(83, 28);
             label25.TabIndex = 63;
@@ -704,8 +711,10 @@
             Controls.Add(listBox1);
             Controls.Add(pictureBox1);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
+            MaximizeBox = false;
             Name = "Form1";
             Text = "Гардероб";
             Load += LoadForm;
