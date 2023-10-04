@@ -32,6 +32,7 @@ namespace wardrobe
             form.NewF4 += new EventHandler<EventArgs>(NewEForm);
             form.NewF5 += new EventHandler<EventArgs>(NewСForm);
             form.NewF6 += new EventHandler<EventArgs>(NewСcForm);
+            form.NewF7 += new EventHandler<EventArgs>(NewSDopForm);
             form.LoadUp += new EventHandler<EventArgs>(Load_Up);
             form.LoadBottom += new EventHandler<EventArgs>(Load_Bottom);
             form.LoadSuit += new EventHandler<EventArgs>(Load_Suit);
@@ -58,6 +59,14 @@ namespace wardrobe
             form.see_clothe.LoadColor += new EventHandler<EventArgs>(LoadColorToEdit);
             form.see_clothe.DeletePhoto += new EventHandler<EventArgs>(DelPhoto);
             form.see_clothe.EditItem += new EventHandler<EventArgs>(EditItem);
+            form.see_clotheDop.LoadF7 += new EventHandler<EventArgs>(LoadSeeDopForm);
+            form.see_clotheDop.AddToCom += new EventHandler<EventArgs>(AddToChose);
+            form.see_clotheDop.DeleteItem += new EventHandler<EventArgs>(DeleteItemFromWardrobe);
+            form.see_clotheDop.LoadStyle += new EventHandler<EventArgs>(LoadStyleToEdit);
+            form.see_clotheDop.LoadSeason += new EventHandler<EventArgs>(LoadSeasonToEdit);
+            form.see_clotheDop.LoadColor += new EventHandler<EventArgs>(LoadColorToEdit);
+            form.see_clotheDop.DeletePhoto += new EventHandler<EventArgs>(DelPhoto);
+            form.see_clotheDop.EditItem += new EventHandler<EventArgs>(EditItem);
             form.edit_form.LoadEditStyle += new EventHandler<EventArgs>(LoadStyleToEdit);
             form.edit_form.LoadEditSeason += new EventHandler<EventArgs>(LoadSeasonToEdit);
             form.edit_form.LoadEditColor += new EventHandler<EventArgs>(LoadColorToEdit);
@@ -137,6 +146,34 @@ namespace wardrobe
                     form.see_clothe.SetDate(s1[6]);
                     form.see_clothe.SetPlace(s1[7]);
                     form.see_clothe.SetSize(s1[8]);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void LoadSeeDopForm(object sender, EventArgs e)
+        {
+            try
+            {
+
+                Wardrobe_Context db = Get_db();
+                using (db)
+                {
+                    var query = (from b in db.clothes_items
+                                 where b.Id == form.setId
+                                 select b.Id + "~" + b.Clothes_Item_name + "~" + b.type.Type_name + "~" + b.color.Color_name + "~" + b.style.Style_name + "~" + b.season.Season_name + "~" + b.date + "~" + b.place + "~" + b.size + "~" + b.photo).Single();
+                    string s = query.ToString();
+                    string[] s1 = s.Split('~');
+                    form.see_clotheDop.SetName(s1[1]);
+                    form.see_clotheDop.SetSeason(s1[5]);
+                    form.see_clotheDop.SetStyle(s1[4]);
+                    form.see_clotheDop.SetColor(s1[3]);
+                    form.see_clotheDop.SetPhoto(s1[9]);
+                    form.see_clotheDop.SetDate(s1[6]);
+                    form.see_clotheDop.SetPlace(s1[7]);
+                    form.see_clotheDop.SetSize(s1[8]);
                 }
             }
             catch (Exception ex)
@@ -710,6 +747,17 @@ namespace wardrobe
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+        public void NewSDopForm(object sender, EventArgs e)
+        {
+            form.see_clotheDop.LoadF7 += new EventHandler<EventArgs>(LoadSeeForm);
+            form.see_clotheDop.AddToCom += new EventHandler<EventArgs>(AddToChose);
+            form.see_clotheDop.DeleteItem += new EventHandler<EventArgs>(DeleteItemFromWardrobe);
+            form.see_clotheDop.LoadStyle += new EventHandler<EventArgs>(LoadStyleToEdit);
+            form.see_clotheDop.LoadSeason += new EventHandler<EventArgs>(LoadSeasonToEdit);
+            form.see_clotheDop.LoadColor += new EventHandler<EventArgs>(LoadColorToEdit);
+            form.see_clotheDop.DeletePhoto += new EventHandler<EventArgs>(DelPhoto);
+            form.see_clotheDop.EditItem += new EventHandler<EventArgs>(EditItem);
         }
         public void DeleteItemFromWardrobe(object sender, EventArgs e)
         {

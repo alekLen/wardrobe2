@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             pictureBox1 = new PictureBox();
             menuStrip1 = new MenuStrip();
@@ -85,9 +86,16 @@
             FilterColorBox = new CheckedListBox();
             FilterStyleBox = new CheckedListBox();
             listView5 = new ListView();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            добавитьВКомплектToolStripMenuItem = new ToolStripMenuItem();
+            редактироватьToolStripMenuItem = new ToolStripMenuItem();
+            удалитьToolStripMenuItem = new ToolStripMenuItem();
             listView6 = new ListView();
+            contextMenuStrip2 = new ContextMenuStrip(components);
             listView7 = new ListView();
+            contextMenuStrip3 = new ContextMenuStrip(components);
             listView8 = new ListView();
+            contextMenuStrip4 = new ContextMenuStrip(components);
             label21 = new Label();
             label22 = new Label();
             label23 = new Label();
@@ -98,6 +106,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // pictureBox1
@@ -578,15 +587,44 @@
             // 
             // listView5
             // 
+            listView5.ContextMenuStrip = contextMenuStrip1;
             listView5.Location = new Point(228, 423);
             listView5.Name = "listView5";
             listView5.Size = new Size(313, 310);
             listView5.TabIndex = 55;
             listView5.UseCompatibleStateImageBehavior = false;
             listView5.ItemActivate += Load_see_formUp;
+            listView5.MouseClick += UpClick;
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { добавитьВКомплектToolStripMenuItem, редактироватьToolStripMenuItem, удалитьToolStripMenuItem });
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(227, 76);
+            // 
+            // добавитьВКомплектToolStripMenuItem
+            // 
+            добавитьВКомплектToolStripMenuItem.Name = "добавитьВКомплектToolStripMenuItem";
+            добавитьВКомплектToolStripMenuItem.Size = new Size(226, 24);
+            добавитьВКомплектToolStripMenuItem.Text = "Добавить в комплект";
+            добавитьВКомплектToolStripMenuItem.Click += Load_see_formUpDop;
+            // 
+            // редактироватьToolStripMenuItem
+            // 
+            редактироватьToolStripMenuItem.Name = "редактироватьToolStripMenuItem";
+            редактироватьToolStripMenuItem.Size = new Size(226, 24);
+            редактироватьToolStripMenuItem.Text = "Редактировать";
+            // 
+            // удалитьToolStripMenuItem
+            // 
+            удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
+            удалитьToolStripMenuItem.Size = new Size(226, 24);
+            удалитьToolStripMenuItem.Text = "Удалить";
             // 
             // listView6
             // 
+            listView6.ContextMenuStrip = contextMenuStrip2;
             listView6.Location = new Point(573, 424);
             listView6.Name = "listView6";
             listView6.Size = new Size(312, 309);
@@ -594,8 +632,15 @@
             listView6.UseCompatibleStateImageBehavior = false;
             listView6.ItemActivate += Load_see_formBottom;
             // 
+            // contextMenuStrip2
+            // 
+            contextMenuStrip2.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip2.Name = "contextMenuStrip2";
+            contextMenuStrip2.Size = new Size(61, 4);
+            // 
             // listView7
             // 
+            listView7.ContextMenuStrip = contextMenuStrip3;
             listView7.Location = new Point(923, 423);
             listView7.Name = "listView7";
             listView7.Size = new Size(313, 309);
@@ -603,14 +648,27 @@
             listView7.UseCompatibleStateImageBehavior = false;
             listView7.ItemActivate += Load_see_formSuit;
             // 
+            // contextMenuStrip3
+            // 
+            contextMenuStrip3.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip3.Name = "contextMenuStrip3";
+            contextMenuStrip3.Size = new Size(61, 4);
+            // 
             // listView8
             // 
+            listView8.ContextMenuStrip = contextMenuStrip4;
             listView8.Location = new Point(1270, 423);
             listView8.Name = "listView8";
             listView8.Size = new Size(314, 310);
             listView8.TabIndex = 58;
             listView8.UseCompatibleStateImageBehavior = false;
             listView8.ItemActivate += Load_see_formShoe;
+            // 
+            // contextMenuStrip4
+            // 
+            contextMenuStrip4.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip4.Name = "contextMenuStrip4";
+            contextMenuStrip4.Size = new Size(61, 4);
             // 
             // label21
             // 
@@ -724,6 +782,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            contextMenuStrip1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -793,5 +852,12 @@
         private Label label23;
         private Label label24;
         private Label label25;
+        private ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem добавитьВКомплектToolStripMenuItem;
+        private ToolStripMenuItem редактироватьToolStripMenuItem;
+        private ToolStripMenuItem удалитьToolStripMenuItem;
+        private ContextMenuStrip contextMenuStrip2;
+        private ContextMenuStrip contextMenuStrip3;
+        private ContextMenuStrip contextMenuStrip4;
     }
 }

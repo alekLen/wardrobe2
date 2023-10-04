@@ -21,6 +21,7 @@ namespace wardrobe
         public Form4 edit_form { get; set; } = new Form4();
         public Form5 complect_form { get; set; } = new Form5();
         public Form6 complects_show_form { get; set; } = new Form6();
+        public Form7 see_clotheDop { get; set; } = new Form7();
         public int setId { get; set; }
         public List<int> Ids { get; set; } = new();
         public List<int> f_color1 { get; set; } = new();
@@ -43,6 +44,7 @@ namespace wardrobe
         public event EventHandler<EventArgs> NewF4;
         public event EventHandler<EventArgs> NewF5;
         public event EventHandler<EventArgs> NewF6;
+        public event EventHandler<EventArgs> NewF7;
         public event EventHandler<EventArgs> Filtr;
         public event EventHandler<EventArgs> Clear_Filtr;
         public event EventHandler<EventArgs> Change_Photo_Up;
@@ -273,6 +275,28 @@ namespace wardrobe
                     see_clothe.MainForm = this;
                     listView5.SelectedIndices.Clear();
                     see_clothe.ShowDialog();
+                }
+            }
+            catch { MessageBox.Show("opsup"); }
+        }
+        private void Load_see_formUpDop(object sender, EventArgs e)
+        {
+            try
+            {
+                if (see_clothe.IsDisposed)
+                {
+                    see_clotheDop = new Form7();
+                    NewF7?.Invoke(this, EventArgs.Empty);
+                }
+                if (listView5.SelectedItems.Count > 0 && !see_clothe.Visible)
+                {
+                    ListViewItem selectedItem = listView5.SelectedItems[0];
+                    string s = selectedItem.ImageKey;
+                    string[] s1 = s.Split('.');
+                    setId = int.Parse(s1[0]);
+                    see_clotheDop.MainForm = this;
+                    listView5.SelectedIndices.Clear();
+                    see_clotheDop.ShowDialog();
                 }
             }
             catch { MessageBox.Show("opsup"); }
@@ -1046,6 +1070,21 @@ namespace wardrobe
             }
             FilterStyleBox.SelectedIndex = -1;
 
+        }
+
+        private void UpClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right) // Проверяем, что это правая кнопка мыши
+            {
+                // Определяем элемент, на котором был сделан клик
+                ListViewItem item = listView5.GetItemAt(e.X, e.Y);
+
+                if (item != null) // Проверяем, что элемент не равен null
+                {
+                    // Отображаем контекстное меню рядом с элементом
+                    contextMenuStrip1.Show(listView5, e.Location);
+                }
+            }
         }
     }
 }

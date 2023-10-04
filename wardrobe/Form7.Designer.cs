@@ -1,6 +1,6 @@
 ﻿namespace wardrobe
 {
-    partial class Form3
+    partial class Form7
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form7));
             textBoxName = new TextBox();
             pictureBox1 = new PictureBox();
             textBoxStyle = new TextBox();
@@ -44,9 +44,8 @@
             textBoxSize = new TextBox();
             label6 = new Label();
             textBoxDate = new TextBox();
-            buttonDelete = new Button();
-            buttonEdit = new Button();
             button2 = new Button();
+            button3Photo = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -64,7 +63,7 @@
             pictureBox1.BackColor = SystemColors.ControlLightLight;
             pictureBox1.Location = new Point(382, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(404, 453);
+            pictureBox1.Size = new Size(344, 330);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -96,13 +95,12 @@
             // button1
             // 
             button1.BackColor = SystemColors.Info;
-            button1.Location = new Point(63, 327);
+            button1.Location = new Point(139, 292);
             button1.Name = "button1";
-            button1.Size = new Size(248, 54);
+            button1.Size = new Size(215, 50);
             button1.TabIndex = 5;
             button1.Text = "добвить в комплект";
             button1.UseVisualStyleBackColor = false;
-            button1.Click += AddToComplectBox;
             // 
             // label1
             // 
@@ -182,47 +180,34 @@
             textBoxDate.Size = new Size(167, 27);
             textBoxDate.TabIndex = 15;
             // 
-            // buttonDelete
-            // 
-            buttonDelete.BackColor = SystemColors.Info;
-            buttonDelete.Location = new Point(63, 436);
-            buttonDelete.Name = "buttonDelete";
-            buttonDelete.Size = new Size(248, 29);
-            buttonDelete.TabIndex = 16;
-            buttonDelete.Text = "удалить из гардероба";
-            buttonDelete.UseVisualStyleBackColor = false;
-            buttonDelete.Click += delete;
-            // 
-            // buttonEdit
-            // 
-            buttonEdit.BackColor = SystemColors.Info;
-            buttonEdit.Location = new Point(63, 387);
-            buttonEdit.Name = "buttonEdit";
-            buttonEdit.Size = new Size(248, 43);
-            buttonEdit.TabIndex = 17;
-            buttonEdit.Text = "редактировать";
-            buttonEdit.UseVisualStyleBackColor = false;
-            buttonEdit.Click += edit_item;
-            // 
             // button2
             // 
             button2.BackColor = SystemColors.Info;
-            button2.Location = new Point(63, 279);
+            button2.Location = new Point(16, 292);
             button2.Name = "button2";
-            button2.Size = new Size(108, 42);
+            button2.Size = new Size(108, 50);
             button2.TabIndex = 18;
             button2.Text = "Отмена";
             button2.UseVisualStyleBackColor = false;
-            button2.Click += Cancel;
             // 
-            // Form3
+            // button3Photo
+            // 
+            button3Photo.BackColor = SystemColors.Info;
+            button3Photo.Location = new Point(83, 234);
+            button3Photo.Name = "button3Photo";
+            button3Photo.Size = new Size(140, 52);
+            button3Photo.TabIndex = 19;
+            button3Photo.Text = "button3";
+            button3Photo.UseVisualStyleBackColor = false;
+            button3Photo.Visible = false;
+            // 
+            // Form7
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(812, 485);
+            ClientSize = new Size(755, 365);
+            Controls.Add(button3Photo);
             Controls.Add(button2);
-            Controls.Add(buttonEdit);
-            Controls.Add(buttonDelete);
             Controls.Add(textBoxDate);
             Controls.Add(label6);
             Controls.Add(textBoxSize);
@@ -241,7 +226,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
-            Name = "Form3";
+            Name = "Form7";
             Text = "Предмет одежды";
             TopMost = true;
             Load += LoadFm3;
@@ -267,8 +252,7 @@
         private TextBox textBoxSize;
         private Label label6;
         private TextBox textBoxDate;
-        private Button buttonDelete;
-        private Button buttonEdit;
         private Button button2;
+        private Button button3Photo;
     }
 }
