@@ -99,80 +99,28 @@ namespace wardrobe
         }
         public void SetStyleToWardrobe(string s, int i)
         {
-            // comboBox3.Items.Add(s);
             l = new ListItem { Name = s, Id = i, IsChecked = false };
-            //  FilterStyleBox.Items.Add(l);
             itemsStyle.Add(l);
-            //  FilterStyleBox.DisplayMember = "Name";
-            //  FilterStyleBox.ValueMember = "Id";      // Значение элемента (Id)
-            //  FilterStyleBox.CheckOnClick = true;
         }
-        /* public void SetTypeUpToWardrobe(string s)
-         {
-             bool q = true;
-             foreach (ListViewItem item in listView5.Items)
-             {
-                 if (item.Text == s) q = false;
-             }
-             if (q)
-             {
-                 listView5.Items.Add(s);
-             }
-         }*/
         public void ClearUp()
         {
             listView5.Items.Clear();
+            listView5.LargeImageList.Images.Clear();
         }
-        /* public void SetTypeBottomToWardrobe(string s)
-         {
-             bool q = true;
-             foreach (ListViewItem item in listView6.Items)
-             {
-                 if (item.Text == s) q = false;
-             }
-             if (q)
-             {
-                 ListViewItem item1 = new ListViewItem(s);
-                 listView6.Items.Add(item1);
-             }
-         }*/
         public void ClearBottom()
         {
             listView6.Items.Clear();
+            listView6.LargeImageList.Images.Clear();
         }
-        /*  public void SetTypeSuitToWardrobe(string s)
-          {
-              bool q = true;
-              foreach (ListViewItem item in listView7.Items)
-              {
-                  if (item.Text == s) q = false;
-              }
-              if (q)
-              {
-                  ListViewItem item1 = new ListViewItem(s);
-                  listView7.Items.Add(item1);
-              }
-          }*/
         public void ClearSuit()
         {
             listView7.Items.Clear();
+            listView7.LargeImageList.Images.Clear();
         }
-        /* public void SetTypeShoeToWardrobe(string s)
-         {
-             bool q = true;
-             foreach (ListViewItem item in listView8.Items)
-             {
-                 if (item.Text == s) q = false;
-             }
-             if (q)
-             {
-                 ListViewItem item1 = new ListViewItem(s);
-                 listView8.Items.Add(item1);
-             }
-         }*/
         public void ClearShoe()
         {
             listView8.Items.Clear();
+            listView8.LargeImageList.Images.Clear();
         }
         public void SetColorToWardrobe(string s, int i)
         {
@@ -279,16 +227,16 @@ namespace wardrobe
             }
             catch { MessageBox.Show("opsup"); }
         }
-        private void Load_see_formUpDop(object sender, EventArgs e)
+        private void Load_see_formUpDop(string str)
         {
             try
             {
-                if (see_clothe.IsDisposed)
+                if (see_clotheDop.IsDisposed)
                 {
                     see_clotheDop = new Form7();
                     NewF7?.Invoke(this, EventArgs.Empty);
                 }
-                if (listView5.SelectedItems.Count > 0 && !see_clothe.Visible)
+                if (listView5.SelectedItems.Count > 0 && !see_clotheDop.Visible)
                 {
                     ListViewItem selectedItem = listView5.SelectedItems[0];
                     string s = selectedItem.ImageKey;
@@ -296,6 +244,7 @@ namespace wardrobe
                     setId = int.Parse(s1[0]);
                     see_clotheDop.MainForm = this;
                     listView5.SelectedIndices.Clear();
+                    see_clotheDop.act = str;
                     see_clotheDop.ShowDialog();
                 }
             }
@@ -324,6 +273,29 @@ namespace wardrobe
             }
             catch { MessageBox.Show("opsbottom"); }
         }
+        private void Load_see_formBottomDop(string str)
+        {
+            try
+            {
+                if (see_clotheDop.IsDisposed)
+                {
+                    see_clotheDop = new Form7();
+                    NewF7?.Invoke(this, EventArgs.Empty);
+                }
+                if (listView6.SelectedItems.Count > 0 && !see_clotheDop.Visible)
+                {
+                    ListViewItem selectedItem = listView6.SelectedItems[0];
+                    string s = selectedItem.Text;
+                    string[] s1 = s.Split('.');
+                    setId = int.Parse(s1[0]);
+                    see_clotheDop.MainForm = this;
+                    listView6.SelectedIndices.Clear();
+                    see_clotheDop.act = str;
+                    see_clotheDop.ShowDialog();
+                }
+            }
+            catch { MessageBox.Show("opsbottom"); }
+        }
 
         private void Load_see_formSuit(object sender, EventArgs e)
         {
@@ -347,6 +319,29 @@ namespace wardrobe
             }
             catch { MessageBox.Show("opssuit"); }
         }
+        private void Load_see_formSuitDop(string str)
+        {
+            try
+            {
+                if (see_clotheDop.IsDisposed)
+                {
+                    see_clotheDop = new Form7();
+                    NewF7?.Invoke(this, EventArgs.Empty);
+                }
+                if (listView7.SelectedItems.Count > 0 && !see_clotheDop.Visible)
+                {
+                    ListViewItem selectedItem = listView7.SelectedItems[0];
+                    string s = selectedItem.Text;
+                    string[] s1 = s.Split('.');
+                    setId = int.Parse(s1[0]);
+                    see_clotheDop.MainForm = this;
+                    listView7.SelectedIndices.Clear();
+                    see_clotheDop.act = str;
+                    see_clotheDop.ShowDialog();
+                }
+            }
+            catch { MessageBox.Show("opssuit"); }
+        }
 
         private void Load_see_formShoe(object sender, EventArgs e)
         {
@@ -366,6 +361,29 @@ namespace wardrobe
                     see_clothe.MainForm = this;
                     listView8.SelectedIndices.Clear();
                     see_clothe.ShowDialog();
+                }
+            }
+            catch { MessageBox.Show("opsshoe"); }
+        }
+        private void Load_see_formShoeDop(string str)
+        {
+            try
+            {
+                if (see_clotheDop.IsDisposed)
+                {
+                    see_clotheDop = new Form7();
+                    NewF7?.Invoke(this, EventArgs.Empty);
+                }
+                if (listView8.SelectedItems.Count > 0 && !see_clotheDop.Visible)
+                {
+                    ListViewItem selectedItem = listView8.SelectedItems[0];
+                    string s = selectedItem.Text;
+                    string[] s1 = s.Split('.');
+                    setId = int.Parse(s1[0]);
+                    see_clotheDop.MainForm = this;
+                    listView8.SelectedIndices.Clear();
+                    see_clotheDop.act = str;
+                    see_clotheDop.ShowDialog();
                 }
             }
             catch { MessageBox.Show("opsshoe"); }
@@ -523,59 +541,6 @@ namespace wardrobe
             }
             catch { }
         }
-        /*   public void ClearStyleBox()
-           {
-               comboBox3.Items.Clear();
-           }
-           public void ClearSeasonBox()
-           {
-               comboBox2.Items.Clear();
-           }
-           public void ClearColorBox()
-           {
-               comboBox1.Items.Clear();
-           }
-        */
-        /* private void filter_color(object sender, EventArgs e)
-          {
-              try
-              {
-
-                  //f_color.Add(comboBox1.SelectedItem.ToString());
-                  //  ListViewItem item1 = new ListViewItem(comboBox1.SelectedItem.ToString());
-                  //listView5.Items.Add(item1);
-                  foreach (ListItem l in FilterColorBox.Items)
-                  {
-                      //  if (l.IsChecked == true)
-                      //  f_color1.Add(l.Id);
-                  }
-                  //l = FilterColorBox.SelectedItem as ListItem;
-                  // f_color1.Add(l.Id);
-              }
-              catch { }
-          }
-
-          private void filter_season(object sender, EventArgs e)
-          {
-              try
-              {
-                  // f_season.Add(comboBox2.SelectedItem.ToString());
-                  //  ListViewItem item1 = new ListViewItem(comboBox2.SelectedItem.ToString());
-                  // listView5.Items.Add(item1);
-              }
-              catch { }
-          }
-
-          private void filter_style(object sender, EventArgs e)
-          {
-              try
-              {
-                  // f_style.Add(comboBox3.SelectedItem.ToString());
-                  // ListViewItem item1 = new ListViewItem(comboBox3.SelectedItem.ToString());
-                  // listView5.Items.Add(item1);
-              }
-              catch { }
-          }*/
 
         private void filter_Start(object sender, EventArgs e)
         {
@@ -1085,6 +1050,63 @@ namespace wardrobe
                     contextMenuStrip1.Show(listView5, e.Location);
                 }
             }
+        }
+
+        private void Load_see_formUpDopA(object sender, EventArgs e)
+        {
+            Load_see_formUpDop("Add");
+        }
+
+        private void Load_see_formUpDopD(object sender, EventArgs e)
+        {
+            Load_see_formUpDop("Delete");
+        }
+
+        private void Load_see_formUpDopE(object sender, EventArgs e)
+        {
+            Load_see_formUpDop("Edit");
+        }
+        private void Load_see_formBottomDopA(object sender, EventArgs e)
+        {
+            Load_see_formBottomDop("Add");
+        }
+
+        private void Load_see_formBottomDopD(object sender, EventArgs e)
+        {
+            Load_see_formBottomDop("Delete");
+        }
+
+        private void Load_see_formBottomDopE(object sender, EventArgs e)
+        {
+            Load_see_formBottomDop("Edit");
+        }
+        private void Load_see_formSuitDopA(object sender, EventArgs e)
+        {
+            Load_see_formSuitDop("Add");
+        }
+
+        private void Load_see_formSuitDopD(object sender, EventArgs e)
+        {
+            Load_see_formSuitDop("Delete");
+        }
+
+        private void Load_see_formSuitDopE(object sender, EventArgs e)
+        {
+            Load_see_formSuitDop("Edit");
+        }
+        private void Load_see_formShoeDopA(object sender, EventArgs e)
+        {
+            Load_see_formShoeDop("Add");
+        }
+
+        private void Load_see_formShoeDopD(object sender, EventArgs e)
+        {
+            Load_see_formShoeDop("Delete");
+        }
+
+        private void Load_see_formShoeDopE(object sender, EventArgs e)
+        {
+            Load_see_formShoeDop("Edit");
         }
     }
 }

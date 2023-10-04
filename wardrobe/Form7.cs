@@ -15,7 +15,6 @@ namespace wardrobe
         public Form7()
         {
             InitializeComponent();
-
         }
         public Form1 MainForm { get; set; }
         public event EventHandler<EventArgs> LoadF7;
@@ -26,6 +25,7 @@ namespace wardrobe
         public event EventHandler<EventArgs> LoadSeason;
         public event EventHandler<EventArgs> LoadColor;
         public event EventHandler<EventArgs> DeletePhoto;
+        public string act;
         public int cId { get; set; }
         public string newphoto { get; set; } = null;
         public string oldphoto { get; set; }
@@ -43,11 +43,39 @@ namespace wardrobe
         public string oldPlace { get; set; }
         public string newSize { get; set; }
         public string oldSize { get; set; }
+        public void AddC()
+        {
+            MainForm.see_clotheDop = this;
+            this.Text = "Добавление в комплект";
+            button1.Text = "Добавить";
+            button1.Click += AddToComplectBox;
+        }
+        public void DelC()
+        {
+            MainForm.see_clotheDop = this;
+            this.Text = "Удаление";
+            button1.Text = "Удалить";
+            button1.Click += delete;
+        }
+        public void EditC()
+        {
+            this.Text = "Редактирование";
+            button1.Text = "Сохранить";
+            button1.Click += SaveIt;
+            MainForm.see_clotheDop = this;
+            textBoxName.Enabled = true;
+            textBoxDate.Enabled = true;
+            textBoxPlace.Enabled = true;
+            textBoxSize.Enabled = true;
+            LoadEditStyle();
+            LoadEditSeason();
+            LoadEditColor();
+            LoadPhotoButton();
+        }
 
         System.Windows.Forms.ComboBox comboBoxStyle;
         System.Windows.Forms.ComboBox comboBoxSeason;
         System.Windows.Forms.ComboBox comboBoxColor;
-        System.Windows.Forms.Button buttonPhoto;
         public void SetSeason(string s)
         {
             textBoxSeason.Text = s;
@@ -101,13 +129,20 @@ namespace wardrobe
             oldphoto = s;
         }
 
-        private void LoadFm3(object sender, EventArgs e)
+        private void LoadFm7(object sender, EventArgs e)
         {
 
             try
             {
                 LoadF7?.Invoke(this, EventArgs.Empty);
                 cId = MainForm.setId;
+                if (act == "Add")
+                    AddC();
+                else if (act == "Delete")
+                    DelC();
+                else if (act == "Edit")
+                    EditC();
+
             }
             catch (Exception ex)
             {
@@ -117,9 +152,11 @@ namespace wardrobe
 
         private void AddToComplectBox(object sender, EventArgs e)
         {
-            MainForm.see_clotheDop = this;
+            button1.Click -= AddToComplectBox;
+            // MainForm.see_clotheDop = this;
             AddToCom?.Invoke(this, EventArgs.Empty);
             this.Close();
+            this.Dispose();
         }
 
         private void edit_item(object sender, EventArgs e)
@@ -127,7 +164,7 @@ namespace wardrobe
             button1.Text = "Сохранить";
             button1.Click -= edit_item;
             button1.Click += SaveIt;
-            MainForm.see_clotheDop = this;
+            //  MainForm.see_clotheDop = this;
             textBoxName.Enabled = true;
             textBoxDate.Enabled = true;
             textBoxPlace.Enabled = true;
@@ -139,13 +176,13 @@ namespace wardrobe
         }
         void LoadPhotoButton()
         {
-            MainForm.see_clotheDop = this;
+            // MainForm.see_clotheDop = this;
             //  buttonPhoto = new System.Windows.Forms.Button();
             button3Photo.Visible = true;
-            buttonPhoto.Text = "изменить фото";
+            button3Photo.Text = "изменить фото";
             // this.Controls.Remove(button1);
             // this.Controls.Add(buttonPhoto);
-            buttonPhoto.Click += buttonPhoto_Click;
+            button3Photo.Click += buttonPhoto_Click;
 
         }
         void LoadEditStyle()
@@ -195,20 +232,23 @@ namespace wardrobe
         }
         private void delete(object sender, EventArgs e)
         {
-            MainForm.see_clotheDop = this;
+            button1.Click -= delete;
+            // MainForm.see_clotheDop = this;
             DialogResult result = MessageBox.Show("вы действительно хотите удалить\n " + textBoxName.Text + " из гардероба", "подтвердите", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 pictureBox1.Image.Dispose();
                 DeleteItem?.Invoke(this, EventArgs.Empty);
                 this.Close();
+                this.Dispose();
                 MessageBox.Show("одежда  удалена!");
             }
         }
 
         private void SaveIt(object sender, EventArgs e)
         {
-            MainForm.see_clotheDop = this;
+            button1.Click -= SaveIt;
+            // MainForm.see_clotheDop = this;
             DialogResult result = MessageBox.Show("вы хотите сохранить изменения\n если изменили фото, то старое будет удалено", "подтвердите", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
@@ -230,10 +270,11 @@ namespace wardrobe
                 }
             }
             this.Close();
+            this.Dispose();
         }
         private void buttonPhoto_Click(object sender, EventArgs e)
         {
-            MainForm.see_clotheDop = this;
+            // MainForm.see_clotheDop = this;
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.Filter = "Image files (*.jpg, *.jpeg, *.png, *.gif)|*.jpg;*.jpeg;*.png;*.gif";
@@ -259,6 +300,12 @@ namespace wardrobe
         private void Cancel(object sender, EventArgs e)
         {
             this.Close();
+            this.Dispose();
+        }
+
+        private void Form7_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

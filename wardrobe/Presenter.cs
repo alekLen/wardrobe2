@@ -22,7 +22,7 @@ namespace wardrobe
     {
         private readonly IForm1 form;
         string targetFilePath="";
-               
+        string PhotoToDelete = "";      
         public Presenter(IForm1 f)
         {
             form = f;
@@ -60,13 +60,13 @@ namespace wardrobe
             form.see_clothe.DeletePhoto += new EventHandler<EventArgs>(DelPhoto);
             form.see_clothe.EditItem += new EventHandler<EventArgs>(EditItem);
             form.see_clotheDop.LoadF7 += new EventHandler<EventArgs>(LoadSeeDopForm);
-            form.see_clotheDop.AddToCom += new EventHandler<EventArgs>(AddToChose);
-            form.see_clotheDop.DeleteItem += new EventHandler<EventArgs>(DeleteItemFromWardrobe);
+            form.see_clotheDop.AddToCom += new EventHandler<EventArgs>(AddToChoseDop);
+            form.see_clotheDop.DeleteItem += new EventHandler<EventArgs>(DeleteItemFromWardrobeDop);
             form.see_clotheDop.LoadStyle += new EventHandler<EventArgs>(LoadStyleToEdit);
             form.see_clotheDop.LoadSeason += new EventHandler<EventArgs>(LoadSeasonToEdit);
             form.see_clotheDop.LoadColor += new EventHandler<EventArgs>(LoadColorToEdit);
-            form.see_clotheDop.DeletePhoto += new EventHandler<EventArgs>(DelPhoto);
-            form.see_clotheDop.EditItem += new EventHandler<EventArgs>(EditItem);
+            form.see_clotheDop.DeletePhoto += new EventHandler<EventArgs>(DelPhotoDop);
+            form.see_clotheDop.EditItem += new EventHandler<EventArgs>(EditItemDop);
             form.edit_form.LoadEditStyle += new EventHandler<EventArgs>(LoadStyleToEdit);
             form.edit_form.LoadEditSeason += new EventHandler<EventArgs>(LoadSeasonToEdit);
             form.edit_form.LoadEditColor += new EventHandler<EventArgs>(LoadColorToEdit);
@@ -190,12 +190,11 @@ namespace wardrobe
                 {
                     var query = from b in db.clothes_items
                                 where b.type.Type_name == "верх"
-                                select b.Id + "." + b.Clothes_Item_name + "*" + b.photo;//"___" + b.color.Color_name + "___" + b.style.Style_name + "___" +b.season.Season_name;
+                                select b.Id + "." + b.Clothes_Item_name + "*" + b.photo;
                     foreach (var i in query)
                     {
                         string[] st = i.Split('*');
-                        form.SetTypeUpToWardrobe(st[1], st[0]);                        
-                      //  form.ListViewUpInput(st[1], st[0]);
+                        form.SetTypeUpToWardrobe(st[1], st[0]);                                             
                     }
                 }
             }
@@ -388,8 +387,8 @@ namespace wardrobe
             try
             {
                     form.ClearUp();
-                    Load_Up(sender, e);
-                    form.ClearBottom();
+                   Load_Up(sender, e);             
+                   form.ClearBottom();
                     Load_Bottom(sender, e);
                     form.ClearSuit();
                     Load_Suit(sender, e);
@@ -434,6 +433,8 @@ namespace wardrobe
                         form.see_clothe.SetSeasonToEdit(s);
                     if (sender is Form4)
                         form.edit_form.SetCategory(s);
+                    if (sender is Form7)
+                        form.see_clotheDop.SetSeasonToEdit(s);
                 }
             }
             catch (Exception ex)
@@ -492,6 +493,8 @@ namespace wardrobe
                         form.see_clothe.SetStyleToEdit(s);
                     if (sender is Form4)
                         form.edit_form.SetCategory(s);
+                    if (sender is Form7)
+                        form.see_clotheDop.SetStyleToEdit(s);
                 }
             }
             catch (Exception ex)
@@ -550,6 +553,8 @@ namespace wardrobe
                         form.see_clothe.SetColorToEdit(s);
                     if (sender is Form4)
                         form.edit_form.SetCategory(s);
+                    if (sender is Form7)
+                        form.see_clotheDop.SetColorToEdit(s);
                 }
             }
             catch (Exception ex)
@@ -708,7 +713,7 @@ namespace wardrobe
             form.complects_show_form.TakePhoto += new EventHandler<EventArgs>(TakePhoto);
             form.complects_show_form.DeleteComplect += new EventHandler<EventArgs>(DeleteComplect);
         }
-        public void AddToChose(object sender, EventArgs e)
+        public void Chose(int id)
         {
             try
             {
@@ -716,9 +721,9 @@ namespace wardrobe
                 using (db)
                 {
                     var query = (from b in db.clothes_items
-                                where b.Id == form.see_clothe.cId
-                                select b.type.Type_name+"|"+ b.photo + "|" + b.Id + "." + b.Clothes_Item_name).Single();
-                  form.Ids.Add(form.see_clothe.cId);
+                                 where b.Id == id
+                                 select b.type.Type_name + "|" + b.photo + "|" + b.Id + "." + b.Clothes_Item_name).Single();
+                    form.Ids.Add(id);
                     string[] s = query.Split('|');
                     if (s[0] == "верх")
                     {
@@ -748,18 +753,54 @@ namespace wardrobe
                 MessageBox.Show(ex.Message);
             }
         }
+        public void AddToChose(object sender, EventArgs e)
+        {
+            Chose(form.see_clothe.cId);
+          
+        }
+        public void AddToChoseDop(object sender, EventArgs e)
+        {
+            Chose(form.see_clotheDop.cId);
+          
+        }
         public void NewSDopForm(object sender, EventArgs e)
         {
-            form.see_clotheDop.LoadF7 += new EventHandler<EventArgs>(LoadSeeForm);
-            form.see_clotheDop.AddToCom += new EventHandler<EventArgs>(AddToChose);
-            form.see_clotheDop.DeleteItem += new EventHandler<EventArgs>(DeleteItemFromWardrobe);
+            form.see_clotheDop.LoadF7 += new EventHandler<EventArgs>(LoadSeeDopForm);
+            form.see_clotheDop.AddToCom += new EventHandler<EventArgs>(AddToChoseDop);
+            form.see_clotheDop.DeleteItem += new EventHandler<EventArgs>(DeleteItemFromWardrobeDop);
             form.see_clotheDop.LoadStyle += new EventHandler<EventArgs>(LoadStyleToEdit);
             form.see_clotheDop.LoadSeason += new EventHandler<EventArgs>(LoadSeasonToEdit);
             form.see_clotheDop.LoadColor += new EventHandler<EventArgs>(LoadColorToEdit);
-            form.see_clotheDop.DeletePhoto += new EventHandler<EventArgs>(DelPhoto);
-            form.see_clotheDop.EditItem += new EventHandler<EventArgs>(EditItem);
+            form.see_clotheDop.DeletePhoto += new EventHandler<EventArgs>(DelPhotoDop);
+            form.see_clotheDop.EditItem += new EventHandler<EventArgs>(EditItemDop);
         }
         public void DeleteItemFromWardrobe(object sender, EventArgs e)
+        {
+            try
+            {
+                DeleteItem(form.see_clothe.cId);
+                    UpdateFm1(sender, e);
+                deletePhoto(PhotoToDelete);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void DeleteItemFromWardrobeDop(object sender, EventArgs e)
+        {
+            try
+            {
+                DeleteItem(form.see_clotheDop.cId);
+                UpdateFm1(sender, e);
+                deletePhoto(PhotoToDelete);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        void DeleteItem(int id)
         {
             try
             {
@@ -767,15 +808,14 @@ namespace wardrobe
                 using (db)
                 {
                     var q = (from b in db.clothes_items
-                                 where b.Id == form.see_clothe.cId
-                                 select b.photo).Single();
-                    deletePhoto(q);
-                    var query = (from b in db.clothes_items
-                                 where b.Id == form.see_clothe.cId
-                                select b).Single();
+                             where b.Id == id
+                             select b.photo).Single();
+                    PhotoToDelete = q;
+                     var query = (from b in db.clothes_items
+                                 where b.Id == id
+                                 select b).Single();
                     db.Remove(query);
-                    db.SaveChanges();
-                    UpdateFm1(sender, e);
+                    db.SaveChanges();                   
                 }
             }
             catch (Exception ex)
@@ -801,6 +841,25 @@ namespace wardrobe
                 MessageBox.Show(ex.Message);
             }
         }
+        public void DelPhotoDop(object sender, EventArgs e)
+        {
+            try
+            {
+                Wardrobe_Context db = Get_db();
+                using (db)
+                {
+                    var q = (from b in db.clothes_items
+                             where b.Id == form.see_clotheDop.cId
+                             select b.photo).Single();
+                    deletePhoto(q);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         public void EditItem(object sender, EventArgs e)
         {
             try
@@ -854,6 +913,67 @@ namespace wardrobe
                         q.photo = form.see_clothe.newphoto;
                     }
                         db.SaveChanges();
+                    UpdateFm1(sender, e);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void EditItemDop(object sender, EventArgs e)
+        {
+            try
+            {
+                Wardrobe_Context db = Get_db();
+                using (db)
+                {
+                    var q = (from b in db.clothes_items
+                             where b.Id == form.see_clotheDop.cId
+                             select b).Single();
+                    if (form.see_clotheDop.newSeason != form.see_clotheDop.oldSeason)
+                    {
+                        var query1 = (from b in db.seasons
+                                      where b.Season_name == form.see_clotheDop.newSeason
+                                      select b).Single();
+                        q.season = query1;
+                    }
+                    if (form.see_clotheDop.newStyle != form.see_clotheDop.oldStyle)
+                    {
+                        var query1 = (from b in db.clothes_styles
+                                      where b.Style_name == form.see_clotheDop.newStyle
+                                      select b).Single();
+                        q.style = query1;
+                    }
+                    if (form.see_clotheDop.newColor != form.see_clotheDop.oldColor)
+                    {
+                        var query1 = (from b in db.colors
+                                      where b.Color_name == form.see_clotheDop.newColor
+                                      select b).Single();
+                        q.color = query1;
+                    }
+                    if (form.see_clotheDop.newName != form.see_clotheDop.oldName)
+                    {
+                        q.Clothes_Item_name = form.see_clotheDop.newName;
+                    }
+                    if (form.see_clotheDop.newDate != form.see_clotheDop.oldDate)
+                    {
+                        q.date = form.see_clotheDop.newDate;
+                    }
+                    if (form.see_clotheDop.newPlace != form.see_clotheDop.oldPlace)
+                    {
+                        q.place = form.see_clotheDop.newPlace;
+                    }
+                    if (form.see_clotheDop.newSize != form.see_clotheDop.oldSize)
+                    {
+                        q.size = form.see_clotheDop.newSize;
+                    }
+                    if (form.see_clotheDop.newphoto != form.see_clotheDop.oldphoto && form.see_clotheDop.newphoto != null)
+                    {
+                        savePhoto(form.see_clotheDop.newphoto);
+                        q.photo = form.see_clotheDop.newphoto;
+                    }
+                    db.SaveChanges();
                     UpdateFm1(sender, e);
                 }
             }

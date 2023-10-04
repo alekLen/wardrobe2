@@ -92,10 +92,19 @@
             удалитьToolStripMenuItem = new ToolStripMenuItem();
             listView6 = new ListView();
             contextMenuStrip2 = new ContextMenuStrip(components);
+            добавитьВКомплектToolStripMenuItem1 = new ToolStripMenuItem();
+            редактироватьToolStripMenuItem1 = new ToolStripMenuItem();
+            удалитьToolStripMenuItem1 = new ToolStripMenuItem();
             listView7 = new ListView();
             contextMenuStrip3 = new ContextMenuStrip(components);
+            добавитьВКомплектToolStripMenuItem2 = new ToolStripMenuItem();
+            редактироватьToolStripMenuItem2 = new ToolStripMenuItem();
+            удалитьToolStripMenuItem2 = new ToolStripMenuItem();
             listView8 = new ListView();
             contextMenuStrip4 = new ContextMenuStrip(components);
+            добавитьВКомплектToolStripMenuItem3 = new ToolStripMenuItem();
+            редактироватьToolStripMenuItem3 = new ToolStripMenuItem();
+            удалиToolStripMenuItem = new ToolStripMenuItem();
             label21 = new Label();
             label22 = new Label();
             label23 = new Label();
@@ -107,6 +116,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             contextMenuStrip1.SuspendLayout();
+            contextMenuStrip2.SuspendLayout();
+            contextMenuStrip3.SuspendLayout();
+            contextMenuStrip4.SuspendLayout();
             SuspendLayout();
             // 
             // pictureBox1
@@ -608,19 +620,21 @@
             добавитьВКомплектToolStripMenuItem.Name = "добавитьВКомплектToolStripMenuItem";
             добавитьВКомплектToolStripMenuItem.Size = new Size(226, 24);
             добавитьВКомплектToolStripMenuItem.Text = "Добавить в комплект";
-            добавитьВКомплектToolStripMenuItem.Click += Load_see_formUpDop;
+            добавитьВКомплектToolStripMenuItem.Click += Load_see_formUpDopA;
             // 
             // редактироватьToolStripMenuItem
             // 
             редактироватьToolStripMenuItem.Name = "редактироватьToolStripMenuItem";
             редактироватьToolStripMenuItem.Size = new Size(226, 24);
             редактироватьToolStripMenuItem.Text = "Редактировать";
+            редактироватьToolStripMenuItem.Click += Load_see_formUpDopE;
             // 
             // удалитьToolStripMenuItem
             // 
             удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
             удалитьToolStripMenuItem.Size = new Size(226, 24);
             удалитьToolStripMenuItem.Text = "Удалить";
+            удалитьToolStripMenuItem.Click += Load_see_formUpDopD;
             // 
             // listView6
             // 
@@ -635,8 +649,30 @@
             // contextMenuStrip2
             // 
             contextMenuStrip2.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip2.Items.AddRange(new ToolStripItem[] { добавитьВКомплектToolStripMenuItem1, редактироватьToolStripMenuItem1, удалитьToolStripMenuItem1 });
             contextMenuStrip2.Name = "contextMenuStrip2";
-            contextMenuStrip2.Size = new Size(61, 4);
+            contextMenuStrip2.Size = new Size(227, 76);
+            // 
+            // добавитьВКомплектToolStripMenuItem1
+            // 
+            добавитьВКомплектToolStripMenuItem1.Name = "добавитьВКомплектToolStripMenuItem1";
+            добавитьВКомплектToolStripMenuItem1.Size = new Size(226, 24);
+            добавитьВКомплектToolStripMenuItem1.Text = "Добавить в комплект";
+            добавитьВКомплектToolStripMenuItem1.Click += Load_see_formBottomDopA;
+            // 
+            // редактироватьToolStripMenuItem1
+            // 
+            редактироватьToolStripMenuItem1.Name = "редактироватьToolStripMenuItem1";
+            редактироватьToolStripMenuItem1.Size = new Size(226, 24);
+            редактироватьToolStripMenuItem1.Text = "Редактировать";
+            редактироватьToolStripMenuItem1.Click += Load_see_formBottomDopE;
+            // 
+            // удалитьToolStripMenuItem1
+            // 
+            удалитьToolStripMenuItem1.Name = "удалитьToolStripMenuItem1";
+            удалитьToolStripMenuItem1.Size = new Size(226, 24);
+            удалитьToolStripMenuItem1.Text = "Удалить";
+            удалитьToolStripMenuItem1.Click += Load_see_formBottomDopD;
             // 
             // listView7
             // 
@@ -651,8 +687,30 @@
             // contextMenuStrip3
             // 
             contextMenuStrip3.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip3.Items.AddRange(new ToolStripItem[] { добавитьВКомплектToolStripMenuItem2, редактироватьToolStripMenuItem2, удалитьToolStripMenuItem2 });
             contextMenuStrip3.Name = "contextMenuStrip3";
-            contextMenuStrip3.Size = new Size(61, 4);
+            contextMenuStrip3.Size = new Size(227, 76);
+            // 
+            // добавитьВКомплектToolStripMenuItem2
+            // 
+            добавитьВКомплектToolStripMenuItem2.Name = "добавитьВКомплектToolStripMenuItem2";
+            добавитьВКомплектToolStripMenuItem2.Size = new Size(226, 24);
+            добавитьВКомплектToolStripMenuItem2.Text = "Добавить в комплект";
+            добавитьВКомплектToolStripMenuItem2.Click += Load_see_formSuitDopA;
+            // 
+            // редактироватьToolStripMenuItem2
+            // 
+            редактироватьToolStripMenuItem2.Name = "редактироватьToolStripMenuItem2";
+            редактироватьToolStripMenuItem2.Size = new Size(226, 24);
+            редактироватьToolStripMenuItem2.Text = "Редактировать";
+            редактироватьToolStripMenuItem2.Click += Load_see_formSuitDopE;
+            // 
+            // удалитьToolStripMenuItem2
+            // 
+            удалитьToolStripMenuItem2.Name = "удалитьToolStripMenuItem2";
+            удалитьToolStripMenuItem2.Size = new Size(226, 24);
+            удалитьToolStripMenuItem2.Text = "Удалить";
+            удалитьToolStripMenuItem2.Click += Load_see_formSuitDopD;
             // 
             // listView8
             // 
@@ -667,8 +725,30 @@
             // contextMenuStrip4
             // 
             contextMenuStrip4.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip4.Items.AddRange(new ToolStripItem[] { добавитьВКомплектToolStripMenuItem3, редактироватьToolStripMenuItem3, удалиToolStripMenuItem });
             contextMenuStrip4.Name = "contextMenuStrip4";
-            contextMenuStrip4.Size = new Size(61, 4);
+            contextMenuStrip4.Size = new Size(227, 104);
+            // 
+            // добавитьВКомплектToolStripMenuItem3
+            // 
+            добавитьВКомплектToolStripMenuItem3.Name = "добавитьВКомплектToolStripMenuItem3";
+            добавитьВКомплектToolStripMenuItem3.Size = new Size(226, 24);
+            добавитьВКомплектToolStripMenuItem3.Text = "Добавить в комплект";
+            добавитьВКомплектToolStripMenuItem3.Click += Load_see_formShoeDopA;
+            // 
+            // редактироватьToolStripMenuItem3
+            // 
+            редактироватьToolStripMenuItem3.Name = "редактироватьToolStripMenuItem3";
+            редактироватьToolStripMenuItem3.Size = new Size(226, 24);
+            редактироватьToolStripMenuItem3.Text = "Редактировать";
+            редактироватьToolStripMenuItem3.Click += Load_see_formShoeDopE;
+            // 
+            // удалиToolStripMenuItem
+            // 
+            удалиToolStripMenuItem.Name = "удалиToolStripMenuItem";
+            удалиToolStripMenuItem.Size = new Size(226, 24);
+            удалиToolStripMenuItem.Text = "Удалить";
+            удалиToolStripMenuItem.Click += Load_see_formShoeDopD;
             // 
             // label21
             // 
@@ -783,6 +863,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             contextMenuStrip1.ResumeLayout(false);
+            contextMenuStrip2.ResumeLayout(false);
+            contextMenuStrip3.ResumeLayout(false);
+            contextMenuStrip4.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -859,5 +942,14 @@
         private ContextMenuStrip contextMenuStrip2;
         private ContextMenuStrip contextMenuStrip3;
         private ContextMenuStrip contextMenuStrip4;
+        private ToolStripMenuItem добавитьВКомплектToolStripMenuItem1;
+        private ToolStripMenuItem редактироватьToolStripMenuItem1;
+        private ToolStripMenuItem удалитьToolStripMenuItem1;
+        private ToolStripMenuItem добавитьВКомплектToolStripMenuItem2;
+        private ToolStripMenuItem редактироватьToolStripMenuItem2;
+        private ToolStripMenuItem удалитьToolStripMenuItem2;
+        private ToolStripMenuItem добавитьВКомплектToolStripMenuItem3;
+        private ToolStripMenuItem редактироватьToolStripMenuItem3;
+        private ToolStripMenuItem удалиToolStripMenuItem;
     }
 }

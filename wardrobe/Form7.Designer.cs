@@ -189,6 +189,7 @@
             button2.TabIndex = 18;
             button2.Text = "Отмена";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += Cancel;
             // 
             // button3Photo
             // 
@@ -229,7 +230,8 @@
             Name = "Form7";
             Text = "Предмет одежды";
             TopMost = true;
-            Load += LoadFm3;
+            FormClosed += Form7_FormClosed;
+            Load += LoadFm7;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
