@@ -32,6 +32,7 @@
             textBox1 = new TextBox();
             label2 = new Label();
             button1 = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // textBox1
@@ -52,7 +53,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(41, 348);
+            button1.Location = new Point(271, 339);
             button1.Name = "button1";
             button1.Size = new Size(296, 29);
             button1.TabIndex = 6;
@@ -60,11 +61,21 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += Save_Complect;
             // 
+            // button2
+            // 
+            button2.Location = new Point(41, 339);
+            button2.Name = "button2";
+            button2.Size = new Size(204, 29);
+            button2.TabIndex = 7;
+            button2.Text = "Отмена";
+            button2.UseVisualStyleBackColor = true;
+            // 
             // Form5
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(768, 450);
+            ClientSize = new Size(768, 399);
+            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(textBox1);
@@ -72,6 +83,7 @@
             MaximizeBox = false;
             Name = "Form5";
             Text = "добаление комплекта в альбом";
+            FormClosed += Form5_FormClosed;
             Load += LoadF5;
             ResumeLayout(false);
             PerformLayout();
@@ -81,5 +93,6 @@
         private TextBox textBox1;
         private Label label2;
         private Button button1;
+        private Button button2;
     }
 }

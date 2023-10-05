@@ -201,7 +201,7 @@ namespace wardrobe
                 NewF2?.Invoke(this, EventArgs.Empty);
             }
             add_clothe.MainForm = this;
-            add_clothe.Show();
+            add_clothe.ShowDialog();
         }
 
         private void Load_see_formUp(object sender, EventArgs e)
@@ -401,7 +401,7 @@ namespace wardrobe
                 edit_form.MainForm = this;
                 edit_form.category = "style";
                 edit_form.action = "edit";
-                edit_form.Show();
+                edit_form.ShowDialog();
             }
             catch { }
         }
@@ -418,7 +418,7 @@ namespace wardrobe
                 edit_form.MainForm = this;
                 edit_form.category = "style";
                 edit_form.action = "delete";
-                edit_form.Show();
+                edit_form.ShowDialog();
             }
             catch { }
         }
@@ -435,7 +435,7 @@ namespace wardrobe
                 edit_form.MainForm = this;
                 edit_form.category = "style";
                 edit_form.action = "add";
-                edit_form.Show();
+                edit_form.ShowDialog();
             }
             catch { }
         }
@@ -452,7 +452,7 @@ namespace wardrobe
                 edit_form.MainForm = this;
                 edit_form.category = "season";
                 edit_form.action = "delete";
-                edit_form.Show();
+                edit_form.ShowDialog();
             }
             catch { }
         }
@@ -469,7 +469,7 @@ namespace wardrobe
                 edit_form.MainForm = this;
                 edit_form.category = "season";
                 edit_form.action = "edit";
-                edit_form.Show();
+                edit_form.ShowDialog();
             }
             catch { }
         }
@@ -486,7 +486,7 @@ namespace wardrobe
                 edit_form.MainForm = this;
                 edit_form.category = "season";
                 edit_form.action = "add";
-                edit_form.Show();
+                edit_form.ShowDialog();
             }
             catch { }
         }
@@ -503,7 +503,7 @@ namespace wardrobe
                 edit_form.MainForm = this;
                 edit_form.category = "color";
                 edit_form.action = "delete";
-                edit_form.Show();
+                edit_form.ShowDialog();
             }
             catch { }
         }
@@ -520,7 +520,7 @@ namespace wardrobe
                 edit_form.MainForm = this;
                 edit_form.category = "color";
                 edit_form.action = "edit";
-                edit_form.Show();
+                edit_form.ShowDialog();
             }
             catch { }
         }
@@ -537,7 +537,7 @@ namespace wardrobe
                 edit_form.MainForm = this;
                 edit_form.category = "color";
                 edit_form.action = "add";
-                edit_form.Show();
+                edit_form.ShowDialog();
             }
             catch { }
         }
@@ -579,7 +579,7 @@ namespace wardrobe
                 complect_form.F5Close += new EventHandler<EventArgs>(F5Close);
             }
             complect_form.MainForm = this;
-            complect_form.Show();
+            complect_form.ShowDialog();
         }
 
         private void del_Choosen_Up(object sender, EventArgs e)

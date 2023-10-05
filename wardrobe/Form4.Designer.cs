@@ -34,6 +34,7 @@
             button1 = new Button();
             textBox1 = new TextBox();
             label2 = new Label();
+            button2 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -62,7 +63,7 @@
             button1.Name = "button1";
             button1.Size = new Size(191, 29);
             button1.TabIndex = 5;
-            button1.Text = "изменить";
+            button1.Text = "Изменить";
             button1.UseVisualStyleBackColor = false;
             // 
             // textBox1
@@ -80,12 +81,23 @@
             label2.Size = new Size(0, 20);
             label2.TabIndex = 7;
             // 
+            // button2
+            // 
+            button2.Location = new Point(21, 106);
+            button2.Name = "button2";
+            button2.Size = new Size(166, 29);
+            button2.TabIndex = 8;
+            button2.Text = "Отмена";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form4
             // 
             AcceptButton = button1;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(428, 163);
+            Controls.Add(button2);
             Controls.Add(label2);
             Controls.Add(textBox1);
             Controls.Add(button1);
@@ -96,6 +108,7 @@
             MaximizeBox = false;
             Name = "Form4";
             Text = "Form4";
+            FormClosed += Form4_FormClosed;
             Load += Load_Form4;
             ResumeLayout(false);
             PerformLayout();
@@ -108,5 +121,6 @@
         private Button button1;
         private TextBox textBox1;
         private Label label2;
+        private Button button2;
     }
 }

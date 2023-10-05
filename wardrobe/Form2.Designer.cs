@@ -286,6 +286,7 @@
             Name = "Form2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Добавление одежды";
+            FormClosed += Form2_FormClosed;
             Load += LoadForm2;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

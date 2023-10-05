@@ -37,30 +37,31 @@ namespace wardrobe
         public Form4()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void Load_Form4(object sender, EventArgs e)
         {
             if (action == "edit")
             {
-                this.Text = "редактирование";
+                this.Text = "Редактирование";
                 textBox1.Enabled = true;
-                button1.Text = "изменить";
+                button1.Text = "Изменить";
                 if (category == "style")
                 {
-                    label1.Text = "стили";
+                    label1.Text = "Стили";
                     LoadEditStyle?.Invoke(this, EventArgs.Empty);
                     button1.Click += editStyle;
                 }
                 if (category == "season")
                 {
-                    label1.Text = "сезоны";
+                    label1.Text = "Сезоны";
                     LoadEditSeason?.Invoke(this, EventArgs.Empty);
                     button1.Click += editSeason;
                 }
                 if (category == "color")
                 {
-                    label1.Text = "цвета";
+                    label1.Text = "Цвета";
                     LoadEditColor?.Invoke(this, EventArgs.Empty);
                     button1.Click += editColor;
                 }
@@ -68,24 +69,24 @@ namespace wardrobe
             }
             if (action == "delete")
             {
-                this.Text = "удаление";
+                this.Text = "Удаление";
                 textBox1.Enabled = false;
-                button1.Text = "удалить";
+                button1.Text = "Удалить";
                 if (category == "style")
                 {
-                    label1.Text = "стили";
+                    label1.Text = "Стили";
                     LoadEditStyle?.Invoke(this, EventArgs.Empty);
                     button1.Click += deleteStyle;
                 }
                 if (category == "season")
                 {
-                    label1.Text = "сезоны";
+                    label1.Text = "Сезоны";
                     LoadEditSeason?.Invoke(this, EventArgs.Empty);
                     button1.Click += deleteSeason;
                 }
                 if (category == "color")
                 {
-                    label1.Text = "цвета";
+                    label1.Text = "Цвета";
                     LoadEditColor?.Invoke(this, EventArgs.Empty);
                     button1.Click += deleteColor;
                 }
@@ -93,28 +94,28 @@ namespace wardrobe
             }
             if (action == "add")
             {
-                this.Text = "добавление";
+                this.Text = "Добавление";
                 textBox1.Enabled = true;
-                button1.Text = "добавить";
+                button1.Text = "Добавить";
                 CreateList();
                 if (category == "style")
                 {
-                    label1.Text = "стили";
-                    label2.Text = "новый стиль";
+                    label1.Text = "Стили";
+                    label2.Text = "Новый стиль";
                     LoadShowStyle?.Invoke(this, EventArgs.Empty);
                     button1.Click += addStyle;
                 }
                 if (category == "season")
                 {
-                    label1.Text = "сезоны";
-                    label2.Text = "новый сезон";
+                    label1.Text = "Сезоны";
+                    label2.Text = "Новый сезон";
                     LoadShowSeason?.Invoke(this, EventArgs.Empty);
                     button1.Click += addSeason;
                 }
                 if (category == "color")
                 {
-                    label1.Text = "цвета";
-                    label2.Text = "новый цвет";
+                    label1.Text = "Цвета";
+                    label2.Text = "Новый цвет";
                     LoadShowColor?.Invoke(this, EventArgs.Empty);
                     button1.Click += addColor;
                 }
@@ -216,6 +217,16 @@ namespace wardrobe
                 this.Close();
                 MessageBox.Show("цвет удален!");
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Form4_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

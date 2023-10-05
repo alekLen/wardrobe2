@@ -33,6 +33,7 @@ namespace wardrobe
             //date = dateTimePicker1.Value.Date;
             date = dateTimePicker1.Value.ToString("dd.MM.yyyy");
             pictureBox1.Image = Image.FromFile("Photos/camera.png");
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void LoadForm2(object sender, EventArgs e)
@@ -130,6 +131,12 @@ namespace wardrobe
             Form8 f = new Form8();
             f.MainForm2 = this;
             f.ShowDialog();
+        }
+
+        private void Form2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            pictureBox1.Image.Dispose();
+            this.Dispose();
         }
     }
 }

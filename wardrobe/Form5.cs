@@ -22,6 +22,7 @@ namespace wardrobe
         public Form5()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void LoadF5(object sender, EventArgs e)
@@ -62,6 +63,11 @@ namespace wardrobe
             {
                 MessageBox.Show("введите название комплекта!");
             }
+        }
+
+        private void Form5_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

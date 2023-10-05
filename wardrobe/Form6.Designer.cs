@@ -42,6 +42,7 @@
             MaximizeBox = false;
             Name = "Form6";
             Text = "комплекты";
+            FormClosed += Form6_FormClosed;
             Load += LoadF6;
             ResumeLayout(false);
         }

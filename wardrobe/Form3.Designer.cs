@@ -255,6 +255,7 @@
             MaximizeBox = false;
             Name = "Form3";
             Text = "Предмет одежды";
+            FormClosed += Form3_FormClosed;
             Load += LoadFm3;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

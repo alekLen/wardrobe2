@@ -48,6 +48,7 @@ namespace wardrobe
         public Form3()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         public void SetSeason(string s)
@@ -270,6 +271,12 @@ namespace wardrobe
             Form8 f = new Form8();
             f.MainForm3 = this;
             f.ShowDialog();
+        }
+
+        private void Form3_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            pictureBox1.Image.Dispose();
+            this.Dispose();
         }
     }
 }

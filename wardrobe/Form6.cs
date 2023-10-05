@@ -28,6 +28,7 @@ namespace wardrobe
         public Form6()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void LoadF6(object sender, EventArgs e)
@@ -90,6 +91,11 @@ namespace wardrobe
                 DeleteComplect?.Invoke(this, new EventArgs());
                 this.Close();
             }
+        }
+
+        private void Form6_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

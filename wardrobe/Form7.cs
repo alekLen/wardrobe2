@@ -15,6 +15,7 @@ namespace wardrobe
         public Form7()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
         public Form1 MainForm { get; set; }
         public event EventHandler<EventArgs> LoadF7;
