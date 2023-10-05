@@ -110,6 +110,10 @@
             label23 = new Label();
             label24 = new Label();
             label25 = new Label();
+            label26 = new Label();
+            pictureBox5 = new PictureBox();
+            listView1 = new ListView();
+            listBox5 = new ListBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -119,6 +123,7 @@
             contextMenuStrip2.SuspendLayout();
             contextMenuStrip3.SuspendLayout();
             contextMenuStrip4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -137,7 +142,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { editToolStripMenuItem2, wardrobeToolStripMenuItem, statisticToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1615, 28);
+            menuStrip1.Size = new Size(1847, 28);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -727,7 +732,7 @@
             contextMenuStrip4.ImageScalingSize = new Size(20, 20);
             contextMenuStrip4.Items.AddRange(new ToolStripItem[] { добавитьВКомплектToolStripMenuItem3, редактироватьToolStripMenuItem3, удалиToolStripMenuItem });
             contextMenuStrip4.Name = "contextMenuStrip4";
-            contextMenuStrip4.Size = new Size(227, 104);
+            contextMenuStrip4.Size = new Size(227, 76);
             // 
             // добавитьВКомплектToolStripMenuItem3
             // 
@@ -800,11 +805,50 @@
             label25.TabIndex = 63;
             label25.Text = "Костюм";
             // 
+            // label26
+            // 
+            label26.AutoSize = true;
+            label26.Location = new Point(1701, 45);
+            label26.Name = "label26";
+            label26.Size = new Size(90, 20);
+            label26.TabIndex = 64;
+            label26.Text = "Аксессуары";
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.BackColor = SystemColors.ControlLightLight;
+            pictureBox5.Location = new Point(1622, 73);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(211, 272);
+            pictureBox5.TabIndex = 65;
+            pictureBox5.TabStop = false;
+            // 
+            // listView1
+            // 
+            listView1.Location = new Point(1622, 423);
+            listView1.Name = "listView1";
+            listView1.Size = new Size(211, 309);
+            listView1.TabIndex = 66;
+            listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // listBox5
+            // 
+            listBox5.FormattingEnabled = true;
+            listBox5.ItemHeight = 20;
+            listBox5.Location = new Point(1683, 369);
+            listBox5.Name = "listBox5";
+            listBox5.Size = new Size(150, 44);
+            listBox5.TabIndex = 67;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1615, 755);
+            ClientSize = new Size(1847, 748);
+            Controls.Add(listBox5);
+            Controls.Add(listView1);
+            Controls.Add(pictureBox5);
+            Controls.Add(label26);
             Controls.Add(label25);
             Controls.Add(label24);
             Controls.Add(label23);
@@ -849,6 +893,7 @@
             Controls.Add(listBox1);
             Controls.Add(pictureBox1);
             Controls.Add(menuStrip1);
+            Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
@@ -866,6 +911,7 @@
             contextMenuStrip2.ResumeLayout(false);
             contextMenuStrip3.ResumeLayout(false);
             contextMenuStrip4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -951,5 +997,9 @@
         private ToolStripMenuItem добавитьВКомплектToolStripMenuItem3;
         private ToolStripMenuItem редактироватьToolStripMenuItem3;
         private ToolStripMenuItem удалиToolStripMenuItem;
+        private Label label26;
+        private PictureBox pictureBox5;
+        private ListView listView1;
+        private ListBox listBox5;
     }
 }

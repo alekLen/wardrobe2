@@ -39,6 +39,7 @@ namespace wardrobe
         public event EventHandler<EventArgs> LoadBottom;
         public event EventHandler<EventArgs> LoadSuit;
         public event EventHandler<EventArgs> LoadShoe;
+        public event EventHandler<EventArgs> LoadAcc;
         public event EventHandler<EventArgs> NewF2;
         public event EventHandler<EventArgs> NewF3;
         public event EventHandler<EventArgs> NewF4;
@@ -80,6 +81,9 @@ namespace wardrobe
                 ImageList largeImageList3 = new ImageList();
                 largeImageList3.ImageSize = new Size(48, 48);
                 listView8.LargeImageList = largeImageList3;
+                ImageList largeImageList4 = new ImageList();
+                largeImageList4.ImageSize = new Size(48, 48);
+                listView1.LargeImageList = largeImageList4;
 
             }
             catch (Exception ex)
@@ -121,6 +125,11 @@ namespace wardrobe
         {
             listView8.Items.Clear();
             listView8.LargeImageList.Images.Clear();
+        }
+        public void ClearAcc()
+        {
+            listView1.Items.Clear();
+            listView1.LargeImageList.Images.Clear();
         }
         public void SetColorToWardrobe(string s, int i)
         {
@@ -182,6 +191,7 @@ namespace wardrobe
                 LoadBottom?.Invoke(this, EventArgs.Empty);
                 LoadSuit?.Invoke(this, EventArgs.Empty);
                 LoadShoe?.Invoke(this, EventArgs.Empty);
+                LoadAcc?.Invoke(this, EventArgs.Empty);
                 Form1Color();
                 Form1Style();
                 Form1Season();
@@ -1010,6 +1020,15 @@ namespace wardrobe
             l.ImageKey = name;
             listView8.LargeImageList.Images.Add(name, im);
             listView8.Items.Add(l);
+
+        }
+        public void SetTypeAccToWardrobe(string puth, string name)
+        {
+            Image im = Image.FromFile(puth);
+            ListViewItem l = new ListViewItem(name);
+            l.ImageKey = name;
+            listView1.LargeImageList.Images.Add(name, im);
+            listView1.Items.Add(l);
 
         }
 

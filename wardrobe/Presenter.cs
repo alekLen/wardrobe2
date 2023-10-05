@@ -37,6 +37,7 @@ namespace wardrobe
             form.LoadBottom += new EventHandler<EventArgs>(Load_Bottom);
             form.LoadSuit += new EventHandler<EventArgs>(Load_Suit);
             form.LoadShoe += new EventHandler<EventArgs>(Load_Shoe);
+            form.LoadAcc += new EventHandler<EventArgs>(Load_Acc);
             form.Filtr += new EventHandler<EventArgs>(Filter);
             form.Clear_Filtr += new EventHandler<EventArgs>(UpdateFm1);
             form.Change_Photo_Up += new EventHandler<EventArgs>(SetPhotoUp);
@@ -276,6 +277,31 @@ namespace wardrobe
                 MessageBox.Show(ex.Message);
             }
         }
+        public void Load_Acc(object sender, EventArgs e)
+        {
+            try
+            {
+                Wardrobe_Context db = Get_db();
+                using (db)
+                {
+                    var query = from b in db.clothes_items
+                                where b.type.Type_name == "Аксессуары"
+                                select b.Id + "." + b.Clothes_Item_name + "*" + b.photo; //+ "___" + b.color.Color_name + "___" + b.style.Style_name + "___" + b.season.Season_name;
+                    foreach (var i in query)
+                    {
+                        // form.SetTypeShoeToWardrobe(i);
+                        string[] st = i.Split('*');
+                        // form.SetTypeShoeToWardrobe(st[0]);
+                        form.SetTypeAccToWardrobe(st[1], st[0]);
+                        // form.ListViewShoeInput(st[1], st[0]);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         public void SaveAdd(object sender, EventArgs e)
         {
             try
@@ -376,6 +402,11 @@ namespace wardrobe
                     form.ClearShoe();
                     Load_Shoe(sender, e);
                 }
+                if (form.add_clothe.type == "Аксессуары")
+                {
+                    form.ClearAcc();
+                    Load_Acc(sender, e);
+                }
             }
             catch (Exception ex)
             {
@@ -394,7 +425,9 @@ namespace wardrobe
                     Load_Suit(sender, e);
                     form.ClearShoe();
                     Load_Shoe(sender, e);
-                   form.ClearFiltrBox();
+                form.ClearAcc();
+                Load_Acc(sender, e);
+                form.ClearFiltrBox();
             }
             catch (Exception ex)
             {

@@ -29,15 +29,17 @@ namespace wardrobe
                 clothes_styles.Add(style3);
                 clothes_styles.Add(style4);
 
-                Clothes_type type1 = new Clothes_type { Type_name = "верх" };
-                Clothes_type type2 = new Clothes_type { Type_name = "низ" };
-                Clothes_type type3 = new Clothes_type { Type_name = "платье/костюм" };
-                Clothes_type type4 = new Clothes_type { Type_name = "обувь" };
+                Clothes_type type1 = new Clothes_type { Type_name = "Верх" };
+                Clothes_type type2 = new Clothes_type { Type_name = "Низ" };
+                Clothes_type type3 = new Clothes_type { Type_name = "Платье/Костюм" };
+                Clothes_type type4 = new Clothes_type { Type_name = "Обувь" };
+                Clothes_type type5 = new Clothes_type { Type_name = "Аксессуары" };
 
                 clothes_types.Add(type1);
                 clothes_types.Add(type2);
                 clothes_types.Add(type3);
                 clothes_types.Add(type4);
+                clothes_types.Add(type5);
 
                 Colors color1 = new Colors { Color_name = "Белый" };
                 Colors color2 = new Colors { Color_name = "Черный" };

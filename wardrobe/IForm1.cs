@@ -20,11 +20,13 @@ namespace wardrobe
         public void SetTypeBottomToWardrobe(string puth, string name);
         public void SetTypeSuitToWardrobe(string puth, string name);
         public void SetTypeShoeToWardrobe(string puth, string name);
+        public void SetTypeAccToWardrobe(string puth, string name);
         public void SetColorToWardrobe(string s, int i);
         public void ClearUp();
         public void ClearBottom();
         public void ClearSuit();
         public void ClearShoe();
+        public void ClearAcc();
         public void ClearFiltrBox();
         public int setId { get; set; }
         public List<int> Ids { get; set; }
@@ -50,6 +52,7 @@ namespace wardrobe
         public event EventHandler<EventArgs> LoadBottom;
         public event EventHandler<EventArgs> LoadSuit;
         public event EventHandler<EventArgs> LoadShoe;
+        public event EventHandler<EventArgs> LoadAcc;
         public event EventHandler<EventArgs> NewF2;
         public event EventHandler<EventArgs> NewF3;
         public event EventHandler<EventArgs> NewF4;
