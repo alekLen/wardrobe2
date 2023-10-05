@@ -46,6 +46,7 @@
             textBoxDate = new TextBox();
             button2 = new Button();
             button3Photo = new Button();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -202,11 +203,22 @@
             button3Photo.UseVisualStyleBackColor = false;
             button3Photo.Visible = false;
             // 
+            // button3
+            // 
+            button3.Location = new Point(693, 313);
+            button3.Name = "button3";
+            button3.Size = new Size(33, 29);
+            button3.TabIndex = 20;
+            button3.Text = "+";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // Form7
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(755, 365);
+            Controls.Add(button3);
             Controls.Add(button3Photo);
             Controls.Add(button2);
             Controls.Add(textBoxDate);
@@ -229,7 +241,6 @@
             MaximizeBox = false;
             Name = "Form7";
             Text = "Предмет одежды";
-            TopMost = true;
             FormClosed += Form7_FormClosed;
             Load += LoadFm7;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -256,5 +267,6 @@
         private TextBox textBoxDate;
         private Button button2;
         private Button button3Photo;
+        private Button button3;
     }
 }

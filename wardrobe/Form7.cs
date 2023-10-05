@@ -307,5 +307,12 @@ namespace wardrobe
         {
             this.Dispose();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form8 f = new Form8();
+            f.MainForm7 = this;
+            f.ShowDialog();
+        }
     }
 }

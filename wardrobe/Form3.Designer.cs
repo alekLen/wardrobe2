@@ -47,6 +47,7 @@
             buttonDelete = new Button();
             buttonEdit = new Button();
             button2 = new Button();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -215,11 +216,22 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += Cancel;
             // 
+            // button3
+            // 
+            button3.Location = new Point(758, 436);
+            button3.Name = "button3";
+            button3.Size = new Size(28, 29);
+            button3.TabIndex = 19;
+            button3.Text = "+";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(812, 485);
+            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(buttonEdit);
             Controls.Add(buttonDelete);
@@ -243,7 +255,6 @@
             MaximizeBox = false;
             Name = "Form3";
             Text = "Предмет одежды";
-            TopMost = true;
             Load += LoadFm3;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -270,5 +281,6 @@
         private Button buttonDelete;
         private Button buttonEdit;
         private Button button2;
+        private Button button3;
     }
 }

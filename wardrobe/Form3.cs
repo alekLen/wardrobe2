@@ -264,5 +264,12 @@ namespace wardrobe
         {
             this.Close();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form8 f = new Form8();
+            f.MainForm3 = this;
+            f.ShowDialog();
+        }
     }
 }

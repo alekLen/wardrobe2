@@ -124,5 +124,12 @@ namespace wardrobe
             //date = dateTimePicker1.Value.Date;
             date = dateTimePicker1.Value.ToString("dd.MM.yyyy");
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form8 f = new Form8();
+            f.MainForm2 = this;
+            f.ShowDialog();
+        }
     }
 }

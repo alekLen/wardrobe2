@@ -50,6 +50,7 @@
             comboBox3 = new ComboBox();
             comboBox4 = new ComboBox();
             button3 = new Button();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -243,11 +244,22 @@
             button3.Text = "Отмена";
             button3.UseVisualStyleBackColor = false;
             // 
+            // button4
+            // 
+            button4.Location = new Point(682, 333);
+            button4.Name = "button4";
+            button4.Size = new Size(35, 29);
+            button4.TabIndex = 26;
+            button4.Text = "+";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(746, 393);
+            Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(comboBox4);
             Controls.Add(comboBox3);
@@ -303,5 +315,6 @@
         private ComboBox comboBox3;
         private ComboBox comboBox4;
         private Button button3;
+        private Button button4;
     }
 }

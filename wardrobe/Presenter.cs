@@ -716,7 +716,7 @@ namespace wardrobe
         public void Chose(int id)
         {
             try
-            {
+            {       
                 Wardrobe_Context db = Get_db();
                 using (db)
                 {
