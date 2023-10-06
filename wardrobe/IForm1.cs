@@ -46,6 +46,8 @@ namespace wardrobe
         public void SetPhotoItemSuit(string s);
         public void SetChoseItemShoe(string s);
         public void SetPhotoItemShoe(string s);
+        public void SetChoseItemAcc(string s);
+        public void SetPhotoItemAcc(string s);
 
         public event EventHandler<EventArgs> LoadF;
         public event EventHandler<EventArgs> LoadUp;
@@ -65,6 +67,7 @@ namespace wardrobe
         public event EventHandler<EventArgs> Change_Photo_Bottom;
         public event EventHandler<EventArgs> Change_Photo_Suit;
         public event EventHandler<EventArgs> Change_Photo_Shoe;
+        public event EventHandler<EventArgs> Change_Photo_Acc;
         public event EventHandler<EventArgs> SeeComplects;
         public event EventHandler<EventArgs> GetNumberColors;
         public event EventHandler<EventArgs> GetStatColor;

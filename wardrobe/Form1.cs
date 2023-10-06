@@ -52,6 +52,7 @@ namespace wardrobe
         public event EventHandler<EventArgs> Change_Photo_Bottom;
         public event EventHandler<EventArgs> Change_Photo_Suit;
         public event EventHandler<EventArgs> Change_Photo_Shoe;
+        public event EventHandler<EventArgs> Change_Photo_Acc;
         public event EventHandler<EventArgs> SeeComplects;
         public event EventHandler<EventArgs> GetNumberColors;
         public event EventHandler<EventArgs> GetStatColor;
@@ -180,6 +181,16 @@ namespace wardrobe
         public void SetPhotoItemShoe(string s)
         {
             pictureBox4.Image = Image.FromFile(s);
+        }
+        public void SetChoseItemAcc(string s)
+        {
+            listBox5.Items.Add(s);
+            label27.Text = listBox5.Items.Count.ToString();
+            listBox5.SelectedIndex = listBox5.Items.Count - 1;
+        }
+        public void SetPhotoItemAcc(string s)
+        {
+            pictureBox5.Image = Image.FromFile(s);
         }
 
         private void LoadForm(object sender, EventArgs e)
@@ -375,6 +386,28 @@ namespace wardrobe
             }
             catch { MessageBox.Show("opsshoe"); }
         }
+        private void Load_see_formAcc(object sender, EventArgs e)
+        {
+            try
+            {
+                if (see_clothe.IsDisposed)
+                {
+                    see_clothe = new Form3();
+                    NewF3?.Invoke(this, EventArgs.Empty);
+                }
+                if (listView1.SelectedItems.Count > 0 && !see_clothe.Visible)
+                {
+                    ListViewItem selectedItem = listView1.SelectedItems[0];
+                    string s = selectedItem.Text;
+                    string[] s1 = s.Split('.');
+                    setId = int.Parse(s1[0]);
+                    see_clothe.MainForm = this;
+                    listView1.SelectedIndices.Clear();
+                    see_clothe.ShowDialog();
+                }
+            }
+            catch { MessageBox.Show("opsacc"); }
+        }
         private void Load_see_formShoeDop(string str)
         {
             try
@@ -392,6 +425,29 @@ namespace wardrobe
                     setId = int.Parse(s1[0]);
                     see_clotheDop.MainForm = this;
                     listView8.SelectedIndices.Clear();
+                    see_clotheDop.act = str;
+                    see_clotheDop.ShowDialog();
+                }
+            }
+            catch { MessageBox.Show("opsshoe"); }
+        }
+        private void Load_see_formAccDop(string str)
+        {
+            try
+            {
+                if (see_clotheDop.IsDisposed)
+                {
+                    see_clotheDop = new Form7();
+                    NewF7?.Invoke(this, EventArgs.Empty);
+                }
+                if (listView1.SelectedItems.Count > 0 && !see_clotheDop.Visible)
+                {
+                    ListViewItem selectedItem = listView1.SelectedItems[0];
+                    string s = selectedItem.Text;
+                    string[] s1 = s.Split('.');
+                    setId = int.Parse(s1[0]);
+                    see_clotheDop.MainForm = this;
+                    listView1.SelectedIndices.Clear();
                     see_clotheDop.act = str;
                     see_clotheDop.ShowDialog();
                 }
@@ -707,6 +763,34 @@ namespace wardrobe
             }
             catch { }
         }
+        private void del_chosen_acc(object sender, EventArgs e)
+        {
+            try
+            {
+                if (listBox5.SelectedIndex != -1)
+                {
+                    string s = listBox5.SelectedItem.ToString();
+                    DialogResult result = MessageBox.Show("вы действительно хотите удалить из комплекта\n" + s + "  ?", "подтвердите", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        string[] s1 = s.Split('.');
+                        Ids.Remove(int.Parse(s1[0]));
+                        pictureBox5.Image = Image.FromFile("Photos/shoe.jpg");
+                        listBox5.Items.RemoveAt(listBox5.SelectedIndex);
+                        label27.Text = listBox5.Items.Count.ToString();
+                        if (listBox5.Items.Count > 0)
+                        {
+                            listBox5.SelectedIndex = listBox5.Items.Count - 1;
+                            string s2 = listBox5.Items[listBox5.Items.Count - 1].ToString();
+                            string[] s3 = s2.Split('.');
+                            setId = int.Parse(s3[0]);
+                            Change_Photo_Acc?.Invoke(this, new EventArgs());
+                        }
+                    }
+                }
+            }
+            catch { }
+        }
 
         private void selectUp(object sender, EventArgs e)
         {
@@ -749,6 +833,16 @@ namespace wardrobe
                 string[] s1 = s.Split('.');
                 setId = int.Parse(s1[0]);
                 Change_Photo_Shoe?.Invoke(this, new EventArgs());
+            }
+        }
+        private void selectAcc(object sender, EventArgs e)
+        {
+            if (listBox5.SelectedIndex != -1)
+            {
+                string s = listBox5.SelectedItem.ToString();
+                string[] s1 = s.Split('.');
+                setId = int.Parse(s1[0]);
+                Change_Photo_Acc?.Invoke(this, new EventArgs());
             }
         }
 
@@ -1126,6 +1220,20 @@ namespace wardrobe
         private void Load_see_formShoeDopE(object sender, EventArgs e)
         {
             Load_see_formShoeDop("Edit");
+        }
+        private void Load_see_formAccDopA(object sender, EventArgs e)
+        {
+            Load_see_formAccDop("Add");
+        }
+
+        private void Load_see_formAccDopD(object sender, EventArgs e)
+        {
+            Load_see_formAccDop("Delete");
+        }
+
+        private void Load_see_formAccDopE(object sender, EventArgs e)
+        {
+            Load_see_formAccDop("Edit");
         }
     }
 }

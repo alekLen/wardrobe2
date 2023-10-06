@@ -44,6 +44,7 @@ namespace wardrobe
             form.Change_Photo_Bottom += new EventHandler<EventArgs>(SetPhotoBottom);
             form.Change_Photo_Suit += new EventHandler<EventArgs>(SetPhotoSuit);
             form.Change_Photo_Shoe += new EventHandler<EventArgs>(SetPhotoShoe);
+            form.Change_Photo_Acc += new EventHandler<EventArgs>(SetPhotoAcc);
             form.GetNumberColors += new EventHandler<EventArgs>(GetNumberColors);
             form.GetStatColor += new EventHandler<EventArgs>(GetStatColor);
             form.GetNumberSeasons += new EventHandler<EventArgs>(GetNumberSeasons);
@@ -778,6 +779,11 @@ namespace wardrobe
                         form.SetChoseItemShoe(s[2]);
                         form.SetPhotoItemShoe(s[1]);
                     }
+                    if (s[0] == "Аксессуары")
+                    {
+                        form.SetChoseItemAcc(s[2]);
+                        form.SetPhotoItemAcc(s[1]);
+                    }
 
                 }
             }
@@ -1403,6 +1409,11 @@ namespace wardrobe
             string s = GetPhoto();
             form.SetPhotoItemShoe(s);
         }
+        public void SetPhotoAcc(object sender, EventArgs e)
+        {
+            string s = GetPhoto();
+            form.SetPhotoItemAcc(s);
+        }
         string GetPhoto()
         {
             try
@@ -1735,7 +1746,8 @@ namespace wardrobe
                  form.ClearUp();
                  form.ClearBottom();
                  form.ClearSuit();
-                 form.ClearShoe();            
+                 form.ClearShoe();
+                form.ClearAcc();
                 Wardrobe_Context db = Get_db();
                 using (db)
                 {              
@@ -1811,8 +1823,9 @@ namespace wardrobe
                                 if (type == 4)
                                     // form.SetTypeShoeToWardrobe(id + "." + name + "___" + color + "___" + style + "___" + season);
                                     form.SetTypeShoeToWardrobe(reader["photo"].ToString(), name);
-
-                        }
+                                if (type == 5)
+                                    form.SetTypeAccToWardrobe(reader["photo"].ToString(), name);
+                            }
                     }
 
                 }
