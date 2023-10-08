@@ -243,6 +243,7 @@
             button3.TabIndex = 25;
             button3.Text = "Отмена";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button4
             // 

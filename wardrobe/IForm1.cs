@@ -48,6 +48,12 @@ namespace wardrobe
         public void SetPhotoItemShoe(string s);
         public void SetChoseItemAcc(string s);
         public void SetPhotoItemAcc(string s);
+        public void Form1Style();
+        public void Form1Color();
+        public void Form1Season();
+        public void ClearStyleBox();
+        public void ClearSeasonBox();
+        public void ClearColorBox();
 
         public event EventHandler<EventArgs> LoadF;
         public event EventHandler<EventArgs> LoadUp;

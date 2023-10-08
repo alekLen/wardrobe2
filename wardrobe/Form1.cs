@@ -22,6 +22,9 @@ namespace wardrobe
         public Form5 complect_form { get; set; } = new Form5();
         public Form6 complects_show_form { get; set; } = new Form6();
         public Form7 see_clotheDop { get; set; } = new Form7();
+        public Form seasonStat { get; set; } = null;
+        public Form styleStat { get; set; } = null;
+        public Form colorStat { get; set; } = null;
         public int setId { get; set; }
         public List<int> Ids { get; set; } = new();
         public List<int> f_color1 { get; set; } = new();
@@ -459,6 +462,7 @@ namespace wardrobe
         {
             try
             {
+                ClearFiltrBox();
                 if (edit_form.IsDisposed || edit_form.Visible)
                 {
                     edit_form = new Form4();
@@ -476,6 +480,7 @@ namespace wardrobe
         {
             try
             {
+                ClearFiltrBox();
                 if (edit_form.IsDisposed || edit_form.Visible)
                 {
                     edit_form = new Form4();
@@ -485,6 +490,7 @@ namespace wardrobe
                 edit_form.category = "style";
                 edit_form.action = "delete";
                 edit_form.ShowDialog();
+                Clear_Filtr?.Invoke(this, EventArgs.Empty);
             }
             catch { }
         }
@@ -493,6 +499,7 @@ namespace wardrobe
         {
             try
             {
+                ClearFiltrBox();
                 if (edit_form.IsDisposed || edit_form.Visible)
                 {
                     edit_form = new Form4();
@@ -501,7 +508,7 @@ namespace wardrobe
                 edit_form.MainForm = this;
                 edit_form.category = "style";
                 edit_form.action = "add";
-                edit_form.ShowDialog();
+                edit_form.ShowDialog();             
             }
             catch { }
         }
@@ -510,6 +517,7 @@ namespace wardrobe
         {
             try
             {
+                ClearFiltrBox();
                 if (edit_form.IsDisposed || edit_form.Visible)
                 {
                     edit_form = new Form4();
@@ -527,6 +535,7 @@ namespace wardrobe
         {
             try
             {
+                ClearFiltrBox();
                 if (edit_form.IsDisposed || edit_form.Visible)
                 {
                     edit_form = new Form4();
@@ -544,6 +553,7 @@ namespace wardrobe
         {
             try
             {
+                ClearFiltrBox();
                 if (edit_form.IsDisposed || edit_form.Visible)
                 {
                     edit_form = new Form4();
@@ -561,6 +571,7 @@ namespace wardrobe
         {
             try
             {
+                ClearFiltrBox();
                 if (edit_form.IsDisposed || edit_form.Visible)
                 {
                     edit_form = new Form4();
@@ -578,6 +589,7 @@ namespace wardrobe
         {
             try
             {
+                ClearFiltrBox();
                 if (edit_form.IsDisposed || edit_form.Visible)
                 {
                     edit_form = new Form4();
@@ -595,6 +607,7 @@ namespace wardrobe
         {
             try
             {
+                ClearFiltrBox();
                 if (edit_form.IsDisposed || edit_form.Visible)
                 {
                     edit_form = new Form4();
@@ -775,7 +788,7 @@ namespace wardrobe
                     {
                         string[] s1 = s.Split('.');
                         Ids.Remove(int.Parse(s1[0]));
-                        pictureBox5.Image = Image.FromFile("Photos/shoe.jpg");
+                        pictureBox5.Image = Image.FromFile("Photos/bag.jpg");
                         listBox5.Items.RemoveAt(listBox5.SelectedIndex);
                         label27.Text = listBox5.Items.Count.ToString();
                         if (listBox5.Items.Count > 0)
@@ -859,110 +872,135 @@ namespace wardrobe
 
         private void color_statistic(object sender, EventArgs e)
         {
-            Form statisticsForm = new Form();
-            Icon myIcon = new Icon("Icons/wardrobe_4486.ico");
-            statisticsForm.Icon = myIcon;
-            statisticsForm.Text = "Статистика цветов одежды";
-            statisticsForm.Width = 600;
-            statisticsForm.Height = 500;
-
-            Chart chart = new Chart();
-            chart.Dock = DockStyle.Fill;
-            chart.ChartAreas.Add(new ChartArea("area"));
-
-            chart.Series.Add(new Series("data"));
-
-            chart.Series["data"].ChartType = SeriesChartType.Pie;
-            chart.Series["data"]["PieLabelStyle"] = "Outside";
-            chart.Series["data"]["PieLineColor"] = "Black";
-            chart.Series["data"]["PieLineWidth"] = "2";
-
-            GetNumberColors?.Invoke(this, new EventArgs());
-            int x = 0;
-            for (int i = 0; i < number; i++)
+            if (colorStat == null)
             {
-                categoryId = Ids[i];
-                GetStatColor?.Invoke(this, new EventArgs());
-                if (point > 0)
-                {
-                    nameCategory += " -" + point.ToString() + "%";
-                    chart.Series["data"].Points.AddXY(nameCategory, point);
-                    chart.Series["data"].Points[x].Color = color;
-                    x++;
-                }
-            }
-            statisticsForm.Controls.Add(chart);
-            statisticsForm.Show();
-        }
+                colorStat = new Form();
+                Icon myIcon = new Icon("Icons/wardrobe_4486.ico");
+                colorStat.Icon = myIcon;
+                colorStat.Text = "Статистика цветов одежды";
+                colorStat.Width = 600;
+                colorStat.Height = 500;
 
+                Chart chart = new Chart();
+                chart.Dock = DockStyle.Fill;
+                chart.ChartAreas.Add(new ChartArea("area"));
+
+                chart.Series.Add(new Series("data"));
+
+                chart.Series["data"].ChartType = SeriesChartType.Pie;
+                chart.Series["data"]["PieLabelStyle"] = "Outside";
+                chart.Series["data"]["PieLineColor"] = "Black";
+                chart.Series["data"]["PieLineWidth"] = "2";
+
+                GetNumberColors?.Invoke(this, new EventArgs());
+                int x = 0;
+                for (int i = 0; i < number; i++)
+                {
+                    categoryId = Ids[i];
+                    GetStatColor?.Invoke(this, new EventArgs());
+                    if (point > 0)
+                    {
+                        nameCategory += " -" + point.ToString() + "%";
+                        chart.Series["data"].Points.AddXY(nameCategory, point);
+                        chart.Series["data"].Points[x].Color = color;
+                        x++;
+                    }
+                }
+                colorStat.Controls.Add(chart);
+                colorStat.FormClosed += colorStatClose;
+                colorStat.Show();
+                Ids.Clear();
+            }
+        }
+        private void colorStatClose(object sender, EventArgs e)
+        {
+            colorStat = null;
+        }
         private void season_statistic(object sender, EventArgs e)
         {
-            Form statisticsForm = new Form();
-            Icon myIcon = new Icon("Icons/wardrobe_4486.ico");
-            statisticsForm.Icon = myIcon;
-            statisticsForm.Text = "Статистика сезонов одежды";
-            statisticsForm.Width = 600;
-            statisticsForm.Height = 500;
-
-            Chart chart = new Chart();
-            chart.Dock = DockStyle.Fill;
-            chart.ChartAreas.Add(new ChartArea("area"));
-
-            chart.Series.Add(new Series("data"));
-
-            chart.Series["data"].ChartType = SeriesChartType.Pie;
-            chart.Series["data"]["PieLabelStyle"] = "Outside";
-            chart.Series["data"]["PieLineColor"] = "Black";
-            chart.Series["data"]["PieLineWidth"] = "2";
-
-            GetNumberSeasons?.Invoke(this, new EventArgs());
-            int x = 0;
-            for (int i = 0; i < number; i++)
+            if (seasonStat == null)
             {
-                categoryId = Ids[i];
-                GetStatSeason?.Invoke(this, new EventArgs());
-                if (point > 0)
-                {
-                    nameCategory += " -" + point.ToString() + "%";
-                    chart.Series["data"].Points.AddXY(nameCategory, point);
-                    chart.Series["data"].Points[x].Color = color;
-                    x++;
-                }
-            }
-            statisticsForm.Controls.Add(chart);
-            statisticsForm.Show();
-        }
+                seasonStat = new Form();
+                Icon myIcon = new Icon("Icons/wardrobe_4486.ico");
+                seasonStat.Icon = myIcon;
+                seasonStat.Text = "Статистика сезонов одежды";
+                seasonStat.Width = 600;
+                seasonStat.Height = 500;
 
+                Chart chart = new Chart();
+                chart.Dock = DockStyle.Fill;
+                chart.ChartAreas.Add(new ChartArea("area"));
+
+                chart.Series.Add(new Series("data"));
+
+                chart.Series["data"].ChartType = SeriesChartType.Pie;
+                chart.Series["data"]["PieLabelStyle"] = "Outside";
+                chart.Series["data"]["PieLineColor"] = "Black";
+                chart.Series["data"]["PieLineWidth"] = "2";
+
+                GetNumberSeasons?.Invoke(this, new EventArgs());
+                int x = 0;
+                for (int i = 0; i < number; i++)
+                {
+                    categoryId = Ids[i];
+                    GetStatSeason?.Invoke(this, new EventArgs());
+                    if (point > 0)
+                    {
+                        nameCategory += " -" + point.ToString() + "%";
+                        chart.Series["data"].Points.AddXY(nameCategory, point);
+                        chart.Series["data"].Points[x].Color = color;
+                        x++;
+                    }
+                }
+                seasonStat.FormClosed += seasonStatClose;
+                seasonStat.Controls.Add(chart);
+                seasonStat.Show();
+                Ids.Clear();
+            }
+        }
+        private void seasonStatClose(object sender, EventArgs e)
+        {
+            seasonStat = null;
+        }
         private void style_statistic(object sender, EventArgs e)
         {
-            Form statisticsForm = new Form();
-            Icon myIcon = new Icon("Icons/wardrobe_4486.ico");
-            statisticsForm.Icon = myIcon;
-            statisticsForm.Text = "Статистика стилей одежды";
-            statisticsForm.Width = 600;
-            statisticsForm.Height = 500;
-
-            Chart chart = new Chart();
-            chart.Dock = DockStyle.Fill;
-            chart.ChartAreas.Add(new ChartArea("area"));
-
-            chart.Series.Add(new Series("data"));
-
-            chart.Series["data"].ChartType = SeriesChartType.Bar;
-
-            GetNumberStyles?.Invoke(this, new EventArgs());
-            color = Color.BlueViolet;
-            for (int i = 0; i < number; i++)
+            if (styleStat == null)
             {
-                categoryId = Ids[i];
-                GetStatStyle?.Invoke(this, new EventArgs());
-                nameCategory += " -" + point.ToString() + "%";
-                chart.Series["data"].Points.AddXY(nameCategory, point);
-                chart.Series["data"].Points[i].Color = color;
+                styleStat = new Form();
+                Icon myIcon = new Icon("Icons/wardrobe_4486.ico");
+                styleStat.Icon = myIcon;
+                styleStat.Text = "Статистика стилей одежды";
+                styleStat.Width = 600;
+                styleStat.Height = 500;
 
+                Chart chart = new Chart();
+                chart.Dock = DockStyle.Fill;
+                chart.ChartAreas.Add(new ChartArea("area"));
+
+                chart.Series.Add(new Series("data"));
+
+                chart.Series["data"].ChartType = SeriesChartType.Bar;
+
+                GetNumberStyles?.Invoke(this, new EventArgs());
+                color = Color.BlueViolet;
+                for (int i = 0; i < number; i++)
+                {
+                    categoryId = Ids[i];
+                    GetStatStyle?.Invoke(this, new EventArgs());
+                    nameCategory += " -" + point.ToString() + "%";
+                    chart.Series["data"].Points.AddXY(nameCategory, point);
+                    chart.Series["data"].Points[i].Color = color;
+
+                }
+                styleStat.Controls.Add(chart);
+                styleStat.FormClosed += styleStatClose;
+                styleStat.Show();
+                Ids.Clear();
             }
-            statisticsForm.Controls.Add(chart);
-            statisticsForm.Show();
+        }
+        private void styleStatClose(object sender, EventArgs e)
+        {
+            styleStat = null;
         }
         public void F5Close(object sender, EventArgs e)
         {
@@ -981,6 +1019,7 @@ namespace wardrobe
             pictureBox2.Image = Image.FromFile("Photos/bottom.png");
             pictureBox3.Image = Image.FromFile("Photos/dress.png");
             pictureBox4.Image = Image.FromFile("Photos/shoe.jpg");
+            pictureBox5.Image = Image.FromFile("Photos/bag.jpg");
         }
         void LabelClear()
         {
@@ -988,6 +1027,7 @@ namespace wardrobe
             label14.Text = "0";
             label15.Text = "0";
             label16.Text = "0";
+            label27.Text = "0";
         }
         void ComplectClear()
         {
@@ -995,6 +1035,7 @@ namespace wardrobe
             listBox2.Items.Clear();
             listBox3.Items.Clear();
             listBox4.Items.Clear();
+            listBox5.Items.Clear();
         }
 
         private void FilterColorBox_ItemCheck(object sender, ItemCheckEventArgs e)
@@ -1023,21 +1064,21 @@ namespace wardrobe
             //FilterColorBox.Che
         }
 
-        private void Form1Style()
+        public void Form1Style()
         {
             FilterStyleBox.DataSource = itemsStyle;
             FilterStyleBox.DisplayMember = "Name";
             FilterStyleBox.ValueMember = "Id";
             FilterStyleBox.CheckOnClick = true;
         }
-        private void Form1Season()
+        public void Form1Season()
         {
             FilterSeasonBox.DataSource = itemsSeason;
             FilterSeasonBox.DisplayMember = "Name";
             FilterSeasonBox.ValueMember = "Id";
             FilterSeasonBox.CheckOnClick = true;
         }
-        private void Form1Color()
+        public void Form1Color()
         {
             FilterColorBox.DataSource = itemsColor;
             FilterColorBox.DisplayMember = "Name";
@@ -1234,6 +1275,24 @@ namespace wardrobe
         private void Load_see_formAccDopE(object sender, EventArgs e)
         {
             Load_see_formAccDop("Edit");
+        }
+        public void ClearStyleBox()
+        {
+            FilterStyleBox.DataSource = null;
+            FilterStyleBox.Items.Clear();
+            itemsStyle.Clear();
+        }
+        public void ClearSeasonBox()
+        {
+            FilterSeasonBox.DataSource = null;
+            FilterSeasonBox.Items.Clear();
+            itemsSeason.Clear();
+        }
+        public void ClearColorBox()
+        {
+            FilterColorBox.DataSource = null;
+            FilterColorBox.Items.Clear();
+            itemsColor.Clear();
         }
     }
 }

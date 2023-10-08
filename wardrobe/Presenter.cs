@@ -499,8 +499,8 @@ namespace wardrobe
         {
             try
             {
-                var query =  db.clothes_styles.ToList();
-                    foreach (var p in query)
+                var query =  db.clothes_styles.ToList();               
+                foreach (var p in query)
                     {
                         string s = p.Style_name;
                     int i = p.Id;
@@ -1030,8 +1030,8 @@ namespace wardrobe
                 style.Style_name = form.edit_form.name;
                 db.Add(style);
                 db.SaveChanges();
-               // form.ClearStyleBox();
-                ToStyleBox(db);
+                updateFilterStylebox(db);
+
             }
             catch (Exception ex)
             {
@@ -1047,8 +1047,9 @@ namespace wardrobe
                 season.Season_name = form.edit_form.name;
                 db.Add(season);
                 db.SaveChanges();
-               // form.ClearSeasonBox();
-                ToSeasonBox(db);
+                updateFilterSeasonbox(db);
+
+
             }
             catch (Exception ex)
             {
@@ -1064,8 +1065,7 @@ namespace wardrobe
                 color.Color_name = form.edit_form.name;
                 db.Add(color);
                 db.SaveChanges();
-               // form.ClearColorBox();
-                ToColorBox(db);
+                updateFilterColorbox(db);
             }
             catch (Exception ex)
             {
@@ -1082,8 +1082,7 @@ namespace wardrobe
                             select b).Single();
                query.Style_name = form.edit_form.name;              
                 db.SaveChanges();
-                //form.ClearStyleBox();
-                ToStyleBox(db);
+                updateFilterStylebox(db);
                 UpdateFm1(sender, e);
             }
             catch (Exception ex)
@@ -1101,8 +1100,7 @@ namespace wardrobe
                              select b).Single();
                 query.Season_name = form.edit_form.name;
                 db.SaveChanges();
-               // form.ClearSeasonBox();
-                ToSeasonBox(db);
+                updateFilterSeasonbox(db);
                 UpdateFm1(sender, e);
             }
             catch (Exception ex)
@@ -1120,8 +1118,7 @@ namespace wardrobe
                              select b).Single();
                 query.Color_name = form.edit_form.name;
                 db.SaveChanges();
-               // form.ClearColorBox();
-                ToColorBox(db);
+                updateFilterColorbox(db);
                 UpdateFm1(sender, e);
             }
             catch (Exception ex)
@@ -1139,9 +1136,9 @@ namespace wardrobe
                              select b).Single();
                 db.Remove(query);
                 db.SaveChanges();
-               // form.ClearStyleBox();
-                ToStyleBox(db);
+               
                 UpdateFm1(sender, e);
+                updateFilterStylebox(db);
             }
             catch (Exception ex)
             {
@@ -1158,8 +1155,7 @@ namespace wardrobe
                              select b).Single();
                 db.Remove(query);
                 db.SaveChanges();
-               // form.ClearSeasonBox();
-                ToSeasonBox(db);
+                updateFilterSeasonbox(db);
                 UpdateFm1(sender, e);
             }
             catch (Exception ex)
@@ -1177,8 +1173,7 @@ namespace wardrobe
                              select b).Single();
                 db.Remove(query);
                 db.SaveChanges();
-               // form.ClearColorBox();
-                ToColorBox(db);
+                updateFilterColorbox(db);
                 UpdateFm1(sender, e);
             }
             catch (Exception ex)
@@ -1857,7 +1852,24 @@ namespace wardrobe
                          select b.Season_name).Single();
                 return q;
         }
-
+        void updateFilterStylebox(Wardrobe_Context db)
+        {
+            form.ClearStyleBox();
+            ToStyleBox(db);
+            form.Form1Style();
+        }
+        void updateFilterSeasonbox(Wardrobe_Context db)
+        {
+            form.ClearSeasonBox();
+            ToSeasonBox(db);
+            form.Form1Season();
+        }
+        void updateFilterColorbox(Wardrobe_Context db)
+        {
+            form.ClearColorBox();
+            ToColorBox(db);
+            form.Form1Color();
+        }
     }
 
 }

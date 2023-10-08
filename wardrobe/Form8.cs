@@ -23,20 +23,20 @@ namespace wardrobe
 
         private void Form8_Load(object sender, EventArgs e)
         {
-            if (MainForm3 != null) {
+            if (MainForm3 != null ) {
                 if (MainForm3.newphoto == null)
                     pictureBox1.Image = Image.FromFile(MainForm3.oldphoto);
                 else
                     pictureBox1.Image = Image.FromFile(MainForm3.newphoto);
             }
-            if (MainForm7 != null)
+            if (MainForm7 != null )
             {
                 if(MainForm7.newphoto==null)
                    pictureBox1.Image = Image.FromFile(MainForm7.oldphoto);
                 else
                     pictureBox1.Image = Image.FromFile(MainForm7.newphoto);
             }
-            if (MainForm2 != null)
+            if (MainForm2 != null )
             {
                 pictureBox1.Image = Image.FromFile(MainForm2.FilePath);
             }

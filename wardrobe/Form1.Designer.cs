@@ -53,11 +53,17 @@
             styleToolStripMenuItem = new ToolStripMenuItem();
             seasonToolStripMenuItem = new ToolStripMenuItem();
             listBox1 = new ListBox();
+            contextMenuStrip6 = new ContextMenuStrip(components);
+            удалитьИзКомплектаToolStripMenuItem = new ToolStripMenuItem();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
             listBox3 = new ListBox();
+            contextMenuStrip8 = new ContextMenuStrip(components);
+            удалитьИзКомплектаToolStripMenuItem2 = new ToolStripMenuItem();
             listBox4 = new ListBox();
+            contextMenuStrip9 = new ContextMenuStrip(components);
+            удалитьИзКомплектаToolStripMenuItem3 = new ToolStripMenuItem();
             button4 = new Button();
             label1 = new Label();
             label2 = new Label();
@@ -82,7 +88,8 @@
             label19 = new Label();
             label20 = new Label();
             listBox2 = new ListBox();
-            contextMenuStrip6 = new ContextMenuStrip(components);
+            contextMenuStrip7 = new ContextMenuStrip(components);
+            удалитьИзКомплектаToolStripMenuItem1 = new ToolStripMenuItem();
             FilterSeasonBox = new CheckedListBox();
             FilterColorBox = new CheckedListBox();
             FilterStyleBox = new CheckedListBox();
@@ -119,40 +126,33 @@
             редактироватьToolStripMenuItem4 = new ToolStripMenuItem();
             удалитьToolStripMenuItem3 = new ToolStripMenuItem();
             listBox5 = new ListBox();
+            contextMenuStrip10 = new ContextMenuStrip(components);
+            удалитьИзКомплектаToolStripMenuItem4 = new ToolStripMenuItem();
             label27 = new Label();
             label28 = new Label();
             label29 = new Label();
-            удалитьИзКомплектаToolStripMenuItem = new ToolStripMenuItem();
-            contextMenuStrip7 = new ContextMenuStrip(components);
-            удалитьИзКомплектаToolStripMenuItem1 = new ToolStripMenuItem();
-            contextMenuStrip8 = new ContextMenuStrip(components);
-            удалитьИзКомплектаToolStripMenuItem2 = new ToolStripMenuItem();
-            contextMenuStrip9 = new ContextMenuStrip(components);
-            удалитьИзКомплектаToolStripMenuItem3 = new ToolStripMenuItem();
-            contextMenuStrip10 = new ContextMenuStrip(components);
-            удалитьИзКомплектаToolStripMenuItem4 = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             menuStrip1.SuspendLayout();
+            contextMenuStrip6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            contextMenuStrip6.SuspendLayout();
+            contextMenuStrip8.SuspendLayout();
+            contextMenuStrip9.SuspendLayout();
+            contextMenuStrip7.SuspendLayout();
             contextMenuStrip1.SuspendLayout();
             contextMenuStrip2.SuspendLayout();
             contextMenuStrip3.SuspendLayout();
             contextMenuStrip4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             contextMenuStrip5.SuspendLayout();
-            contextMenuStrip7.SuspendLayout();
-            contextMenuStrip8.SuspendLayout();
-            contextMenuStrip9.SuspendLayout();
             contextMenuStrip10.SuspendLayout();
             SuspendLayout();
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = SystemColors.ControlLightLight;
-            pictureBox1.Location = new Point(227, 73);
+            pictureBox1.Location = new Point(211, 78);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(314, 272);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -165,7 +165,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { editToolStripMenuItem2, wardrobeToolStripMenuItem, statisticToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1847, 28);
+            menuStrip1.Size = new Size(1828, 28);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -314,17 +314,31 @@
             listBox1.ContextMenuStrip = contextMenuStrip6;
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 20;
-            listBox1.Location = new Point(365, 373);
+            listBox1.Location = new Point(349, 374);
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(176, 44);
             listBox1.TabIndex = 6;
             listBox1.SelectedIndexChanged += selectUp;
             listBox1.DoubleClick += del_Choosen_Up;
             // 
+            // contextMenuStrip6
+            // 
+            contextMenuStrip6.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip6.Items.AddRange(new ToolStripItem[] { удалитьИзКомплектаToolStripMenuItem });
+            contextMenuStrip6.Name = "contextMenuStrip6";
+            contextMenuStrip6.Size = new Size(232, 28);
+            // 
+            // удалитьИзКомплектаToolStripMenuItem
+            // 
+            удалитьИзКомплектаToolStripMenuItem.Name = "удалитьИзКомплектаToolStripMenuItem";
+            удалитьИзКомплектаToolStripMenuItem.Size = new Size(231, 24);
+            удалитьИзКомплектаToolStripMenuItem.Text = "Удалить из комплекта";
+            удалитьИзКомплектаToolStripMenuItem.Click += del_Choosen_Up;
+            // 
             // pictureBox2
             // 
             pictureBox2.BackColor = SystemColors.ControlLightLight;
-            pictureBox2.Location = new Point(573, 73);
+            pictureBox2.Location = new Point(531, 76);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(314, 272);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -334,7 +348,7 @@
             // pictureBox3
             // 
             pictureBox3.BackColor = SystemColors.ControlLightLight;
-            pictureBox3.Location = new Point(923, 73);
+            pictureBox3.Location = new Point(851, 76);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(314, 272);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -344,7 +358,7 @@
             // pictureBox4
             // 
             pictureBox4.BackColor = SystemColors.ControlLightLight;
-            pictureBox4.Location = new Point(1270, 73);
+            pictureBox4.Location = new Point(1174, 76);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(314, 272);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
@@ -356,24 +370,52 @@
             listBox3.ContextMenuStrip = contextMenuStrip8;
             listBox3.FormattingEnabled = true;
             listBox3.ItemHeight = 20;
-            listBox3.Location = new Point(1056, 374);
+            listBox3.Location = new Point(978, 374);
             listBox3.Name = "listBox3";
-            listBox3.Size = new Size(180, 44);
+            listBox3.Size = new Size(186, 44);
             listBox3.TabIndex = 11;
             listBox3.SelectedIndexChanged += selectSuit;
             listBox3.DoubleClick += del_chosen_suit;
+            // 
+            // contextMenuStrip8
+            // 
+            contextMenuStrip8.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip8.Items.AddRange(new ToolStripItem[] { удалитьИзКомплектаToolStripMenuItem2 });
+            contextMenuStrip8.Name = "contextMenuStrip8";
+            contextMenuStrip8.Size = new Size(232, 28);
+            // 
+            // удалитьИзКомплектаToolStripMenuItem2
+            // 
+            удалитьИзКомплектаToolStripMenuItem2.Name = "удалитьИзКомплектаToolStripMenuItem2";
+            удалитьИзКомплектаToolStripMenuItem2.Size = new Size(231, 24);
+            удалитьИзКомплектаToolStripMenuItem2.Text = "Удалить из комплекта";
+            удалитьИзКомплектаToolStripMenuItem2.Click += del_chosen_suit;
             // 
             // listBox4
             // 
             listBox4.ContextMenuStrip = contextMenuStrip9;
             listBox4.FormattingEnabled = true;
             listBox4.ItemHeight = 20;
-            listBox4.Location = new Point(1402, 371);
+            listBox4.Location = new Point(1306, 373);
             listBox4.Name = "listBox4";
             listBox4.Size = new Size(182, 44);
             listBox4.TabIndex = 12;
             listBox4.SelectedIndexChanged += selectShoe;
             listBox4.DoubleClick += del_chosen_shoe;
+            // 
+            // contextMenuStrip9
+            // 
+            contextMenuStrip9.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip9.Items.AddRange(new ToolStripItem[] { удалитьИзКомплектаToolStripMenuItem3 });
+            contextMenuStrip9.Name = "contextMenuStrip9";
+            contextMenuStrip9.Size = new Size(232, 28);
+            // 
+            // удалитьИзКомплектаToolStripMenuItem3
+            // 
+            удалитьИзКомплектаToolStripMenuItem3.Name = "удалитьИзКомплектаToolStripMenuItem3";
+            удалитьИзКомплектаToolStripMenuItem3.Size = new Size(231, 24);
+            удалитьИзКомплектаToolStripMenuItem3.Text = "Удалить из комплекта";
+            удалитьИзКомплектаToolStripMenuItem3.Click += del_chosen_shoe;
             // 
             // button4
             // 
@@ -438,7 +480,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(256, 397);
+            label5.Location = new Point(244, 401);
             label5.Name = "label5";
             label5.Size = new Size(42, 20);
             label5.TabIndex = 34;
@@ -447,7 +489,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(613, 397);
+            label6.Location = new Point(589, 397);
             label6.Name = "label6";
             label6.Size = new Size(36, 20);
             label6.TabIndex = 35;
@@ -456,7 +498,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(923, 397);
+            label7.Location = new Point(856, 401);
             label7.Name = "label7";
             label7.Size = new Size(118, 20);
             label7.TabIndex = 36;
@@ -465,7 +507,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(1305, 397);
+            label8.Location = new Point(1241, 401);
             label8.Name = "label8";
             label8.Size = new Size(52, 20);
             label8.TabIndex = 37;
@@ -516,7 +558,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(339, 369);
+            label13.Location = new Point(318, 374);
             label13.Name = "label13";
             label13.Size = new Size(17, 20);
             label13.TabIndex = 43;
@@ -525,7 +567,7 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(676, 371);
+            label14.Location = new Point(631, 375);
             label14.Name = "label14";
             label14.Size = new Size(17, 20);
             label14.TabIndex = 44;
@@ -534,7 +576,7 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(1033, 370);
+            label15.Location = new Point(957, 378);
             label15.Name = "label15";
             label15.Size = new Size(17, 20);
             label15.TabIndex = 45;
@@ -543,7 +585,7 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(1379, 369);
+            label16.Location = new Point(1287, 376);
             label16.Name = "label16";
             label16.Size = new Size(17, 20);
             label16.TabIndex = 46;
@@ -553,7 +595,7 @@
             // 
             label17.AutoSize = true;
             label17.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label17.Location = new Point(256, 371);
+            label17.Location = new Point(218, 374);
             label17.Name = "label17";
             label17.Size = new Size(80, 19);
             label17.TabIndex = 47;
@@ -563,7 +605,7 @@
             // 
             label18.AutoSize = true;
             label18.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label18.Location = new Point(590, 371);
+            label18.Location = new Point(545, 375);
             label18.Name = "label18";
             label18.Size = new Size(80, 19);
             label18.TabIndex = 48;
@@ -573,7 +615,7 @@
             // 
             label19.AutoSize = true;
             label19.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label19.Location = new Point(941, 371);
+            label19.Location = new Point(871, 378);
             label19.Name = "label19";
             label19.Size = new Size(80, 19);
             label19.TabIndex = 49;
@@ -583,7 +625,7 @@
             // 
             label20.AutoSize = true;
             label20.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label20.Location = new Point(1292, 371);
+            label20.Location = new Point(1195, 375);
             label20.Name = "label20";
             label20.Size = new Size(80, 19);
             label20.TabIndex = 50;
@@ -594,19 +636,26 @@
             listBox2.ContextMenuStrip = contextMenuStrip7;
             listBox2.FormattingEnabled = true;
             listBox2.ItemHeight = 20;
-            listBox2.Location = new Point(699, 374);
+            listBox2.Location = new Point(659, 375);
             listBox2.Name = "listBox2";
             listBox2.Size = new Size(186, 44);
             listBox2.TabIndex = 51;
             listBox2.SelectedIndexChanged += selectBottom;
             listBox2.DoubleClick += del_chosen_bottom;
             // 
-            // contextMenuStrip6
+            // contextMenuStrip7
             // 
-            contextMenuStrip6.ImageScalingSize = new Size(20, 20);
-            contextMenuStrip6.Items.AddRange(new ToolStripItem[] { удалитьИзКомплектаToolStripMenuItem });
-            contextMenuStrip6.Name = "contextMenuStrip6";
-            contextMenuStrip6.Size = new Size(232, 28);
+            contextMenuStrip7.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip7.Items.AddRange(new ToolStripItem[] { удалитьИзКомплектаToolStripMenuItem1 });
+            contextMenuStrip7.Name = "contextMenuStrip7";
+            contextMenuStrip7.Size = new Size(232, 28);
+            // 
+            // удалитьИзКомплектаToolStripMenuItem1
+            // 
+            удалитьИзКомплектаToolStripMenuItem1.Name = "удалитьИзКомплектаToolStripMenuItem1";
+            удалитьИзКомплектаToolStripMenuItem1.Size = new Size(231, 24);
+            удалитьИзКомплектаToolStripMenuItem1.Text = "Удалить из комплекта";
+            удалитьИзКомплектаToolStripMenuItem1.Click += del_chosen_bottom;
             // 
             // FilterSeasonBox
             // 
@@ -639,9 +688,9 @@
             // listView5
             // 
             listView5.ContextMenuStrip = contextMenuStrip1;
-            listView5.Location = new Point(228, 423);
+            listView5.Location = new Point(211, 424);
             listView5.Name = "listView5";
-            listView5.Size = new Size(313, 310);
+            listView5.Size = new Size(314, 310);
             listView5.TabIndex = 55;
             listView5.UseCompatibleStateImageBehavior = false;
             listView5.ItemActivate += Load_see_formUp;
@@ -678,7 +727,7 @@
             // listView6
             // 
             listView6.ContextMenuStrip = contextMenuStrip2;
-            listView6.Location = new Point(573, 424);
+            listView6.Location = new Point(531, 424);
             listView6.Name = "listView6";
             listView6.Size = new Size(312, 309);
             listView6.TabIndex = 56;
@@ -716,7 +765,7 @@
             // listView7
             // 
             listView7.ContextMenuStrip = contextMenuStrip3;
-            listView7.Location = new Point(923, 423);
+            listView7.Location = new Point(851, 424);
             listView7.Name = "listView7";
             listView7.Size = new Size(313, 309);
             listView7.TabIndex = 57;
@@ -754,7 +803,7 @@
             // listView8
             // 
             listView8.ContextMenuStrip = contextMenuStrip4;
-            listView8.Location = new Point(1270, 423);
+            listView8.Location = new Point(1174, 424);
             listView8.Name = "listView8";
             listView8.Size = new Size(314, 310);
             listView8.TabIndex = 58;
@@ -803,7 +852,7 @@
             // 
             label22.AutoSize = true;
             label22.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label22.Location = new Point(699, 38);
+            label22.Location = new Point(659, 45);
             label22.Name = "label22";
             label22.Size = new Size(47, 28);
             label22.TabIndex = 60;
@@ -813,7 +862,7 @@
             // 
             label23.AutoSize = true;
             label23.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label23.Location = new Point(991, 39);
+            label23.Location = new Point(927, 39);
             label23.Name = "label23";
             label23.Size = new Size(83, 28);
             label23.TabIndex = 61;
@@ -823,7 +872,7 @@
             // 
             label24.AutoSize = true;
             label24.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label24.Location = new Point(1379, 38);
+            label24.Location = new Point(1287, 39);
             label24.Name = "label24";
             label24.Size = new Size(70, 28);
             label24.TabIndex = 62;
@@ -833,7 +882,7 @@
             // 
             label25.AutoSize = true;
             label25.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label25.Location = new Point(1069, 39);
+            label25.Location = new Point(1003, 39);
             label25.Name = "label25";
             label25.Size = new Size(83, 28);
             label25.TabIndex = 63;
@@ -842,18 +891,19 @@
             // label26
             // 
             label26.AutoSize = true;
-            label26.Location = new Point(1701, 45);
+            label26.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label26.Location = new Point(1589, 39);
             label26.Name = "label26";
-            label26.Size = new Size(90, 20);
+            label26.Size = new Size(118, 28);
             label26.TabIndex = 64;
             label26.Text = "Аксессуары";
             // 
             // pictureBox5
             // 
             pictureBox5.BackColor = SystemColors.ControlLightLight;
-            pictureBox5.Location = new Point(1622, 73);
+            pictureBox5.Location = new Point(1494, 78);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(211, 272);
+            pictureBox5.Size = new Size(314, 272);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 65;
             pictureBox5.TabStop = false;
@@ -861,9 +911,9 @@
             // listView1
             // 
             listView1.ContextMenuStrip = contextMenuStrip5;
-            listView1.Location = new Point(1622, 423);
+            listView1.Location = new Point(1494, 425);
             listView1.Name = "listView1";
-            listView1.Size = new Size(211, 309);
+            listView1.Size = new Size(314, 309);
             listView1.TabIndex = 66;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.ItemActivate += Load_see_formAcc;
@@ -901,89 +951,12 @@
             listBox5.ContextMenuStrip = contextMenuStrip10;
             listBox5.FormattingEnabled = true;
             listBox5.ItemHeight = 20;
-            listBox5.Location = new Point(1683, 369);
+            listBox5.Location = new Point(1622, 377);
             listBox5.Name = "listBox5";
-            listBox5.Size = new Size(150, 44);
+            listBox5.Size = new Size(186, 44);
             listBox5.TabIndex = 67;
             listBox5.SelectedIndexChanged += selectAcc;
             listBox5.DoubleClick += del_chosen_acc;
-            // 
-            // label27
-            // 
-            label27.AutoSize = true;
-            label27.Location = new Point(1657, 369);
-            label27.Name = "label27";
-            label27.Size = new Size(17, 20);
-            label27.TabIndex = 68;
-            label27.Text = "0";
-            // 
-            // label28
-            // 
-            label28.AutoSize = true;
-            label28.Location = new Point(1604, 397);
-            label28.Name = "label28";
-            label28.Size = new Size(90, 20);
-            label28.TabIndex = 69;
-            label28.Text = "Аксессуары";
-            // 
-            // label29
-            // 
-            label29.AutoSize = true;
-            label29.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label29.Location = new Point(1612, 353);
-            label29.Name = "label29";
-            label29.Size = new Size(80, 19);
-            label29.TabIndex = 70;
-            label29.Text = "в комплект";
-            // 
-            // удалитьИзКомплектаToolStripMenuItem
-            // 
-            удалитьИзКомплектаToolStripMenuItem.Name = "удалитьИзКомплектаToolStripMenuItem";
-            удалитьИзКомплектаToolStripMenuItem.Size = new Size(231, 24);
-            удалитьИзКомплектаToolStripMenuItem.Text = "Удалить из комплекта";
-            удалитьИзКомплектаToolStripMenuItem.Click += del_Choosen_Up;
-            // 
-            // contextMenuStrip7
-            // 
-            contextMenuStrip7.ImageScalingSize = new Size(20, 20);
-            contextMenuStrip7.Items.AddRange(new ToolStripItem[] { удалитьИзКомплектаToolStripMenuItem1 });
-            contextMenuStrip7.Name = "contextMenuStrip7";
-            contextMenuStrip7.Size = new Size(232, 28);
-            // 
-            // удалитьИзКомплектаToolStripMenuItem1
-            // 
-            удалитьИзКомплектаToolStripMenuItem1.Name = "удалитьИзКомплектаToolStripMenuItem1";
-            удалитьИзКомплектаToolStripMenuItem1.Size = new Size(231, 24);
-            удалитьИзКомплектаToolStripMenuItem1.Text = "Удалить из комплекта";
-            удалитьИзКомплектаToolStripMenuItem1.Click += del_chosen_bottom;
-            // 
-            // contextMenuStrip8
-            // 
-            contextMenuStrip8.ImageScalingSize = new Size(20, 20);
-            contextMenuStrip8.Items.AddRange(new ToolStripItem[] { удалитьИзКомплектаToolStripMenuItem2 });
-            contextMenuStrip8.Name = "contextMenuStrip8";
-            contextMenuStrip8.Size = new Size(232, 28);
-            // 
-            // удалитьИзКомплектаToolStripMenuItem2
-            // 
-            удалитьИзКомплектаToolStripMenuItem2.Name = "удалитьИзКомплектаToolStripMenuItem2";
-            удалитьИзКомплектаToolStripMenuItem2.Size = new Size(231, 24);
-            удалитьИзКомплектаToolStripMenuItem2.Text = "Удалить из комплекта";
-            удалитьИзКомплектаToolStripMenuItem2.Click += del_chosen_suit;
-            // 
-            // contextMenuStrip9
-            // 
-            contextMenuStrip9.ImageScalingSize = new Size(20, 20);
-            contextMenuStrip9.Items.AddRange(new ToolStripItem[] { удалитьИзКомплектаToolStripMenuItem3 });
-            contextMenuStrip9.Name = "contextMenuStrip9";
-            contextMenuStrip9.Size = new Size(232, 28);
-            // 
-            // удалитьИзКомплектаToolStripMenuItem3
-            // 
-            удалитьИзКомплектаToolStripMenuItem3.Name = "удалитьИзКомплектаToolStripMenuItem3";
-            удалитьИзКомплектаToolStripMenuItem3.Size = new Size(231, 24);
-            удалитьИзКомплектаToolStripMenuItem3.Text = "Удалить из комплекта";
-            удалитьИзКомплектаToolStripMenuItem3.Click += del_chosen_shoe;
             // 
             // contextMenuStrip10
             // 
@@ -999,11 +972,39 @@
             удалитьИзКомплектаToolStripMenuItem4.Text = "Удалить из комплекта";
             удалитьИзКомплектаToolStripMenuItem4.Click += del_chosen_acc;
             // 
+            // label27
+            // 
+            label27.AutoSize = true;
+            label27.Location = new Point(1599, 378);
+            label27.Name = "label27";
+            label27.Size = new Size(17, 20);
+            label27.TabIndex = 68;
+            label27.Text = "0";
+            // 
+            // label28
+            // 
+            label28.AutoSize = true;
+            label28.Location = new Point(1526, 402);
+            label28.Name = "label28";
+            label28.Size = new Size(90, 20);
+            label28.TabIndex = 69;
+            label28.Text = "Аксессуары";
+            // 
+            // label29
+            // 
+            label29.AutoSize = true;
+            label29.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            label29.Location = new Point(1513, 375);
+            label29.Name = "label29";
+            label29.Size = new Size(80, 19);
+            label29.TabIndex = 70;
+            label29.Text = "в комплект";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1847, 748);
+            ClientSize = new Size(1828, 748);
             Controls.Add(label29);
             Controls.Add(label28);
             Controls.Add(label27);
@@ -1066,19 +1067,19 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            contextMenuStrip6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            contextMenuStrip6.ResumeLayout(false);
+            contextMenuStrip8.ResumeLayout(false);
+            contextMenuStrip9.ResumeLayout(false);
+            contextMenuStrip7.ResumeLayout(false);
             contextMenuStrip1.ResumeLayout(false);
             contextMenuStrip2.ResumeLayout(false);
             contextMenuStrip3.ResumeLayout(false);
             contextMenuStrip4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             contextMenuStrip5.ResumeLayout(false);
-            contextMenuStrip7.ResumeLayout(false);
-            contextMenuStrip8.ResumeLayout(false);
-            contextMenuStrip9.ResumeLayout(false);
             contextMenuStrip10.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();

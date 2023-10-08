@@ -128,15 +128,23 @@ namespace wardrobe
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form8 f = new Form8();
-            f.MainForm2 = this;
-            f.ShowDialog();
+            if (FilePath != null)
+            {
+                Form8 f = new Form8();
+                f.MainForm2 = this;
+                f.ShowDialog();
+            }
         }
 
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)
         {
             pictureBox1.Image.Dispose();
             this.Dispose();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
