@@ -6,6 +6,7 @@ using System.Windows.Forms.DataVisualization.Charting;
 using System.Security.Cryptography;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 using System.Linq.Expressions;
+using System;
 
 namespace wardrobe
 {
@@ -887,13 +888,14 @@ namespace wardrobe
 
                 chart.Series.Add(new Series("data"));
 
-                chart.Series["data"].ChartType = SeriesChartType.Pie;
-                chart.Series["data"]["PieLabelStyle"] = "Outside";
-                chart.Series["data"]["PieLineColor"] = "Black";
-                chart.Series["data"]["PieLineWidth"] = "2";
+                chart.Series["data"].ChartType = SeriesChartType.Column;
+                //chart.Series["data"].ChartType = SeriesChartType.Pie;
+                // chart.Series["data"]["PieLabelStyle"] = "Outside";
+                // chart.Series["data"]["PieLineColor"] = "Black";
+                // chart.Series["data"]["PieLineWidth"] = "2";              
 
                 GetNumberColors?.Invoke(this, new EventArgs());
-                int x = 0;
+                int x = 0; double x1 = 0.5; double y1 = 1.5;
                 for (int i = 0; i < number; i++)
                 {
                     categoryId = Ids[i];
@@ -902,8 +904,9 @@ namespace wardrobe
                     {
                         nameCategory += " -" + point.ToString() + "%";
                         chart.Series["data"].Points.AddXY(nameCategory, point);
+                        chart.ChartAreas[0].AxisX.CustomLabels.Add(x1, y1, nameCategory);
                         chart.Series["data"].Points[x].Color = color;
-                        x++;
+                        x++; x1++; y1++;
                     }
                 }
                 colorStat.Controls.Add(chart);
@@ -911,6 +914,8 @@ namespace wardrobe
                 colorStat.Show();
                 Ids.Clear();
             }
+            else
+                colorStat.Focus();
         }
         private void colorStatClose(object sender, EventArgs e)
         {
@@ -957,6 +962,8 @@ namespace wardrobe
                 seasonStat.Show();
                 Ids.Clear();
             }
+            else
+                seasonStat.Focus();
         }
         private void seasonStatClose(object sender, EventArgs e)
         {
@@ -997,6 +1004,8 @@ namespace wardrobe
                 styleStat.Show();
                 Ids.Clear();
             }
+            else
+                styleStat.Focus();
         }
         private void styleStatClose(object sender, EventArgs e)
         {
