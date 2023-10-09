@@ -509,7 +509,7 @@ namespace wardrobe
                 edit_form.MainForm = this;
                 edit_form.category = "style";
                 edit_form.action = "add";
-                edit_form.ShowDialog();             
+                edit_form.ShowDialog();
             }
             catch { }
         }
@@ -674,7 +674,7 @@ namespace wardrobe
                     {
                         string[] s1 = s.Split('.');
                         Ids.Remove(int.Parse(s1[0]));
-                        pictureBox1.Image = Image.FromFile("Photos/up.png");
+                        pictureBox1.Image = Image.FromFile("Photos/up1.jpg");
                         listBox1.Items.RemoveAt(listBox1.SelectedIndex);
                         label13.Text = listBox1.Items.Count.ToString();
                         if (listBox1.Items.Count > 0)
@@ -703,7 +703,7 @@ namespace wardrobe
                     {
                         string[] s1 = s.Split('.');
                         Ids.Remove(int.Parse(s1[0]));
-                        pictureBox2.Image = Image.FromFile("Photos/bottom.png");
+                        pictureBox2.Image = Image.FromFile("Photos/bottom1.png");
                         listBox2.Items.RemoveAt(listBox2.SelectedIndex);
                         label14.Text = listBox2.Items.Count.ToString();
                         if (listBox2.Items.Count > 0)
@@ -732,7 +732,7 @@ namespace wardrobe
                     {
                         string[] s1 = s.Split('.');
                         Ids.Remove(int.Parse(s1[0]));
-                        pictureBox3.Image = Image.FromFile("Photos/dress.png");
+                        pictureBox3.Image = Image.FromFile("Photos/dress1.jpg");
                         listBox3.Items.RemoveAt(listBox3.SelectedIndex);
                         label15.Text = listBox3.Items.Count.ToString();
                         if (listBox3.Items.Count > 0)
@@ -761,7 +761,7 @@ namespace wardrobe
                     {
                         string[] s1 = s.Split('.');
                         Ids.Remove(int.Parse(s1[0]));
-                        pictureBox4.Image = Image.FromFile("Photos/shoe.jpg");
+                        pictureBox4.Image = Image.FromFile("Photos/shoe1.jpg");
                         listBox4.Items.RemoveAt(listBox4.SelectedIndex);
                         label16.Text = listBox4.Items.Count.ToString();
                         if (listBox4.Items.Count > 0)
@@ -1020,14 +1020,14 @@ namespace wardrobe
         }
         void PictureFill()
         {
-            pictureBox1.Image = Image.FromFile("Photos/up.png");
+            pictureBox1.Image = Image.FromFile("Photos/up1.jpg");
             // pictureBox1.Image = Image.FromFile("Photos/camera.png");
             // pictureBox2.Image = Image.FromFile("Photos/camera.png");
             // pictureBox3.Image = Image.FromFile("Photos/camera.png");
             // pictureBox4.Image = Image.FromFile("Photos/camera.png");
-            pictureBox2.Image = Image.FromFile("Photos/bottom.png");
-            pictureBox3.Image = Image.FromFile("Photos/dress.png");
-            pictureBox4.Image = Image.FromFile("Photos/shoe.jpg");
+            pictureBox2.Image = Image.FromFile("Photos/bottom1.png");
+            pictureBox3.Image = Image.FromFile("Photos/dress1.jpg");
+            pictureBox4.Image = Image.FromFile("Photos/shoe1.jpg");
             pictureBox5.Image = Image.FromFile("Photos/bag.jpg");
         }
         void LabelClear()
@@ -1302,6 +1302,15 @@ namespace wardrobe
             FilterColorBox.DataSource = null;
             FilterColorBox.Items.Clear();
             itemsColor.Clear();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("вы действительно хотите выйти" + "  ?", "¬ыйти", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Close()
+;            }
         }
     }
 }

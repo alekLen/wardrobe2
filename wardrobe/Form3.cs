@@ -148,6 +148,7 @@ namespace wardrobe
             buttonPhoto.Location = button1.Location;
             buttonPhoto.Size = button1.Size;
             buttonPhoto.Text = "изменить фото";
+            buttonPhoto.BackColor = button1.BackColor;
             this.Controls.Remove(button1);
             this.Controls.Add(buttonPhoto);
             buttonPhoto.Click += buttonPhoto_Click;

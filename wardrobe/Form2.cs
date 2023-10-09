@@ -32,7 +32,8 @@ namespace wardrobe
             InitializeComponent();
             //date = dateTimePicker1.Value.Date;
             date = dateTimePicker1.Value.ToString("dd.MM.yyyy");
-            pictureBox1.Image = Image.FromFile("Photos/camera.png");
+            //pictureBox1.Image = Image.FromFile("Photos/camera.png");
+            pictureBox1.Image = Image.FromFile("Photos/cam.jpg");
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 

@@ -131,6 +131,7 @@
             label27 = new Label();
             label28 = new Label();
             label29 = new Label();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             menuStrip1.SuspendLayout();
             contextMenuStrip6.SuspendLayout();
@@ -152,9 +153,9 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = SystemColors.ControlLightLight;
-            pictureBox1.Location = new Point(211, 78);
+            pictureBox1.Location = new Point(164, 59);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(314, 272);
+            pictureBox1.Size = new Size(335, 309);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -165,7 +166,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { editToolStripMenuItem2, wardrobeToolStripMenuItem, statisticToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1828, 28);
+            menuStrip1.Size = new Size(1880, 28);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -314,9 +315,9 @@
             listBox1.ContextMenuStrip = contextMenuStrip6;
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 20;
-            listBox1.Location = new Point(349, 374);
+            listBox1.Location = new Point(292, 375);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(176, 44);
+            listBox1.Size = new Size(186, 44);
             listBox1.TabIndex = 6;
             listBox1.SelectedIndexChanged += selectUp;
             listBox1.DoubleClick += del_Choosen_Up;
@@ -338,9 +339,9 @@
             // pictureBox2
             // 
             pictureBox2.BackColor = SystemColors.ControlLightLight;
-            pictureBox2.Location = new Point(531, 76);
+            pictureBox2.Location = new Point(505, 59);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(314, 272);
+            pictureBox2.Size = new Size(335, 309);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 7;
             pictureBox2.TabStop = false;
@@ -348,9 +349,9 @@
             // pictureBox3
             // 
             pictureBox3.BackColor = SystemColors.ControlLightLight;
-            pictureBox3.Location = new Point(851, 76);
+            pictureBox3.Location = new Point(846, 59);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(314, 272);
+            pictureBox3.Size = new Size(335, 309);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 8;
             pictureBox3.TabStop = false;
@@ -358,9 +359,9 @@
             // pictureBox4
             // 
             pictureBox4.BackColor = SystemColors.ControlLightLight;
-            pictureBox4.Location = new Point(1174, 76);
+            pictureBox4.Location = new Point(1187, 59);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(314, 272);
+            pictureBox4.Size = new Size(335, 309);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 9;
             pictureBox4.TabStop = false;
@@ -396,7 +397,7 @@
             listBox4.ContextMenuStrip = contextMenuStrip9;
             listBox4.FormattingEnabled = true;
             listBox4.ItemHeight = 20;
-            listBox4.Location = new Point(1306, 373);
+            listBox4.Location = new Point(1319, 374);
             listBox4.Name = "listBox4";
             listBox4.Size = new Size(182, 44);
             listBox4.TabIndex = 12;
@@ -420,9 +421,9 @@
             // button4
             // 
             button4.BackColor = SystemColors.Info;
-            button4.Location = new Point(31, 682);
+            button4.Location = new Point(12, 685);
             button4.Name = "button4";
-            button4.Size = new Size(158, 51);
+            button4.Size = new Size(146, 51);
             button4.TabIndex = 20;
             button4.Text = "Добавить комплект";
             button4.UseVisualStyleBackColor = false;
@@ -431,16 +432,16 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(32, 84);
+            label1.Location = new Point(12, 84);
             label1.Name = "label1";
-            label1.Size = new Size(47, 20);
+            label1.Size = new Size(49, 20);
             label1.TabIndex = 22;
-            label1.Text = "цвету";
+            label1.Text = "Цвету";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(32, 290);
+            label2.Location = new Point(12, 290);
             label2.Name = "label2";
             label2.Size = new Size(58, 20);
             label2.TabIndex = 25;
@@ -449,18 +450,18 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(32, 430);
+            label3.Location = new Point(12, 430);
             label3.Name = "label3";
-            label3.Size = new Size(51, 20);
+            label3.Size = new Size(53, 20);
             label3.TabIndex = 26;
-            label3.Text = "стилю";
+            label3.Text = "Стилю";
             // 
             // button5
             // 
             button5.BackColor = SystemColors.Info;
-            button5.Location = new Point(31, 631);
+            button5.Location = new Point(12, 631);
             button5.Name = "button5";
-            button5.Size = new Size(158, 29);
+            button5.Size = new Size(146, 29);
             button5.TabIndex = 29;
             button5.Text = "Сбросить фильтр";
             button5.UseVisualStyleBackColor = false;
@@ -469,9 +470,9 @@
             // button6
             // 
             button6.BackColor = SystemColors.Info;
-            button6.Location = new Point(31, 596);
+            button6.Location = new Point(12, 596);
             button6.Name = "button6";
-            button6.Size = new Size(158, 29);
+            button6.Size = new Size(146, 29);
             button6.TabIndex = 30;
             button6.Text = "Фильтровать";
             button6.UseVisualStyleBackColor = false;
@@ -480,7 +481,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(244, 401);
+            label5.Location = new Point(214, 401);
             label5.Name = "label5";
             label5.Size = new Size(42, 20);
             label5.TabIndex = 34;
@@ -489,7 +490,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(589, 397);
+            label6.Location = new Point(552, 401);
             label6.Name = "label6";
             label6.Size = new Size(36, 20);
             label6.TabIndex = 35;
@@ -507,7 +508,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(1241, 401);
+            label8.Location = new Point(1241, 399);
             label8.Name = "label8";
             label8.Size = new Size(52, 20);
             label8.TabIndex = 37;
@@ -548,7 +549,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(31, 64);
+            label4.Location = new Point(12, 64);
             label4.Name = "label4";
             label4.Size = new Size(124, 20);
             label4.TabIndex = 42;
@@ -558,7 +559,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(318, 374);
+            label13.Location = new Point(263, 377);
             label13.Name = "label13";
             label13.Size = new Size(17, 20);
             label13.TabIndex = 43;
@@ -567,7 +568,7 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(631, 375);
+            label14.Location = new Point(608, 378);
             label14.Name = "label14";
             label14.Size = new Size(17, 20);
             label14.TabIndex = 44;
@@ -576,7 +577,7 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(957, 378);
+            label15.Location = new Point(955, 378);
             label15.Name = "label15";
             label15.Size = new Size(17, 20);
             label15.TabIndex = 45;
@@ -585,7 +586,7 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(1287, 376);
+            label16.Location = new Point(1287, 379);
             label16.Name = "label16";
             label16.Size = new Size(17, 20);
             label16.TabIndex = 46;
@@ -595,7 +596,7 @@
             // 
             label17.AutoSize = true;
             label17.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label17.Location = new Point(218, 374);
+            label17.Location = new Point(187, 377);
             label17.Name = "label17";
             label17.Size = new Size(80, 19);
             label17.TabIndex = 47;
@@ -605,7 +606,7 @@
             // 
             label18.AutoSize = true;
             label18.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label18.Location = new Point(545, 375);
+            label18.Location = new Point(522, 379);
             label18.Name = "label18";
             label18.Size = new Size(80, 19);
             label18.TabIndex = 48;
@@ -625,7 +626,7 @@
             // 
             label20.AutoSize = true;
             label20.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label20.Location = new Point(1195, 375);
+            label20.Location = new Point(1201, 377);
             label20.Name = "label20";
             label20.Size = new Size(80, 19);
             label20.TabIndex = 50;
@@ -636,7 +637,7 @@
             listBox2.ContextMenuStrip = contextMenuStrip7;
             listBox2.FormattingEnabled = true;
             listBox2.ItemHeight = 20;
-            listBox2.Location = new Point(659, 375);
+            listBox2.Location = new Point(633, 374);
             listBox2.Name = "listBox2";
             listBox2.Size = new Size(186, 44);
             listBox2.TabIndex = 51;
@@ -660,9 +661,9 @@
             // FilterSeasonBox
             // 
             FilterSeasonBox.FormattingEnabled = true;
-            FilterSeasonBox.Location = new Point(32, 313);
+            FilterSeasonBox.Location = new Point(12, 313);
             FilterSeasonBox.Name = "FilterSeasonBox";
-            FilterSeasonBox.Size = new Size(158, 114);
+            FilterSeasonBox.Size = new Size(146, 114);
             FilterSeasonBox.TabIndex = 52;
             FilterSeasonBox.ItemCheck += FilterSeasonBox_ItemCheck;
             // 
@@ -670,27 +671,27 @@
             // 
             FilterColorBox.CheckOnClick = true;
             FilterColorBox.FormattingEnabled = true;
-            FilterColorBox.Location = new Point(32, 107);
+            FilterColorBox.Location = new Point(12, 107);
             FilterColorBox.Name = "FilterColorBox";
-            FilterColorBox.Size = new Size(159, 180);
+            FilterColorBox.Size = new Size(146, 180);
             FilterColorBox.TabIndex = 53;
             FilterColorBox.ItemCheck += FilterColorBox_ItemCheck;
             // 
             // FilterStyleBox
             // 
             FilterStyleBox.FormattingEnabled = true;
-            FilterStyleBox.Location = new Point(32, 453);
+            FilterStyleBox.Location = new Point(12, 453);
             FilterStyleBox.Name = "FilterStyleBox";
-            FilterStyleBox.Size = new Size(159, 114);
+            FilterStyleBox.Size = new Size(146, 114);
             FilterStyleBox.TabIndex = 54;
             FilterStyleBox.ItemCheck += FilterStyleBox_ItemCheck;
             // 
             // listView5
             // 
             listView5.ContextMenuStrip = contextMenuStrip1;
-            listView5.Location = new Point(211, 424);
+            listView5.Location = new Point(164, 425);
             listView5.Name = "listView5";
-            listView5.Size = new Size(314, 310);
+            listView5.Size = new Size(335, 310);
             listView5.TabIndex = 55;
             listView5.UseCompatibleStateImageBehavior = false;
             listView5.ItemActivate += Load_see_formUp;
@@ -727,9 +728,9 @@
             // listView6
             // 
             listView6.ContextMenuStrip = contextMenuStrip2;
-            listView6.Location = new Point(531, 424);
+            listView6.Location = new Point(505, 426);
             listView6.Name = "listView6";
-            listView6.Size = new Size(312, 309);
+            listView6.Size = new Size(335, 310);
             listView6.TabIndex = 56;
             listView6.UseCompatibleStateImageBehavior = false;
             listView6.ItemActivate += Load_see_formBottom;
@@ -765,9 +766,9 @@
             // listView7
             // 
             listView7.ContextMenuStrip = contextMenuStrip3;
-            listView7.Location = new Point(851, 424);
+            listView7.Location = new Point(846, 425);
             listView7.Name = "listView7";
-            listView7.Size = new Size(313, 309);
+            listView7.Size = new Size(335, 310);
             listView7.TabIndex = 57;
             listView7.UseCompatibleStateImageBehavior = false;
             listView7.ItemActivate += Load_see_formSuit;
@@ -803,9 +804,9 @@
             // listView8
             // 
             listView8.ContextMenuStrip = contextMenuStrip4;
-            listView8.Location = new Point(1174, 424);
+            listView8.Location = new Point(1187, 425);
             listView8.Name = "listView8";
-            listView8.Size = new Size(314, 310);
+            listView8.Size = new Size(335, 310);
             listView8.TabIndex = 58;
             listView8.UseCompatibleStateImageBehavior = false;
             listView8.ItemActivate += Load_see_formShoe;
@@ -842,7 +843,7 @@
             // 
             label21.AutoSize = true;
             label21.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label21.Location = new Point(339, 39);
+            label21.Location = new Point(320, 28);
             label21.Name = "label21";
             label21.Size = new Size(54, 28);
             label21.TabIndex = 59;
@@ -852,7 +853,7 @@
             // 
             label22.AutoSize = true;
             label22.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label22.Location = new Point(659, 45);
+            label22.Location = new Point(633, 28);
             label22.Name = "label22";
             label22.Size = new Size(47, 28);
             label22.TabIndex = 60;
@@ -862,7 +863,7 @@
             // 
             label23.AutoSize = true;
             label23.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label23.Location = new Point(927, 39);
+            label23.Location = new Point(924, 28);
             label23.Name = "label23";
             label23.Size = new Size(83, 28);
             label23.TabIndex = 61;
@@ -872,7 +873,7 @@
             // 
             label24.AutoSize = true;
             label24.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label24.Location = new Point(1287, 39);
+            label24.Location = new Point(1287, 28);
             label24.Name = "label24";
             label24.Size = new Size(70, 28);
             label24.TabIndex = 62;
@@ -882,7 +883,7 @@
             // 
             label25.AutoSize = true;
             label25.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label25.Location = new Point(1003, 39);
+            label25.Location = new Point(1000, 28);
             label25.Name = "label25";
             label25.Size = new Size(83, 28);
             label25.TabIndex = 63;
@@ -892,7 +893,7 @@
             // 
             label26.AutoSize = true;
             label26.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label26.Location = new Point(1589, 39);
+            label26.Location = new Point(1588, 28);
             label26.Name = "label26";
             label26.Size = new Size(118, 28);
             label26.TabIndex = 64;
@@ -901,9 +902,9 @@
             // pictureBox5
             // 
             pictureBox5.BackColor = SystemColors.ControlLightLight;
-            pictureBox5.Location = new Point(1494, 78);
+            pictureBox5.Location = new Point(1528, 59);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(314, 272);
+            pictureBox5.Size = new Size(335, 309);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 65;
             pictureBox5.TabStop = false;
@@ -911,9 +912,9 @@
             // listView1
             // 
             listView1.ContextMenuStrip = contextMenuStrip5;
-            listView1.Location = new Point(1494, 425);
+            listView1.Location = new Point(1528, 425);
             listView1.Name = "listView1";
-            listView1.Size = new Size(314, 309);
+            listView1.Size = new Size(335, 310);
             listView1.TabIndex = 66;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.ItemActivate += Load_see_formAcc;
@@ -951,7 +952,7 @@
             listBox5.ContextMenuStrip = contextMenuStrip10;
             listBox5.FormattingEnabled = true;
             listBox5.ItemHeight = 20;
-            listBox5.Location = new Point(1622, 377);
+            listBox5.Location = new Point(1656, 374);
             listBox5.Name = "listBox5";
             listBox5.Size = new Size(186, 44);
             listBox5.TabIndex = 67;
@@ -975,7 +976,7 @@
             // label27
             // 
             label27.AutoSize = true;
-            label27.Location = new Point(1599, 378);
+            label27.Location = new Point(1621, 379);
             label27.Name = "label27";
             label27.Size = new Size(17, 20);
             label27.TabIndex = 68;
@@ -984,7 +985,7 @@
             // label28
             // 
             label28.AutoSize = true;
-            label28.Location = new Point(1526, 402);
+            label28.Location = new Point(1560, 399);
             label28.Name = "label28";
             label28.Size = new Size(90, 20);
             label28.TabIndex = 69;
@@ -994,17 +995,29 @@
             // 
             label29.AutoSize = true;
             label29.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label29.Location = new Point(1513, 375);
+            label29.Location = new Point(1545, 379);
             label29.Name = "label29";
             label29.Size = new Size(80, 19);
             label29.TabIndex = 70;
             label29.Text = "в комплект";
             // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.Info;
+            button1.Location = new Point(12, 32);
+            button1.Name = "button1";
+            button1.Size = new Size(87, 29);
+            button1.TabIndex = 71;
+            button1.Text = "Выйти";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1828, 748);
+            ClientSize = new Size(1880, 748);
+            Controls.Add(button1);
             Controls.Add(label29);
             Controls.Add(label28);
             Controls.Add(label27);
@@ -1187,5 +1200,6 @@
         private ToolStripMenuItem удалитьИзКомплектаToolStripMenuItem3;
         private ContextMenuStrip contextMenuStrip10;
         private ToolStripMenuItem удалитьИзКомплектаToolStripMenuItem4;
+        private Button button1;
     }
 }
