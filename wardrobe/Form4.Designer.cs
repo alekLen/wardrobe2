@@ -83,12 +83,13 @@
             // 
             // button2
             // 
+            button2.BackColor = SystemColors.Info;
             button2.Location = new Point(21, 106);
             button2.Name = "button2";
             button2.Size = new Size(166, 29);
             button2.TabIndex = 8;
             button2.Text = "Отмена";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // Form4
