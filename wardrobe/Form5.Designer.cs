@@ -85,7 +85,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "Form5";
-            Text = "добаление комплекта в альбом";
+            Text = "сохранение комплекта";
             FormClosed += Form5_FormClosed;
             Load += LoadF5;
             ResumeLayout(false);

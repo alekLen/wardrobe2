@@ -868,7 +868,7 @@ namespace wardrobe
                 NewF6?.Invoke(this, EventArgs.Empty);
             }
             //complects_show_form.MainForm = this;
-            complects_show_form.Show();
+            complects_show_form.ShowDialog();
         }
 
         private void color_statistic(object sender, EventArgs e)

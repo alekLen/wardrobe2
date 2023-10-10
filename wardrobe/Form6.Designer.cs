@@ -36,7 +36,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            BackColor = SystemColors.Control;
+            BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(1079, 450);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
