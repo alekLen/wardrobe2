@@ -132,6 +132,7 @@
             label28 = new Label();
             label29 = new Label();
             button1 = new Button();
+            toolStripContainer1 = new ToolStripContainer();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             menuStrip1.SuspendLayout();
             contextMenuStrip6.SuspendLayout();
@@ -148,6 +149,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             contextMenuStrip5.SuspendLayout();
             contextMenuStrip10.SuspendLayout();
+            toolStripContainer1.SuspendLayout();
             SuspendLayout();
             // 
             // pictureBox1
@@ -162,13 +164,17 @@
             // 
             // menuStrip1
             // 
+            menuStrip1.BackColor = SystemColors.GradientInactiveCaption;
+            menuStrip1.Dock = DockStyle.None;
+            menuStrip1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             menuStrip1.ImageScalingSize = new Size(20, 20);
             menuStrip1.Items.AddRange(new ToolStripItem[] { editToolStripMenuItem2, wardrobeToolStripMenuItem, statisticToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Location = new Point(8, 8);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1880, 28);
+            menuStrip1.Size = new Size(321, 28);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
+            menuStrip1.ItemClicked += menuStrip1_ItemClicked;
             // 
             // editToolStripMenuItem2
             // 
@@ -432,7 +438,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 84);
+            label1.Location = new Point(11, 107);
             label1.Name = "label1";
             label1.Size = new Size(49, 20);
             label1.TabIndex = 22;
@@ -441,7 +447,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 290);
+            label2.Location = new Point(12, 313);
             label2.Name = "label2";
             label2.Size = new Size(58, 20);
             label2.TabIndex = 25;
@@ -450,7 +456,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(12, 430);
+            label3.Location = new Point(12, 453);
             label3.Name = "label3";
             label3.Size = new Size(53, 20);
             label3.TabIndex = 26;
@@ -549,7 +555,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(12, 64);
+            label4.Location = new Point(8, 87);
             label4.Name = "label4";
             label4.Size = new Size(124, 20);
             label4.TabIndex = 42;
@@ -661,7 +667,7 @@
             // FilterSeasonBox
             // 
             FilterSeasonBox.FormattingEnabled = true;
-            FilterSeasonBox.Location = new Point(12, 313);
+            FilterSeasonBox.Location = new Point(11, 336);
             FilterSeasonBox.Name = "FilterSeasonBox";
             FilterSeasonBox.Size = new Size(146, 114);
             FilterSeasonBox.TabIndex = 52;
@@ -671,7 +677,7 @@
             // 
             FilterColorBox.CheckOnClick = true;
             FilterColorBox.FormattingEnabled = true;
-            FilterColorBox.Location = new Point(12, 107);
+            FilterColorBox.Location = new Point(12, 130);
             FilterColorBox.Name = "FilterColorBox";
             FilterColorBox.Size = new Size(146, 180);
             FilterColorBox.TabIndex = 53;
@@ -680,7 +686,7 @@
             // FilterStyleBox
             // 
             FilterStyleBox.FormattingEnabled = true;
-            FilterStyleBox.Location = new Point(12, 453);
+            FilterStyleBox.Location = new Point(11, 476);
             FilterStyleBox.Name = "FilterStyleBox";
             FilterStyleBox.Size = new Size(146, 114);
             FilterStyleBox.TabIndex = 54;
@@ -1004,7 +1010,7 @@
             // button1
             // 
             button1.BackColor = SystemColors.Info;
-            button1.Location = new Point(12, 32);
+            button1.Location = new Point(20, 45);
             button1.Name = "button1";
             button1.Size = new Size(87, 29);
             button1.TabIndex = 71;
@@ -1012,11 +1018,27 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // toolStripContainer1
+            // 
+            // 
+            // toolStripContainer1.ContentPanel
+            // 
+            toolStripContainer1.ContentPanel.BackColor = SystemColors.ControlLight;
+            toolStripContainer1.ContentPanel.Size = new Size(1, 0);
+            toolStripContainer1.Location = new Point(383, 8);
+            toolStripContainer1.Name = "toolStripContainer1";
+            toolStripContainer1.Size = new Size(1, 1);
+            toolStripContainer1.TabIndex = 2;
+            toolStripContainer1.Text = "toolStripContainer1";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(1880, 748);
+            Controls.Add(menuStrip1);
+            Controls.Add(toolStripContainer1);
             Controls.Add(button1);
             Controls.Add(label29);
             Controls.Add(label28);
@@ -1068,7 +1090,6 @@
             Controls.Add(pictureBox2);
             Controls.Add(listBox1);
             Controls.Add(pictureBox1);
-            Controls.Add(menuStrip1);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -1094,6 +1115,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             contextMenuStrip5.ResumeLayout(false);
             contextMenuStrip10.ResumeLayout(false);
+            toolStripContainer1.ResumeLayout(false);
+            toolStripContainer1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1201,5 +1224,6 @@
         private ContextMenuStrip contextMenuStrip10;
         private ToolStripMenuItem удалитьИзКомплектаToolStripMenuItem4;
         private Button button1;
+        private ToolStripContainer toolStripContainer1;
     }
 }

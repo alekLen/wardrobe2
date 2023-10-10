@@ -1309,8 +1309,13 @@ namespace wardrobe
             DialogResult result = MessageBox.Show("вы действительно хотите выйти" + "  ?", "¬ыйти", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                this.Close()
-;            }
+                this.Close();
+            }
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

@@ -53,22 +53,25 @@
             // 
             // button1
             // 
-            button1.Location = new Point(271, 339);
+            button1.BackColor = SystemColors.Info;
+            button1.Location = new Point(212, 327);
             button1.Name = "button1";
-            button1.Size = new Size(296, 29);
+            button1.Size = new Size(225, 41);
             button1.TabIndex = 6;
             button1.Text = "сохранить комплект ";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += Save_Complect;
             // 
             // button2
             // 
-            button2.Location = new Point(41, 339);
+            button2.BackColor = SystemColors.Info;
+            button2.Location = new Point(41, 327);
             button2.Name = "button2";
-            button2.Size = new Size(204, 29);
+            button2.Size = new Size(152, 41);
             button2.TabIndex = 7;
             button2.Text = "Отмена";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // Form5
             // 
