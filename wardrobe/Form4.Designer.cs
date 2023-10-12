@@ -97,6 +97,7 @@
             AcceptButton = button1;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(428, 163);
             Controls.Add(button2);
             Controls.Add(label2);

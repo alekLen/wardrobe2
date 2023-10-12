@@ -652,14 +652,19 @@ namespace wardrobe
 
         private void Add_Complect(object sender, EventArgs e)
         {
-            if (complect_form.IsDisposed || complect_form.Visible)
+            if (Ids.Count > 1)
             {
-                complect_form = new Form5();
-                NewF5?.Invoke(this, EventArgs.Empty);
-                complect_form.F5Close += new EventHandler<EventArgs>(F5Close);
+                if (complect_form.IsDisposed || complect_form.Visible)
+                {
+                    complect_form = new Form5();
+                    NewF5?.Invoke(this, EventArgs.Empty);
+                    complect_form.F5Close += new EventHandler<EventArgs>(F5Close);
+                }
+                complect_form.MainForm = this;
+                complect_form.ShowDialog();
             }
-            complect_form.MainForm = this;
-            complect_form.ShowDialog();
+            else
+                MessageBox.Show("Добавьте как минимум 2 предмета одежды!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void del_Choosen_Up(object sender, EventArgs e)
@@ -727,7 +732,7 @@ namespace wardrobe
                 if (listBox3.SelectedIndex != -1)
                 {
                     string s = listBox3.SelectedItem.ToString();
-                    DialogResult result = MessageBox.Show("вы действительно хотите удалить из комплекта\n" + s + "  ?", "подтвердите", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult result = MessageBox.Show("Вы действительно хотите удалить из комплекта\n" + s + "  ?", "Подтвердите", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (result == DialogResult.Yes)
                     {
                         string[] s1 = s.Split('.');

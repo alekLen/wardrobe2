@@ -217,6 +217,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(755, 365);
             Controls.Add(button3);
             Controls.Add(button3Photo);
