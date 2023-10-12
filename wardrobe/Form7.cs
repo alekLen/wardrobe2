@@ -180,7 +180,7 @@ namespace wardrobe
             // MainForm.see_clotheDop = this;
             //  buttonPhoto = new System.Windows.Forms.Button();
             button3Photo.Visible = true;
-            button3Photo.Text = "изменить фото";
+            button3Photo.Text = "Изменить фото";
             // this.Controls.Remove(button1);
             // this.Controls.Add(buttonPhoto);
             button3Photo.Click += buttonPhoto_Click;
@@ -235,14 +235,14 @@ namespace wardrobe
         {
             button1.Click -= delete;
             // MainForm.see_clotheDop = this;
-            DialogResult result = MessageBox.Show("вы действительно хотите удалить\n " + textBoxName.Text + " из гардероба", "подтвердите", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Вы действительно хотите удалить\n " + textBoxName.Text + " из гардероба", "Подтвердите", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 pictureBox1.Image.Dispose();
                 DeleteItem?.Invoke(this, EventArgs.Empty);
                 this.Close();
                 this.Dispose();
-                MessageBox.Show("одежда  удалена!");
+                MessageBox.Show("Одежда  удалена!");
             }
         }
 
@@ -250,7 +250,7 @@ namespace wardrobe
         {
             button1.Click -= SaveIt;
             // MainForm.see_clotheDop = this;
-            DialogResult result = MessageBox.Show("вы хотите сохранить изменения\n если изменили фото, то старое будет удалено", "подтвердите", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Вы хотите сохранить изменения\n если изменили фото, то старое будет удалено", "Подтвердите", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 SetNewData();
@@ -260,7 +260,7 @@ namespace wardrobe
                     DeletePhoto?.Invoke(this, EventArgs.Empty);
                 }
                 EditItem?.Invoke(this, EventArgs.Empty);
-                MessageBox.Show("измененения сохранены успешно");
+                MessageBox.Show("Измененения сохранены успешно");
             }
             if (result == DialogResult.No)
             {

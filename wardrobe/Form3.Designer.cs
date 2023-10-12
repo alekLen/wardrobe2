@@ -48,6 +48,7 @@
             buttonEdit = new Button();
             button2 = new Button();
             button3 = new Button();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -55,7 +56,7 @@
             // 
             textBoxName.Enabled = false;
             textBoxName.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxName.Location = new Point(21, 12);
+            textBoxName.Location = new Point(21, 31);
             textBoxName.Name = "textBoxName";
             textBoxName.Size = new Size(333, 47);
             textBoxName.TabIndex = 0;
@@ -73,7 +74,7 @@
             // textBoxStyle
             // 
             textBoxStyle.Enabled = false;
-            textBoxStyle.Location = new Point(83, 65);
+            textBoxStyle.Location = new Point(83, 84);
             textBoxStyle.Name = "textBoxStyle";
             textBoxStyle.Size = new Size(271, 27);
             textBoxStyle.TabIndex = 2;
@@ -81,7 +82,7 @@
             // textBoxColor
             // 
             textBoxColor.Enabled = false;
-            textBoxColor.Location = new Point(83, 99);
+            textBoxColor.Location = new Point(83, 117);
             textBoxColor.Name = "textBoxColor";
             textBoxColor.Size = new Size(271, 27);
             textBoxColor.TabIndex = 3;
@@ -89,7 +90,7 @@
             // textBoxSeason
             // 
             textBoxSeason.Enabled = false;
-            textBoxSeason.Location = new Point(83, 132);
+            textBoxSeason.Location = new Point(83, 150);
             textBoxSeason.Name = "textBoxSeason";
             textBoxSeason.Size = new Size(271, 27);
             textBoxSeason.TabIndex = 4;
@@ -97,63 +98,63 @@
             // button1
             // 
             button1.BackColor = SystemColors.Info;
-            button1.Location = new Point(63, 327);
+            button1.Location = new Point(106, 327);
             button1.Name = "button1";
             button1.Size = new Size(248, 54);
             button1.TabIndex = 5;
-            button1.Text = "добвить в комплект";
+            button1.Text = "Добвить в комплект";
             button1.UseVisualStyleBackColor = false;
             button1.Click += AddToComplectBox;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(23, 68);
+            label1.Location = new Point(16, 87);
             label1.Name = "label1";
-            label1.Size = new Size(47, 20);
+            label1.Size = new Size(49, 20);
             label1.TabIndex = 6;
-            label1.Text = "стиль";
+            label1.Text = "Стиль";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(24, 102);
+            label2.Location = new Point(16, 120);
             label2.Name = "label2";
-            label2.Size = new Size(40, 20);
+            label2.Size = new Size(42, 20);
             label2.TabIndex = 7;
-            label2.Text = "цвет";
+            label2.Text = "Цвет";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(21, 139);
+            label3.Location = new Point(16, 153);
             label3.Name = "label3";
-            label3.Size = new Size(49, 20);
+            label3.Size = new Size(51, 20);
             label3.TabIndex = 8;
-            label3.Text = "сезон";
+            label3.Text = "Сезон";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(24, 168);
+            label4.Location = new Point(16, 186);
             label4.Name = "label4";
-            label4.Size = new Size(39, 20);
+            label4.Size = new Size(41, 20);
             label4.TabIndex = 10;
-            label4.Text = "дата";
+            label4.Text = "Дата";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(10, 201);
+            label5.Location = new Point(16, 219);
             label5.Name = "label5";
-            label5.Size = new Size(67, 20);
+            label5.Size = new Size(69, 20);
             label5.TabIndex = 11;
-            label5.Text = "магазин";
+            label5.Text = "Магазин";
             // 
             // textBoxPlace
             // 
             textBoxPlace.Enabled = false;
-            textBoxPlace.Location = new Point(83, 198);
+            textBoxPlace.Location = new Point(83, 216);
             textBoxPlace.Name = "textBoxPlace";
             textBoxPlace.Size = new Size(271, 27);
             textBoxPlace.TabIndex = 12;
@@ -161,24 +162,24 @@
             // textBoxSize
             // 
             textBoxSize.Enabled = false;
-            textBoxSize.Location = new Point(229, 231);
+            textBoxSize.Location = new Point(187, 249);
             textBoxSize.Name = "textBoxSize";
-            textBoxSize.Size = new Size(125, 27);
+            textBoxSize.Size = new Size(167, 27);
             textBoxSize.TabIndex = 13;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(16, 234);
+            label6.Location = new Point(16, 249);
             label6.Name = "label6";
-            label6.Size = new Size(61, 20);
+            label6.Size = new Size(60, 20);
             label6.TabIndex = 14;
-            label6.Text = "размер";
+            label6.Text = "Размер";
             // 
             // textBoxDate
             // 
             textBoxDate.Enabled = false;
-            textBoxDate.Location = new Point(187, 165);
+            textBoxDate.Location = new Point(187, 183);
             textBoxDate.Name = "textBoxDate";
             textBoxDate.Size = new Size(167, 27);
             textBoxDate.TabIndex = 15;
@@ -186,31 +187,31 @@
             // buttonDelete
             // 
             buttonDelete.BackColor = SystemColors.Info;
-            buttonDelete.Location = new Point(63, 436);
+            buttonDelete.Location = new Point(106, 436);
             buttonDelete.Name = "buttonDelete";
             buttonDelete.Size = new Size(248, 29);
             buttonDelete.TabIndex = 16;
-            buttonDelete.Text = "удалить из гардероба";
+            buttonDelete.Text = "Удалить из гардероба";
             buttonDelete.UseVisualStyleBackColor = false;
             buttonDelete.Click += delete;
             // 
             // buttonEdit
             // 
             buttonEdit.BackColor = SystemColors.Info;
-            buttonEdit.Location = new Point(63, 387);
+            buttonEdit.Location = new Point(106, 387);
             buttonEdit.Name = "buttonEdit";
             buttonEdit.Size = new Size(248, 43);
             buttonEdit.TabIndex = 17;
-            buttonEdit.Text = "редактировать";
+            buttonEdit.Text = "Редактировать";
             buttonEdit.UseVisualStyleBackColor = false;
             buttonEdit.Click += edit_item;
             // 
             // button2
             // 
             button2.BackColor = SystemColors.Info;
-            button2.Location = new Point(63, 279);
+            button2.Location = new Point(16, 298);
             button2.Name = "button2";
-            button2.Size = new Size(108, 42);
+            button2.Size = new Size(79, 42);
             button2.TabIndex = 18;
             button2.Text = "Отмена";
             button2.UseVisualStyleBackColor = false;
@@ -226,12 +227,22 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(21, 8);
+            label7.Name = "label7";
+            label7.Size = new Size(116, 20);
+            label7.TabIndex = 20;
+            label7.Text = "Наименование";
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(812, 485);
+            Controls.Add(label7);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(buttonEdit);
@@ -284,5 +295,6 @@
         private Button buttonEdit;
         private Button button2;
         private Button button3;
+        private Label label7;
     }
 }

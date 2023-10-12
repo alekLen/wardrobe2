@@ -67,7 +67,7 @@ namespace wardrobe
                         x = i1;
                     }
                     Button button = new Button();
-                    button.Text = "удалить комплект";
+                    button.Text = "Удалить комплект";
                     button.Name = "button." + i;
                     button.Width = 150;
                     button.Height = 50;
@@ -87,7 +87,7 @@ namespace wardrobe
             string s = clickedButton.Name;
             string[] s1 = s.Split('.');
             n = int.Parse(s1[1]);
-            DialogResult result = MessageBox.Show("уверены , что хотите удалить комплект ?", "подтвердите", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Уверены , что хотите удалить комплект ?", "Подтвердите", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 DeleteComplect?.Invoke(this, new EventArgs());

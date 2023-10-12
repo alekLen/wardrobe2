@@ -19,7 +19,6 @@ namespace wardrobe
         public string season { get; set; } = null;
         public string style { get; set; } = null;
         public string name { get; set; } = null;
-        //public DateTime date { get; set; }
         public string place { get; set; } = null;
         public string size { get; set; } = null;
         public string date { get; set; } = null;
@@ -29,8 +28,7 @@ namespace wardrobe
         public Form1 MainForm { get; set; }
         public Form2()
         {
-            InitializeComponent();
-            //date = dateTimePicker1.Value.Date;
+            InitializeComponent();        
             date = dateTimePicker1.Value.ToString("dd.MM.yyyy");
             //pictureBox1.Image = Image.FromFile("Photos/camera.png");
             pictureBox1.Image = Image.FromFile("Photos/cam.jpg");
@@ -91,7 +89,7 @@ namespace wardrobe
             }
             else
             {
-                MessageBox.Show("ПЕРЕД ДОБАВЛЕНИЕМ ОБЯЗАТЕЛЬНО:\n\nзагрузить фото\nввести название\n тип\n стиль\n цвет\n сезон");
+                MessageBox.Show("ПЕРЕД ДОБАВЛЕНИЕМ ОБЯЗАТЕЛЬНО:\n\nзагрузить фото\nввести название\n тип\n стиль\n цвет\n сезон","Предупреждение",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
 
         }

@@ -100,11 +100,7 @@ namespace wardrobe
         public void SetSeasonToWardrobe(string s, int i)
         {
             l = new ListItem { Name = s, Id = i, IsChecked = false };
-            //  FilterSeasonBox.Items.Add(l);
             itemsSeason.Add(l);
-            //  FilterSeasonBox.DisplayMember = "Name";
-            // FilterSeasonBox.ValueMember = "Id";      // «начение элемента (Id)
-            // FilterSeasonBox.CheckOnClick = true;
         }
         public void SetStyleToWardrobe(string s, int i)
         {
@@ -138,13 +134,8 @@ namespace wardrobe
         }
         public void SetColorToWardrobe(string s, int i)
         {
-            //comboBox1.Items.Add(s);
             l = new ListItem { Name = s, Id = i, IsChecked = false };
-            // FilterColorBox.Items.Add(l);
             itemsColor.Add(l);
-            //  FilterColorBox.DisplayMember = "Name";
-            //  FilterColorBox.ValueMember = "Id";      // «начение элемента (Id)
-            //  FilterColorBox.CheckOnClick = true;
         }
         public void SetChoseItemUp(string s)
         {
@@ -491,7 +482,7 @@ namespace wardrobe
                 edit_form.category = "style";
                 edit_form.action = "delete";
                 edit_form.ShowDialog();
-                Clear_Filtr?.Invoke(this, EventArgs.Empty);
+               // Clear_Filtr?.Invoke(this, EventArgs.Empty);
             }
             catch { }
         }
@@ -674,7 +665,7 @@ namespace wardrobe
                 if (listBox1.SelectedIndex != -1)
                 {
                     string s = listBox1.SelectedItem.ToString();
-                    DialogResult result = MessageBox.Show("вы действительно хотите удалить из комплекта\n" + s + "  ?", "подтвердите", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult result = MessageBox.Show("вы действительно хотите удалить из комплекта\n" + s + "  ?", "подтвердите", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
                         string[] s1 = s.Split('.');
@@ -703,7 +694,7 @@ namespace wardrobe
                 if (listBox2.SelectedIndex != -1)
                 {
                     string s = listBox2.SelectedItem.ToString();
-                    DialogResult result = MessageBox.Show("вы действительно хотите удалить из комплекта\n" + s + "  ?", "подтвердите", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult result = MessageBox.Show("вы действительно хотите удалить из комплекта\n" + s + "  ?", "подтвердите", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
                         string[] s1 = s.Split('.');
@@ -732,7 +723,7 @@ namespace wardrobe
                 if (listBox3.SelectedIndex != -1)
                 {
                     string s = listBox3.SelectedItem.ToString();
-                    DialogResult result = MessageBox.Show("¬ы действительно хотите удалить из комплекта\n" + s + "  ?", "ѕодтвердите", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult result = MessageBox.Show("¬ы действительно хотите удалить из комплекта\n" + s + "  ?", "ѕодтвердите", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
                         string[] s1 = s.Split('.');
@@ -761,7 +752,7 @@ namespace wardrobe
                 if (listBox4.SelectedIndex != -1)
                 {
                     string s = listBox4.SelectedItem.ToString();
-                    DialogResult result = MessageBox.Show("вы действительно хотите удалить из комплекта\n" + s + "  ?", "подтвердите", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult result = MessageBox.Show("вы действительно хотите удалить из комплекта\n" + s + "  ?", "подтвердите", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
                         string[] s1 = s.Split('.');
@@ -789,7 +780,7 @@ namespace wardrobe
                 if (listBox5.SelectedIndex != -1)
                 {
                     string s = listBox5.SelectedItem.ToString();
-                    DialogResult result = MessageBox.Show("вы действительно хотите удалить из комплекта\n" + s + "  ?", "подтвердите", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult result = MessageBox.Show("вы действительно хотите удалить из комплекта\n" + s + "  ?", "подтвердите", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
                         string[] s1 = s.Split('.');

@@ -34,7 +34,7 @@ namespace wardrobe
                 pictureBox.Width = 200;
                 pictureBox.Height = 200;
                 pictureBox.Location = new System.Drawing.Point(20 + i * 220, 100);
-                pictureBox.BackColor = System.Drawing.Color.Gray;
+                pictureBox.BackColor = System.Drawing.Color.White;
                 Id_Item = MainForm.Ids[i];
                 TakePhoto?.Invoke(this, new EventArgs());
                 pictureBox.Image = Image.FromFile(Path);
@@ -52,16 +52,16 @@ namespace wardrobe
                 Path = textBox1.Text;
                 SaveComplect?.Invoke(this, new EventArgs());
                 if (sucses)
-                    MessageBox.Show("комплект сохранен!");
+                    MessageBox.Show("Комплект сохранен!");
                 else
-                    MessageBox.Show("ошибка сохранения!");
+                    MessageBox.Show("Ошибка сохранения!");
                 F5Close.Invoke(this, new EventArgs());
                 this.Close();
 
             }
             else
             {
-                MessageBox.Show("введите название комплекта!");
+                MessageBox.Show("Введите название комплекта!");
             }
         }
 
