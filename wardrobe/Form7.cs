@@ -16,6 +16,7 @@ namespace wardrobe
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+            InitializeUI();
         }
         public Form1 MainForm { get; set; }
         public event EventHandler<EventArgs> LoadF7;
@@ -313,6 +314,24 @@ namespace wardrobe
                 f.MainForm7 = this;
                 f.ShowDialog();
             }
+        }
+        private void InitializeUI()
+        {
+            Bitmap originalIcon = new Bitmap(Properties.Resources._100);
+            Size controlSize = new Size(20, 20);
+            Bitmap scaledIcon = ScaleImage(originalIcon, controlSize);
+            button3.Image = scaledIcon;
+        }
+
+        private Bitmap ScaleImage(Bitmap image, Size newSize)
+        {
+            Bitmap newImage = new Bitmap(newSize.Width, newSize.Height);
+            using (Graphics g = Graphics.FromImage(newImage))
+            {
+                g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                g.DrawImage(image, 0, 0, newSize.Width, newSize.Height);
+            }
+            return newImage;
         }
     }
 }

@@ -49,6 +49,7 @@ namespace wardrobe
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+            InitializeUI();
         }
 
         public void SetSeason(string s)
@@ -281,6 +282,24 @@ namespace wardrobe
         {
             pictureBox1.Image.Dispose();
             this.Dispose();
+        }
+        private void InitializeUI()
+        {
+            Bitmap originalIcon = new Bitmap(Properties.Resources._100);
+            Size controlSize = new Size(20, 20);
+            Bitmap scaledIcon = ScaleImage(originalIcon, controlSize);
+            button3.Image = scaledIcon;
+        }
+
+        private Bitmap ScaleImage(Bitmap image, Size newSize)
+        {
+            Bitmap newImage = new Bitmap(newSize.Width, newSize.Height);
+            using (Graphics g = Graphics.FromImage(newImage))
+            {
+                g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                g.DrawImage(image, 0, 0, newSize.Width, newSize.Height);
+            }
+            return newImage;
         }
     }
 }

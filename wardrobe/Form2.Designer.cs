@@ -273,7 +273,6 @@
             button4.Name = "button4";
             button4.Size = new Size(36, 38);
             button4.TabIndex = 26;
-            button4.Text = "+";
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 

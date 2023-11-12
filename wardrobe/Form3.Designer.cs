@@ -242,12 +242,12 @@
             // button3
             // 
             button3.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.Image = Properties.Resources._100;
             button3.Location = new Point(760, 387);
             button3.Margin = new Padding(3, 2, 3, 2);
             button3.Name = "button3";
             button3.Size = new Size(27, 28);
             button3.TabIndex = 19;
-            button3.Text = "+";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 

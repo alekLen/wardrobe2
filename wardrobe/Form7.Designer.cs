@@ -219,7 +219,6 @@
             button3.Name = "button3";
             button3.Size = new Size(33, 29);
             button3.TabIndex = 20;
-            button3.Text = "+";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 

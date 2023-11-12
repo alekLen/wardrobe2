@@ -33,6 +33,7 @@ namespace wardrobe
             //pictureBox1.Image = Image.FromFile("Photos/camera.png");
             pictureBox1.Image = Image.FromFile("Photos/cam.jpg");
             this.StartPosition = FormStartPosition.CenterScreen;
+            InitializeUI();
         }
 
         private void LoadForm2(object sender, EventArgs e)
@@ -144,6 +145,24 @@ namespace wardrobe
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void InitializeUI()
+        {
+            Bitmap originalIcon = new Bitmap(Properties.Resources._100);
+            Size controlSize = new Size(25, 25);
+            Bitmap scaledIcon = ScaleImage(originalIcon, controlSize);
+            button4.Image = scaledIcon;
+        }
+
+        private Bitmap ScaleImage(Bitmap image, Size newSize)
+        {
+            Bitmap newImage = new Bitmap(newSize.Width, newSize.Height);
+            using (Graphics g = Graphics.FromImage(newImage))
+            {
+                g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                g.DrawImage(image, 0, 0, newSize.Width, newSize.Height);
+            }
+            return newImage;
         }
     }
 }
