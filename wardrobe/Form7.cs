@@ -177,12 +177,8 @@ namespace wardrobe
         }
         void LoadPhotoButton()
         {
-            // MainForm.see_clotheDop = this;
-            //  buttonPhoto = new System.Windows.Forms.Button();
             button3Photo.Visible = true;
             button3Photo.Text = "Изменить фото";
-            // this.Controls.Remove(button1);
-            // this.Controls.Add(buttonPhoto);
             button3Photo.Click += buttonPhoto_Click;
 
         }

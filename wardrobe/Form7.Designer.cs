@@ -88,7 +88,7 @@
             // textBoxSeason
             // 
             textBoxSeason.Enabled = false;
-            textBoxSeason.Location = new Point(83, 132);
+            textBoxSeason.Location = new Point(83, 134);
             textBoxSeason.Name = "textBoxSeason";
             textBoxSeason.Size = new Size(271, 27);
             textBoxSeason.TabIndex = 4;
@@ -100,58 +100,58 @@
             button1.Name = "button1";
             button1.Size = new Size(215, 50);
             button1.TabIndex = 5;
-            button1.Text = "добвить в комплект";
+            button1.Text = "Добвить в комплект";
             button1.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(23, 68);
+            label1.Location = new Point(14, 68);
             label1.Name = "label1";
-            label1.Size = new Size(47, 20);
+            label1.Size = new Size(49, 20);
             label1.TabIndex = 6;
-            label1.Text = "стиль";
+            label1.Text = "Стиль";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(24, 102);
+            label2.Location = new Point(12, 99);
             label2.Name = "label2";
-            label2.Size = new Size(40, 20);
+            label2.Size = new Size(42, 20);
             label2.TabIndex = 7;
-            label2.Text = "цвет";
+            label2.Text = "Цвет";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(21, 139);
+            label3.Location = new Point(12, 134);
             label3.Name = "label3";
-            label3.Size = new Size(49, 20);
+            label3.Size = new Size(51, 20);
             label3.TabIndex = 8;
-            label3.Text = "сезон";
+            label3.Text = "Сезон";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(24, 168);
+            label4.Location = new Point(14, 170);
             label4.Name = "label4";
-            label4.Size = new Size(39, 20);
+            label4.Size = new Size(41, 20);
             label4.TabIndex = 10;
-            label4.Text = "дата";
+            label4.Text = "Дата";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(10, 201);
+            label5.Location = new Point(10, 203);
             label5.Name = "label5";
-            label5.Size = new Size(67, 20);
+            label5.Size = new Size(69, 20);
             label5.TabIndex = 11;
-            label5.Text = "магазин";
+            label5.Text = "Магазин";
             // 
             // textBoxPlace
             // 
             textBoxPlace.Enabled = false;
-            textBoxPlace.Location = new Point(83, 198);
+            textBoxPlace.Location = new Point(83, 200);
             textBoxPlace.Name = "textBoxPlace";
             textBoxPlace.Size = new Size(271, 27);
             textBoxPlace.TabIndex = 12;
@@ -159,7 +159,7 @@
             // textBoxSize
             // 
             textBoxSize.Enabled = false;
-            textBoxSize.Location = new Point(229, 231);
+            textBoxSize.Location = new Point(229, 237);
             textBoxSize.Name = "textBoxSize";
             textBoxSize.Size = new Size(125, 27);
             textBoxSize.TabIndex = 13;
@@ -167,16 +167,16 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(16, 234);
+            label6.Location = new Point(12, 240);
             label6.Name = "label6";
-            label6.Size = new Size(61, 20);
+            label6.Size = new Size(60, 20);
             label6.TabIndex = 14;
-            label6.Text = "размер";
+            label6.Text = "Размер";
             // 
             // textBoxDate
             // 
             textBoxDate.Enabled = false;
-            textBoxDate.Location = new Point(187, 165);
+            textBoxDate.Location = new Point(187, 167);
             textBoxDate.Name = "textBoxDate";
             textBoxDate.Size = new Size(167, 27);
             textBoxDate.TabIndex = 15;
@@ -184,7 +184,7 @@
             // button2
             // 
             button2.BackColor = SystemColors.Info;
-            button2.Location = new Point(16, 292);
+            button2.Location = new Point(14, 292);
             button2.Name = "button2";
             button2.Size = new Size(108, 50);
             button2.TabIndex = 18;
@@ -195,9 +195,9 @@
             // button3Photo
             // 
             button3Photo.BackColor = SystemColors.Info;
-            button3Photo.Location = new Point(83, 234);
+            button3Photo.Location = new Point(83, 240);
             button3Photo.Name = "button3Photo";
-            button3Photo.Size = new Size(140, 52);
+            button3Photo.Size = new Size(140, 41);
             button3Photo.TabIndex = 19;
             button3Photo.Text = "button3";
             button3Photo.UseVisualStyleBackColor = false;
@@ -218,7 +218,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
-            ClientSize = new Size(755, 365);
+            ClientSize = new Size(744, 363);
             Controls.Add(button3);
             Controls.Add(button3Photo);
             Controls.Add(button2);

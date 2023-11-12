@@ -482,7 +482,7 @@ namespace wardrobe
                 edit_form.category = "style";
                 edit_form.action = "delete";
                 edit_form.ShowDialog();
-               // Clear_Filtr?.Invoke(this, EventArgs.Empty);
+                // Clear_Filtr?.Invoke(this, EventArgs.Empty);
             }
             catch { }
         }

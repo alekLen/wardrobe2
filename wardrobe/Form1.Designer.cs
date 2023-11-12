@@ -565,7 +565,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(263, 377);
+            label13.Location = new Point(260, 376);
             label13.Name = "label13";
             label13.Size = new Size(17, 20);
             label13.TabIndex = 43;
@@ -574,7 +574,7 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(608, 378);
+            label14.Location = new Point(598, 379);
             label14.Name = "label14";
             label14.Size = new Size(17, 20);
             label14.TabIndex = 44;
@@ -583,7 +583,7 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(955, 378);
+            label15.Location = new Point(946, 378);
             label15.Name = "label15";
             label15.Size = new Size(17, 20);
             label15.TabIndex = 45;
@@ -592,7 +592,7 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(1287, 379);
+            label16.Location = new Point(1276, 377);
             label16.Name = "label16";
             label16.Size = new Size(17, 20);
             label16.TabIndex = 46;
@@ -602,7 +602,7 @@
             // 
             label17.AutoSize = true;
             label17.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label17.Location = new Point(187, 377);
+            label17.Location = new Point(185, 377);
             label17.Name = "label17";
             label17.Size = new Size(80, 19);
             label17.TabIndex = 47;

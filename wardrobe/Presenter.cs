@@ -100,7 +100,7 @@ namespace wardrobe
                 using (db)
                 {
                    ToSeasonBox(db);
-                    ToStyleBox(db);
+                   ToStyleBox(db);
                    ToColorBox(db);
                 }
             }
@@ -435,16 +435,16 @@ namespace wardrobe
                 MessageBox.Show(ex.Message);
             }
         }
-        public/* async Task*/ void ToSeasonBox(Wardrobe_Context db)
+        public void ToSeasonBox(Wardrobe_Context db)
         {
             try
             {                        
-                var query1 = /*await*/ db.seasons.ToList/*Async*/();
+                var query1 =  db.seasons.ToList();
                 foreach (var p in query1)
                     {
                         string s = p.Season_name;
-                       int i = p.Id;
-                        form.SetSeasonToWardrobe(s,i);
+                       int i = p.Id;                   
+                    form.SetSeasonToWardrobe(s,i);
                     }
             }
             catch (Exception ex)
