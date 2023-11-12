@@ -1017,10 +1017,6 @@ namespace wardrobe
         void PictureFill()
         {
             pictureBox1.Image = Image.FromFile("Photos/up1.jpg");
-            // pictureBox1.Image = Image.FromFile("Photos/camera.png");
-            // pictureBox2.Image = Image.FromFile("Photos/camera.png");
-            // pictureBox3.Image = Image.FromFile("Photos/camera.png");
-            // pictureBox4.Image = Image.FromFile("Photos/camera.png");
             pictureBox2.Image = Image.FromFile("Photos/bottom1.png");
             pictureBox3.Image = Image.FromFile("Photos/dress1.jpg");
             pictureBox4.Image = Image.FromFile("Photos/shoe1.jpg");
@@ -1317,11 +1313,22 @@ namespace wardrobe
         {
             try
             {
-                del_Choosen_Up(sender, e);
-                del_chosen_bottom(sender, e);
-                del_chosen_suit(sender, e);
-                del_chosen_shoe(sender, e);
-                del_chosen_acc(sender, e);
+                DialogResult result = MessageBox.Show("вы действительно хотите очистить  комплект ?", "подтвердите", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    Ids.Clear();
+                    listBox1.Items.Clear();
+                    listBox2.Items.Clear();
+                    listBox3.Items.Clear();
+                    listBox4.Items.Clear();
+                    listBox5.Items.Clear();
+                    PictureFill();
+                    label13.Text = "0";
+                    label14.Text = "0";
+                    label15.Text = "0";
+                    label16.Text = "0";
+                    label27.Text = "0";
+                }
             }
             catch { }
         }
