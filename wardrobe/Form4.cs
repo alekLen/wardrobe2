@@ -137,6 +137,8 @@ namespace wardrobe
         {
             listbox = new ListBox();
             listbox.Location = comboBox1.Location;
+            listbox.Size = comboBox1.Size;
+            listbox.Height= comboBox1.Height*2;
             this.Controls.Remove(comboBox1);
             this.Controls.Add(listbox);
         }

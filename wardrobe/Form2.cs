@@ -28,7 +28,7 @@ namespace wardrobe
         public Form1 MainForm { get; set; }
         public Form2()
         {
-            InitializeComponent();        
+            InitializeComponent();
             date = dateTimePicker1.Value.ToString("dd.MM.yyyy");
             //pictureBox1.Image = Image.FromFile("Photos/camera.png");
             pictureBox1.Image = Image.FromFile("Photos/cam.jpg");
@@ -89,7 +89,7 @@ namespace wardrobe
             }
             else
             {
-                MessageBox.Show("ПЕРЕД ДОБАВЛЕНИЕМ ОБЯЗАТЕЛЬНО:\n\nзагрузить фото\nввести название\n тип\n стиль\n цвет\n сезон","Предупреждение",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("ПЕРЕД ДОБАВЛЕНИЕМ ОБЯЗАТЕЛЬНО:\n\nзагрузить фото\nввести название\n тип\n стиль\n цвет\n сезон", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }

@@ -64,7 +64,7 @@
             pictureBox1.BackColor = SystemColors.ControlLightLight;
             pictureBox1.Location = new Point(382, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(344, 330);
+            pictureBox1.Size = new Size(344, 339);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -96,7 +96,8 @@
             // button1
             // 
             button1.BackColor = SystemColors.Info;
-            button1.Location = new Point(139, 292);
+            button1.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(139, 301);
             button1.Name = "button1";
             button1.Size = new Size(215, 50);
             button1.TabIndex = 5;
@@ -106,45 +107,50 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(14, 68);
             label1.Name = "label1";
-            label1.Size = new Size(49, 20);
+            label1.Size = new Size(63, 26);
             label1.TabIndex = 6;
             label1.Text = "Стиль";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(12, 99);
             label2.Name = "label2";
-            label2.Size = new Size(42, 20);
+            label2.Size = new Size(56, 26);
             label2.TabIndex = 7;
             label2.Text = "Цвет";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label3.Location = new Point(12, 134);
             label3.Name = "label3";
-            label3.Size = new Size(51, 20);
+            label3.Size = new Size(54, 26);
             label3.TabIndex = 8;
             label3.Text = "Сезон";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label4.Location = new Point(14, 170);
             label4.Name = "label4";
-            label4.Size = new Size(41, 20);
+            label4.Size = new Size(59, 26);
             label4.TabIndex = 10;
             label4.Text = "Дата";
             // 
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label5.Location = new Point(10, 203);
             label5.Name = "label5";
-            label5.Size = new Size(69, 20);
+            label5.Size = new Size(77, 26);
             label5.TabIndex = 11;
             label5.Text = "Магазин";
             // 
@@ -167,9 +173,10 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label6.Location = new Point(12, 240);
             label6.Name = "label6";
-            label6.Size = new Size(60, 20);
+            label6.Size = new Size(70, 26);
             label6.TabIndex = 14;
             label6.Text = "Размер";
             // 
@@ -184,7 +191,8 @@
             // button2
             // 
             button2.BackColor = SystemColors.Info;
-            button2.Location = new Point(14, 292);
+            button2.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Location = new Point(14, 302);
             button2.Name = "button2";
             button2.Size = new Size(108, 50);
             button2.TabIndex = 18;
@@ -195,9 +203,10 @@
             // button3Photo
             // 
             button3Photo.BackColor = SystemColors.Info;
-            button3Photo.Location = new Point(83, 240);
+            button3Photo.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button3Photo.Location = new Point(83, 232);
             button3Photo.Name = "button3Photo";
-            button3Photo.Size = new Size(140, 41);
+            button3Photo.Size = new Size(140, 64);
             button3Photo.TabIndex = 19;
             button3Photo.Text = "button3";
             button3Photo.UseVisualStyleBackColor = false;
@@ -205,7 +214,8 @@
             // 
             // button3
             // 
-            button3.Location = new Point(693, 313);
+            button3.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.Location = new Point(693, 322);
             button3.Name = "button3";
             button3.Size = new Size(33, 29);
             button3.TabIndex = 20;

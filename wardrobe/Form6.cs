@@ -46,7 +46,7 @@ namespace wardrobe
                     textbox.Location = new System.Drawing.Point(20, y);
                     textbox.Width = 200;
                     textbox.Text = s;
-                    textbox.BackColor = Color.White;    
+                    textbox.BackColor = Color.White;
                     textbox.Enabled = false;
                     this.Controls.Add(textbox);
                     CountItems?.Invoke(this, new EventArgs());
@@ -91,7 +91,7 @@ namespace wardrobe
             if (result == DialogResult.Yes)
             {
                 DeleteComplect?.Invoke(this, new EventArgs());
-                this.Close();              
+                this.Close();
             }
         }
 

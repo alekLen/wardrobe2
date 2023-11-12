@@ -133,6 +133,7 @@
             label29 = new Label();
             button1 = new Button();
             toolStripContainer1 = new ToolStripContainer();
+            buttonClearComplect = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             menuStrip1.SuspendLayout();
             contextMenuStrip6.SuspendLayout();
@@ -155,9 +156,9 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = SystemColors.ControlLightLight;
-            pictureBox1.Location = new Point(164, 59);
+            pictureBox1.Location = new Point(166, 75);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(335, 309);
+            pictureBox1.Size = new Size(335, 383);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -171,7 +172,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { editToolStripMenuItem2, wardrobeToolStripMenuItem, statisticToolStripMenuItem });
             menuStrip1.Location = new Point(8, 8);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(321, 28);
+            menuStrip1.Size = new Size(393, 34);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             menuStrip1.ItemClicked += menuStrip1_ItemClicked;
@@ -179,35 +180,36 @@
             // editToolStripMenuItem2
             // 
             editToolStripMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { editStyleToolStripMenuItem, editColorToolStripMenuItem, editSeasonoolStripMenuItem });
+            editToolStripMenuItem2.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
             editToolStripMenuItem2.Name = "editToolStripMenuItem2";
-            editToolStripMenuItem2.Size = new Size(125, 24);
+            editToolStripMenuItem2.Size = new Size(153, 30);
             editToolStripMenuItem2.Text = "Редактировать";
             // 
             // editStyleToolStripMenuItem
             // 
             editStyleToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { delStyleToolStripMenuItem4, edStyleToolStripMenuItem3, addStyleToolStripMenuItem4 });
             editStyleToolStripMenuItem.Name = "editStyleToolStripMenuItem";
-            editStyleToolStripMenuItem.Size = new Size(134, 26);
+            editStyleToolStripMenuItem.Size = new Size(149, 30);
             editStyleToolStripMenuItem.Text = "Стиль";
             // 
             // delStyleToolStripMenuItem4
             // 
             delStyleToolStripMenuItem4.Name = "delStyleToolStripMenuItem4";
-            delStyleToolStripMenuItem4.Size = new Size(161, 26);
+            delStyleToolStripMenuItem4.Size = new Size(181, 30);
             delStyleToolStripMenuItem4.Text = "Удалить";
             delStyleToolStripMenuItem4.Click += delStyle;
             // 
             // edStyleToolStripMenuItem3
             // 
             edStyleToolStripMenuItem3.Name = "edStyleToolStripMenuItem3";
-            edStyleToolStripMenuItem3.Size = new Size(161, 26);
+            edStyleToolStripMenuItem3.Size = new Size(181, 30);
             edStyleToolStripMenuItem3.Text = "Изменить";
             edStyleToolStripMenuItem3.Click += editStyle;
             // 
             // addStyleToolStripMenuItem4
             // 
             addStyleToolStripMenuItem4.Name = "addStyleToolStripMenuItem4";
-            addStyleToolStripMenuItem4.Size = new Size(161, 26);
+            addStyleToolStripMenuItem4.Size = new Size(181, 30);
             addStyleToolStripMenuItem4.Text = "Добавить";
             addStyleToolStripMenuItem4.Click += addStyle;
             // 
@@ -215,27 +217,27 @@
             // 
             editColorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { deColorToolStripMenuItem5, edColorToolStripMenuItem4, addColorToolStripMenuItem5 });
             editColorToolStripMenuItem.Name = "editColorToolStripMenuItem";
-            editColorToolStripMenuItem.Size = new Size(134, 26);
+            editColorToolStripMenuItem.Size = new Size(149, 30);
             editColorToolStripMenuItem.Text = "Цвет";
             // 
             // deColorToolStripMenuItem5
             // 
             deColorToolStripMenuItem5.Name = "deColorToolStripMenuItem5";
-            deColorToolStripMenuItem5.Size = new Size(161, 26);
+            deColorToolStripMenuItem5.Size = new Size(181, 30);
             deColorToolStripMenuItem5.Text = "Удалить";
             deColorToolStripMenuItem5.Click += delColor;
             // 
             // edColorToolStripMenuItem4
             // 
             edColorToolStripMenuItem4.Name = "edColorToolStripMenuItem4";
-            edColorToolStripMenuItem4.Size = new Size(161, 26);
+            edColorToolStripMenuItem4.Size = new Size(181, 30);
             edColorToolStripMenuItem4.Text = "Изменить";
             edColorToolStripMenuItem4.Click += editColor;
             // 
             // addColorToolStripMenuItem5
             // 
             addColorToolStripMenuItem5.Name = "addColorToolStripMenuItem5";
-            addColorToolStripMenuItem5.Size = new Size(161, 26);
+            addColorToolStripMenuItem5.Size = new Size(181, 30);
             addColorToolStripMenuItem5.Text = "Добавить";
             addColorToolStripMenuItem5.Click += addColor;
             // 
@@ -243,87 +245,91 @@
             // 
             editSeasonoolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { delSeasonToolStripMenuItem6, edSeasonToolStripMenuItem5, addSeasonToolStripMenuItem6 });
             editSeasonoolStripMenuItem.Name = "editSeasonoolStripMenuItem";
-            editSeasonoolStripMenuItem.Size = new Size(134, 26);
+            editSeasonoolStripMenuItem.Size = new Size(149, 30);
             editSeasonoolStripMenuItem.Text = "Сезон";
             // 
             // delSeasonToolStripMenuItem6
             // 
             delSeasonToolStripMenuItem6.Name = "delSeasonToolStripMenuItem6";
-            delSeasonToolStripMenuItem6.Size = new Size(161, 26);
+            delSeasonToolStripMenuItem6.Size = new Size(181, 30);
             delSeasonToolStripMenuItem6.Text = "Удалить";
             delSeasonToolStripMenuItem6.Click += delSeason;
             // 
             // edSeasonToolStripMenuItem5
             // 
             edSeasonToolStripMenuItem5.Name = "edSeasonToolStripMenuItem5";
-            edSeasonToolStripMenuItem5.Size = new Size(161, 26);
+            edSeasonToolStripMenuItem5.Size = new Size(181, 30);
             edSeasonToolStripMenuItem5.Text = "Изменить";
             edSeasonToolStripMenuItem5.Click += editSeason;
             // 
             // addSeasonToolStripMenuItem6
             // 
             addSeasonToolStripMenuItem6.Name = "addSeasonToolStripMenuItem6";
-            addSeasonToolStripMenuItem6.Size = new Size(161, 26);
+            addSeasonToolStripMenuItem6.Size = new Size(181, 30);
             addSeasonToolStripMenuItem6.Text = "Добавить";
             addSeasonToolStripMenuItem6.Click += addSeason;
             // 
             // wardrobeToolStripMenuItem
             // 
             wardrobeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addClotheToolStripMenuItem1, complectsToolStripMenuItem });
+            wardrobeToolStripMenuItem.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
             wardrobeToolStripMenuItem.Name = "wardrobeToolStripMenuItem";
-            wardrobeToolStripMenuItem.Size = new Size(90, 24);
+            wardrobeToolStripMenuItem.Size = new Size(98, 30);
             wardrobeToolStripMenuItem.Text = "Гардероб";
             // 
             // addClotheToolStripMenuItem1
             // 
             addClotheToolStripMenuItem1.Name = "addClotheToolStripMenuItem1";
-            addClotheToolStripMenuItem1.Size = new Size(214, 26);
+            addClotheToolStripMenuItem1.Size = new Size(237, 30);
             addClotheToolStripMenuItem1.Text = "Добавить одежду";
             addClotheToolStripMenuItem1.Click += Add_Form;
             // 
             // complectsToolStripMenuItem
             // 
             complectsToolStripMenuItem.Name = "complectsToolStripMenuItem";
-            complectsToolStripMenuItem.Size = new Size(214, 26);
+            complectsToolStripMenuItem.Size = new Size(237, 30);
             complectsToolStripMenuItem.Text = "Комплекты";
             complectsToolStripMenuItem.Click += See_Complects;
             // 
             // statisticToolStripMenuItem
             // 
             statisticToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { colorToolStripMenuItem, styleToolStripMenuItem, seasonToolStripMenuItem });
+            statisticToolStripMenuItem.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
             statisticToolStripMenuItem.Name = "statisticToolStripMenuItem";
-            statisticToolStripMenuItem.Size = new Size(98, 24);
+            statisticToolStripMenuItem.Size = new Size(134, 30);
             statisticToolStripMenuItem.Text = "Статистика";
             // 
             // colorToolStripMenuItem
             // 
             colorToolStripMenuItem.Name = "colorToolStripMenuItem";
-            colorToolStripMenuItem.Size = new Size(195, 26);
+            colorToolStripMenuItem.Size = new Size(211, 30);
             colorToolStripMenuItem.Text = "Цвет одежды";
             colorToolStripMenuItem.Click += color_statistic;
             // 
             // styleToolStripMenuItem
             // 
             styleToolStripMenuItem.Name = "styleToolStripMenuItem";
-            styleToolStripMenuItem.Size = new Size(195, 26);
+            styleToolStripMenuItem.Size = new Size(211, 30);
             styleToolStripMenuItem.Text = "Стиль одежды";
             styleToolStripMenuItem.Click += style_statistic;
             // 
             // seasonToolStripMenuItem
             // 
             seasonToolStripMenuItem.Name = "seasonToolStripMenuItem";
-            seasonToolStripMenuItem.Size = new Size(195, 26);
+            seasonToolStripMenuItem.Size = new Size(211, 30);
             seasonToolStripMenuItem.Text = "Сезон Одежды";
             seasonToolStripMenuItem.Click += season_statistic;
             // 
             // listBox1
             // 
             listBox1.ContextMenuStrip = contextMenuStrip6;
+            listBox1.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
             listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 20;
-            listBox1.Location = new Point(292, 375);
+            listBox1.ItemHeight = 26;
+            listBox1.Location = new Point(290, 467);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(186, 44);
+            listBox1.Size = new Size(211, 30);
+            listBox1.Sorted = true;
             listBox1.TabIndex = 6;
             listBox1.SelectedIndexChanged += selectUp;
             listBox1.DoubleClick += del_Choosen_Up;
@@ -345,9 +351,9 @@
             // pictureBox2
             // 
             pictureBox2.BackColor = SystemColors.ControlLightLight;
-            pictureBox2.Location = new Point(505, 59);
+            pictureBox2.Location = new Point(505, 75);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(335, 309);
+            pictureBox2.Size = new Size(335, 382);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 7;
             pictureBox2.TabStop = false;
@@ -355,9 +361,9 @@
             // pictureBox3
             // 
             pictureBox3.BackColor = SystemColors.ControlLightLight;
-            pictureBox3.Location = new Point(846, 59);
+            pictureBox3.Location = new Point(846, 75);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(335, 309);
+            pictureBox3.Size = new Size(335, 382);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 8;
             pictureBox3.TabStop = false;
@@ -365,9 +371,9 @@
             // pictureBox4
             // 
             pictureBox4.BackColor = SystemColors.ControlLightLight;
-            pictureBox4.Location = new Point(1187, 59);
+            pictureBox4.Location = new Point(1187, 75);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(335, 309);
+            pictureBox4.Size = new Size(335, 382);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 9;
             pictureBox4.TabStop = false;
@@ -375,11 +381,12 @@
             // listBox3
             // 
             listBox3.ContextMenuStrip = contextMenuStrip8;
+            listBox3.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
             listBox3.FormattingEnabled = true;
-            listBox3.ItemHeight = 20;
-            listBox3.Location = new Point(978, 374);
+            listBox3.ItemHeight = 26;
+            listBox3.Location = new Point(1004, 464);
             listBox3.Name = "listBox3";
-            listBox3.Size = new Size(186, 44);
+            listBox3.Size = new Size(177, 30);
             listBox3.TabIndex = 11;
             listBox3.SelectedIndexChanged += selectSuit;
             listBox3.DoubleClick += del_chosen_suit;
@@ -401,11 +408,12 @@
             // listBox4
             // 
             listBox4.ContextMenuStrip = contextMenuStrip9;
+            listBox4.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
             listBox4.FormattingEnabled = true;
-            listBox4.ItemHeight = 20;
-            listBox4.Location = new Point(1319, 374);
+            listBox4.ItemHeight = 26;
+            listBox4.Location = new Point(1345, 464);
             listBox4.Name = "listBox4";
-            listBox4.Size = new Size(182, 44);
+            listBox4.Size = new Size(177, 30);
             listBox4.TabIndex = 12;
             listBox4.SelectedIndexChanged += selectShoe;
             listBox4.DoubleClick += del_chosen_shoe;
@@ -427,9 +435,10 @@
             // button4
             // 
             button4.BackColor = SystemColors.Info;
-            button4.Location = new Point(12, 685);
+            button4.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.Location = new Point(8, 773);
             button4.Name = "button4";
-            button4.Size = new Size(146, 51);
+            button4.Size = new Size(152, 71);
             button4.TabIndex = 20;
             button4.Text = "Добавить комплект";
             button4.UseVisualStyleBackColor = false;
@@ -438,36 +447,40 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(11, 107);
+            label1.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(12, 113);
             label1.Name = "label1";
-            label1.Size = new Size(49, 20);
+            label1.Size = new Size(65, 26);
             label1.TabIndex = 22;
             label1.Text = "Цвету";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 313);
+            label2.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(8, 315);
             label2.Name = "label2";
-            label2.Size = new Size(58, 20);
+            label2.Size = new Size(63, 26);
             label2.TabIndex = 25;
             label2.Text = "Сезону";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(12, 453);
+            label3.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(12, 471);
             label3.Name = "label3";
-            label3.Size = new Size(53, 20);
+            label3.Size = new Size(68, 26);
             label3.TabIndex = 26;
             label3.Text = "Стилю";
             // 
             // button5
             // 
             button5.BackColor = SystemColors.Info;
-            button5.Location = new Point(12, 631);
+            button5.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.Location = new Point(8, 666);
             button5.Name = "button5";
-            button5.Size = new Size(146, 29);
+            button5.Size = new Size(152, 71);
             button5.TabIndex = 29;
             button5.Text = "Сбросить фильтр";
             button5.UseVisualStyleBackColor = false;
@@ -476,9 +489,10 @@
             // button6
             // 
             button6.BackColor = SystemColors.Info;
-            button6.Location = new Point(12, 596);
+            button6.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button6.Location = new Point(8, 626);
             button6.Name = "button6";
-            button6.Size = new Size(146, 29);
+            button6.Size = new Size(152, 34);
             button6.TabIndex = 30;
             button6.Text = "Фильтровать";
             button6.UseVisualStyleBackColor = false;
@@ -487,36 +501,41 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(214, 401);
+            label5.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(290, 899);
             label5.Name = "label5";
-            label5.Size = new Size(42, 20);
+            label5.Size = new Size(49, 26);
             label5.TabIndex = 34;
             label5.Text = "Верх";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(552, 401);
+            label6.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(663, 899);
             label6.Name = "label6";
-            label6.Size = new Size(36, 20);
+            label6.Size = new Size(40, 26);
             label6.TabIndex = 35;
             label6.Text = "Низ";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(856, 401);
+            label7.BackColor = SystemColors.GradientInactiveCaption;
+            label7.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Location = new Point(963, 899);
             label7.Name = "label7";
-            label7.Size = new Size(118, 20);
+            label7.Size = new Size(152, 26);
             label7.TabIndex = 36;
             label7.Text = "Платье/Костюм";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(1241, 399);
+            label8.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Location = new Point(1325, 899);
             label8.Name = "label8";
-            label8.Size = new Size(52, 20);
+            label8.Size = new Size(59, 26);
             label8.TabIndex = 37;
             label8.Text = "Обувь";
             // 
@@ -555,9 +574,10 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label4.Location = new Point(8, 87);
             label4.Name = "label4";
-            label4.Size = new Size(124, 20);
+            label4.Size = new Size(152, 26);
             label4.TabIndex = 42;
             label4.Text = "Фильтровать по:";
             label4.Click += label4_Click;
@@ -565,87 +585,92 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(260, 376);
+            label13.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label13.Location = new Point(263, 474);
             label13.Name = "label13";
-            label13.Size = new Size(17, 20);
+            label13.Size = new Size(23, 26);
             label13.TabIndex = 43;
             label13.Text = "0";
             // 
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(598, 379);
+            label14.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label14.Location = new Point(616, 468);
             label14.Name = "label14";
-            label14.Size = new Size(17, 20);
+            label14.Size = new Size(23, 26);
             label14.TabIndex = 44;
             label14.Text = "0";
             // 
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(946, 378);
+            label15.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label15.Location = new Point(963, 468);
             label15.Name = "label15";
-            label15.Size = new Size(17, 20);
+            label15.Size = new Size(23, 26);
             label15.TabIndex = 45;
             label15.Text = "0";
             // 
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(1276, 377);
+            label16.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label16.Location = new Point(1306, 470);
             label16.Name = "label16";
-            label16.Size = new Size(17, 20);
+            label16.Size = new Size(23, 26);
             label16.TabIndex = 46;
             label16.Text = "0";
             // 
             // label17
             // 
             label17.AutoSize = true;
-            label17.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label17.Location = new Point(185, 377);
+            label17.Font = new Font("Segoe Print", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label17.Location = new Point(166, 474);
             label17.Name = "label17";
-            label17.Size = new Size(80, 19);
+            label17.Size = new Size(91, 23);
             label17.TabIndex = 47;
             label17.Text = "в комплект";
             // 
             // label18
             // 
             label18.AutoSize = true;
-            label18.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label18.Location = new Point(522, 379);
+            label18.Font = new Font("Segoe Print", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label18.Location = new Point(519, 471);
             label18.Name = "label18";
-            label18.Size = new Size(80, 19);
+            label18.Size = new Size(91, 23);
             label18.TabIndex = 48;
             label18.Text = "в комплект";
             // 
             // label19
             // 
             label19.AutoSize = true;
-            label19.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label19.Location = new Point(871, 378);
+            label19.Font = new Font("Segoe Print", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label19.Location = new Point(866, 470);
             label19.Name = "label19";
-            label19.Size = new Size(80, 19);
+            label19.Size = new Size(91, 23);
             label19.TabIndex = 49;
             label19.Text = "в комплект";
             // 
             // label20
             // 
             label20.AutoSize = true;
-            label20.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label20.Location = new Point(1201, 377);
+            label20.Font = new Font("Segoe Print", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label20.Location = new Point(1209, 470);
             label20.Name = "label20";
-            label20.Size = new Size(80, 19);
+            label20.Size = new Size(91, 23);
             label20.TabIndex = 50;
             label20.Text = "в комплект";
             // 
             // listBox2
             // 
             listBox2.ContextMenuStrip = contextMenuStrip7;
+            listBox2.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
             listBox2.FormattingEnabled = true;
-            listBox2.ItemHeight = 20;
-            listBox2.Location = new Point(633, 374);
+            listBox2.ItemHeight = 26;
+            listBox2.Location = new Point(663, 463);
             listBox2.Name = "listBox2";
-            listBox2.Size = new Size(186, 44);
+            listBox2.Size = new Size(177, 30);
             listBox2.TabIndex = 51;
             listBox2.SelectedIndexChanged += selectBottom;
             listBox2.DoubleClick += del_chosen_bottom;
@@ -666,38 +691,42 @@
             // 
             // FilterSeasonBox
             // 
+            FilterSeasonBox.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FilterSeasonBox.FormattingEnabled = true;
-            FilterSeasonBox.Location = new Point(11, 336);
+            FilterSeasonBox.Location = new Point(8, 341);
             FilterSeasonBox.Name = "FilterSeasonBox";
-            FilterSeasonBox.Size = new Size(146, 114);
+            FilterSeasonBox.Size = new Size(152, 120);
             FilterSeasonBox.TabIndex = 52;
             FilterSeasonBox.ItemCheck += FilterSeasonBox_ItemCheck;
             // 
             // FilterColorBox
             // 
             FilterColorBox.CheckOnClick = true;
+            FilterColorBox.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FilterColorBox.FormattingEnabled = true;
-            FilterColorBox.Location = new Point(12, 130);
+            FilterColorBox.Location = new Point(8, 142);
             FilterColorBox.Name = "FilterColorBox";
-            FilterColorBox.Size = new Size(146, 180);
+            FilterColorBox.Size = new Size(152, 160);
             FilterColorBox.TabIndex = 53;
             FilterColorBox.ItemCheck += FilterColorBox_ItemCheck;
             // 
             // FilterStyleBox
             // 
+            FilterStyleBox.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FilterStyleBox.FormattingEnabled = true;
-            FilterStyleBox.Location = new Point(11, 476);
+            FilterStyleBox.Location = new Point(8, 500);
             FilterStyleBox.Name = "FilterStyleBox";
-            FilterStyleBox.Size = new Size(146, 114);
+            FilterStyleBox.Size = new Size(152, 120);
             FilterStyleBox.TabIndex = 54;
             FilterStyleBox.ItemCheck += FilterStyleBox_ItemCheck;
             // 
             // listView5
             // 
             listView5.ContextMenuStrip = contextMenuStrip1;
-            listView5.Location = new Point(164, 425);
+            listView5.Font = new Font("Segoe Print", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
+            listView5.Location = new Point(166, 501);
             listView5.Name = "listView5";
-            listView5.Size = new Size(335, 310);
+            listView5.Size = new Size(335, 395);
             listView5.TabIndex = 55;
             listView5.UseCompatibleStateImageBehavior = false;
             listView5.ItemActivate += Load_see_formUp;
@@ -734,9 +763,10 @@
             // listView6
             // 
             listView6.ContextMenuStrip = contextMenuStrip2;
-            listView6.Location = new Point(505, 426);
+            listView6.Font = new Font("Segoe Print", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
+            listView6.Location = new Point(505, 500);
             listView6.Name = "listView6";
-            listView6.Size = new Size(335, 310);
+            listView6.Size = new Size(335, 396);
             listView6.TabIndex = 56;
             listView6.UseCompatibleStateImageBehavior = false;
             listView6.ItemActivate += Load_see_formBottom;
@@ -772,9 +802,10 @@
             // listView7
             // 
             listView7.ContextMenuStrip = contextMenuStrip3;
-            listView7.Location = new Point(846, 425);
+            listView7.Font = new Font("Segoe Print", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
+            listView7.Location = new Point(846, 500);
             listView7.Name = "listView7";
-            listView7.Size = new Size(335, 310);
+            listView7.Size = new Size(335, 396);
             listView7.TabIndex = 57;
             listView7.UseCompatibleStateImageBehavior = false;
             listView7.ItemActivate += Load_see_formSuit;
@@ -810,9 +841,10 @@
             // listView8
             // 
             listView8.ContextMenuStrip = contextMenuStrip4;
-            listView8.Location = new Point(1187, 425);
+            listView8.Font = new Font("Segoe Print", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
+            listView8.Location = new Point(1187, 500);
             listView8.Name = "listView8";
-            listView8.Size = new Size(335, 310);
+            listView8.Size = new Size(335, 396);
             listView8.TabIndex = 58;
             listView8.UseCompatibleStateImageBehavior = false;
             listView8.ItemActivate += Load_see_formShoe;
@@ -848,69 +880,69 @@
             // label21
             // 
             label21.AutoSize = true;
-            label21.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label21.Location = new Point(320, 28);
+            label21.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label21.Location = new Point(290, 37);
             label21.Name = "label21";
-            label21.Size = new Size(54, 28);
+            label21.Size = new Size(64, 35);
             label21.TabIndex = 59;
             label21.Text = "Верх";
             // 
             // label22
             // 
             label22.AutoSize = true;
-            label22.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label22.Location = new Point(633, 28);
+            label22.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label22.Location = new Point(633, 37);
             label22.Name = "label22";
-            label22.Size = new Size(47, 28);
+            label22.Size = new Size(52, 35);
             label22.TabIndex = 60;
             label22.Text = "Низ";
             // 
             // label23
             // 
             label23.AutoSize = true;
-            label23.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label23.Location = new Point(924, 28);
+            label23.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label23.Location = new Point(907, 37);
             label23.Name = "label23";
-            label23.Size = new Size(83, 28);
+            label23.Size = new Size(106, 35);
             label23.TabIndex = 61;
             label23.Text = "Платье/";
             // 
             // label24
             // 
             label24.AutoSize = true;
-            label24.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label24.Location = new Point(1287, 28);
+            label24.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label24.Location = new Point(1308, 37);
             label24.Name = "label24";
-            label24.Size = new Size(70, 28);
+            label24.Size = new Size(76, 35);
             label24.TabIndex = 62;
             label24.Text = "Обувь";
             // 
             // label25
             // 
             label25.AutoSize = true;
-            label25.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label25.Location = new Point(1000, 28);
+            label25.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label25.Location = new Point(1007, 37);
             label25.Name = "label25";
-            label25.Size = new Size(83, 28);
+            label25.Size = new Size(110, 35);
             label25.TabIndex = 63;
             label25.Text = "Костюм";
             // 
             // label26
             // 
             label26.AutoSize = true;
-            label26.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label26.Location = new Point(1588, 28);
+            label26.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label26.Location = new Point(1617, 37);
             label26.Name = "label26";
-            label26.Size = new Size(118, 28);
+            label26.Size = new Size(136, 35);
             label26.TabIndex = 64;
             label26.Text = "Аксессуары";
             // 
             // pictureBox5
             // 
             pictureBox5.BackColor = SystemColors.ControlLightLight;
-            pictureBox5.Location = new Point(1528, 59);
+            pictureBox5.Location = new Point(1528, 75);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(335, 309);
+            pictureBox5.Size = new Size(335, 382);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 65;
             pictureBox5.TabStop = false;
@@ -918,9 +950,10 @@
             // listView1
             // 
             listView1.ContextMenuStrip = contextMenuStrip5;
-            listView1.Location = new Point(1528, 425);
+            listView1.Font = new Font("Segoe Print", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
+            listView1.Location = new Point(1528, 500);
             listView1.Name = "listView1";
-            listView1.Size = new Size(335, 310);
+            listView1.Size = new Size(335, 396);
             listView1.TabIndex = 66;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.ItemActivate += Load_see_formAcc;
@@ -956,11 +989,12 @@
             // listBox5
             // 
             listBox5.ContextMenuStrip = contextMenuStrip10;
+            listBox5.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
             listBox5.FormattingEnabled = true;
-            listBox5.ItemHeight = 20;
-            listBox5.Location = new Point(1656, 374);
+            listBox5.ItemHeight = 26;
+            listBox5.Location = new Point(1686, 464);
             listBox5.Name = "listBox5";
-            listBox5.Size = new Size(186, 44);
+            listBox5.Size = new Size(177, 30);
             listBox5.TabIndex = 67;
             listBox5.SelectedIndexChanged += selectAcc;
             listBox5.DoubleClick += del_chosen_acc;
@@ -982,37 +1016,40 @@
             // label27
             // 
             label27.AutoSize = true;
-            label27.Location = new Point(1621, 379);
+            label27.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label27.Location = new Point(1646, 468);
             label27.Name = "label27";
-            label27.Size = new Size(17, 20);
+            label27.Size = new Size(23, 26);
             label27.TabIndex = 68;
             label27.Text = "0";
             // 
             // label28
             // 
             label28.AutoSize = true;
-            label28.Location = new Point(1560, 399);
+            label28.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label28.Location = new Point(1648, 899);
             label28.Name = "label28";
-            label28.Size = new Size(90, 20);
+            label28.Size = new Size(105, 26);
             label28.TabIndex = 69;
             label28.Text = "Аксессуары";
             // 
             // label29
             // 
             label29.AutoSize = true;
-            label29.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label29.Location = new Point(1545, 379);
+            label29.Font = new Font("Segoe Print", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label29.Location = new Point(1549, 470);
             label29.Name = "label29";
-            label29.Size = new Size(80, 19);
+            label29.Size = new Size(91, 23);
             label29.TabIndex = 70;
             label29.Text = "в комплект";
             // 
             // button1
             // 
             button1.BackColor = SystemColors.Info;
+            button1.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button1.Location = new Point(20, 45);
             button1.Name = "button1";
-            button1.Size = new Size(87, 29);
+            button1.Size = new Size(87, 39);
             button1.TabIndex = 71;
             button1.Text = "Выйти";
             button1.UseVisualStyleBackColor = false;
@@ -1031,12 +1068,25 @@
             toolStripContainer1.TabIndex = 2;
             toolStripContainer1.Text = "toolStripContainer1";
             // 
+            // buttonClearComplect
+            // 
+            buttonClearComplect.BackColor = SystemColors.Info;
+            buttonClearComplect.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonClearComplect.Location = new Point(8, 855);
+            buttonClearComplect.Name = "buttonClearComplect";
+            buttonClearComplect.Size = new Size(152, 41);
+            buttonClearComplect.TabIndex = 72;
+            buttonClearComplect.Text = "Очистить";
+            buttonClearComplect.UseVisualStyleBackColor = false;
+            buttonClearComplect.Click += buttonClearComplect_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
-            ClientSize = new Size(1880, 748);
+            ClientSize = new Size(1886, 926);
+            Controls.Add(buttonClearComplect);
             Controls.Add(menuStrip1);
             Controls.Add(toolStripContainer1);
             Controls.Add(button1);
@@ -1096,6 +1146,7 @@
             MainMenuStrip = menuStrip1;
             MaximizeBox = false;
             Name = "Form1";
+            StartPosition = FormStartPosition.Manual;
             Text = "Гардероб";
             Load += LoadForm;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -1225,5 +1276,6 @@
         private ToolStripMenuItem удалитьИзКомплектаToolStripMenuItem4;
         private Button button1;
         private ToolStripContainer toolStripContainer1;
+        private Button buttonClearComplect;
     }
 }

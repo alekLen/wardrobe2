@@ -1311,7 +1311,19 @@ namespace wardrobe
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
+        }
 
+        private void buttonClearComplect_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                del_Choosen_Up(sender, e);
+                del_chosen_bottom(sender, e);
+                del_chosen_suit(sender, e);
+                del_chosen_shoe(sender, e);
+                del_chosen_acc(sender, e);
+            }
+            catch { }
         }
     }
 }

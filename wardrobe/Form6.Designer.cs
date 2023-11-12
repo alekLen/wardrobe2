@@ -33,12 +33,14 @@
             // 
             // Form6
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 26F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = SystemColors.GradientInactiveCaption;
-            ClientSize = new Size(1079, 450);
+            ClientSize = new Size(1083, 565);
+            Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4, 4, 4, 4);
             MaximizeBox = false;
             Name = "Form6";
             Text = "комплекты";

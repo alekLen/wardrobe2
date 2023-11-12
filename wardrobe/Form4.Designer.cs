@@ -40,9 +40,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(21, 22);
+            label1.Location = new Point(26, 29);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(50, 20);
+            label1.Size = new Size(57, 26);
             label1.TabIndex = 0;
             label1.Text = "label1";
             // 
@@ -50,43 +51,48 @@
             // 
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(21, 45);
+            comboBox1.Location = new Point(26, 58);
+            comboBox1.Margin = new Padding(4, 4, 4, 4);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(166, 28);
+            comboBox1.Size = new Size(206, 34);
             comboBox1.TabIndex = 1;
             comboBox1.SelectedIndexChanged += selected;
             // 
             // button1
             // 
             button1.BackColor = SystemColors.Info;
-            button1.Location = new Point(214, 106);
+            button1.Location = new Point(271, 126);
+            button1.Margin = new Padding(4, 4, 4, 4);
             button1.Name = "button1";
-            button1.Size = new Size(191, 29);
+            button1.Size = new Size(215, 50);
             button1.TabIndex = 5;
             button1.Text = "Изменить";
             button1.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(214, 46);
+            textBox1.Location = new Point(268, 60);
+            textBox1.Margin = new Padding(4, 4, 4, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(191, 27);
+            textBox1.Size = new Size(218, 34);
             textBox1.TabIndex = 6;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(217, 23);
+            label2.Location = new Point(271, 30);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(0, 20);
+            label2.Size = new Size(0, 26);
             label2.TabIndex = 7;
             // 
             // button2
             // 
             button2.BackColor = SystemColors.Info;
-            button2.Location = new Point(21, 106);
+            button2.Location = new Point(26, 126);
+            button2.Margin = new Padding(4, 4, 4, 4);
             button2.Name = "button2";
-            button2.Size = new Size(166, 29);
+            button2.Size = new Size(206, 50);
             button2.TabIndex = 8;
             button2.Text = "Отмена";
             button2.UseVisualStyleBackColor = false;
@@ -95,18 +101,20 @@
             // Form4
             // 
             AcceptButton = button1;
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 26F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
-            ClientSize = new Size(428, 163);
+            ClientSize = new Size(523, 212);
             Controls.Add(button2);
             Controls.Add(label2);
             Controls.Add(textBox1);
             Controls.Add(button1);
             Controls.Add(comboBox1);
             Controls.Add(label1);
+            Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4, 4, 4, 4);
             MaximizeBox = false;
             Name = "Form4";
             Text = "Form4";

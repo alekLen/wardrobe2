@@ -37,7 +37,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(41, 51);
+            textBox1.Location = new Point(31, 57);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(237, 27);
             textBox1.TabIndex = 2;
@@ -45,15 +45,17 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(41, 28);
             label2.Name = "label2";
-            label2.Size = new Size(152, 20);
+            label2.Size = new Size(176, 26);
             label2.TabIndex = 3;
             label2.Text = "название комплекта";
             // 
             // button1
             // 
             button1.BackColor = SystemColors.Info;
+            button1.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button1.Location = new Point(212, 327);
             button1.Name = "button1";
             button1.Size = new Size(225, 41);
@@ -65,6 +67,7 @@
             // button2
             // 
             button2.BackColor = SystemColors.Info;
+            button2.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button2.Location = new Point(41, 327);
             button2.Name = "button2";
             button2.Size = new Size(152, 41);
