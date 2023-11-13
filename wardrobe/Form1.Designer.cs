@@ -30,6 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            toolStripContainer1 = new ToolStripContainer();
             pictureBox1 = new PictureBox();
             menuStrip1 = new MenuStrip();
             editToolStripMenuItem2 = new ToolStripMenuItem();
@@ -132,8 +133,8 @@
             label28 = new Label();
             label29 = new Label();
             button1 = new Button();
-            toolStripContainer1 = new ToolStripContainer();
             buttonClearComplect = new Button();
+            toolStripContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             menuStrip1.SuspendLayout();
             contextMenuStrip6.SuspendLayout();
@@ -150,187 +151,161 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             contextMenuStrip5.SuspendLayout();
             contextMenuStrip10.SuspendLayout();
-            toolStripContainer1.SuspendLayout();
             SuspendLayout();
+            // 
+            // toolStripContainer1
+            // 
+            // 
+            // toolStripContainer1.ContentPanel
+            // 
+            toolStripContainer1.ContentPanel.BackColor = SystemColors.ControlLight;
+            resources.ApplyResources(toolStripContainer1.ContentPanel, "toolStripContainer1.ContentPanel");
+            resources.ApplyResources(toolStripContainer1, "toolStripContainer1");
+            toolStripContainer1.Name = "toolStripContainer1";
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = SystemColors.ControlLightLight;
-            pictureBox1.Location = new Point(166, 75);
+            resources.ApplyResources(pictureBox1, "pictureBox1");
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(335, 383);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
             // menuStrip1
             // 
             menuStrip1.BackColor = SystemColors.GradientInactiveCaption;
-            menuStrip1.Dock = DockStyle.None;
-            menuStrip1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            resources.ApplyResources(menuStrip1, "menuStrip1");
             menuStrip1.ImageScalingSize = new Size(20, 20);
             menuStrip1.Items.AddRange(new ToolStripItem[] { editToolStripMenuItem2, wardrobeToolStripMenuItem, statisticToolStripMenuItem });
-            menuStrip1.Location = new Point(8, 8);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(393, 34);
-            menuStrip1.TabIndex = 2;
-            menuStrip1.Text = "menuStrip1";
             menuStrip1.ItemClicked += menuStrip1_ItemClicked;
             // 
             // editToolStripMenuItem2
             // 
             editToolStripMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { editStyleToolStripMenuItem, editColorToolStripMenuItem, editSeasonoolStripMenuItem });
-            editToolStripMenuItem2.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            resources.ApplyResources(editToolStripMenuItem2, "editToolStripMenuItem2");
             editToolStripMenuItem2.Name = "editToolStripMenuItem2";
-            editToolStripMenuItem2.Size = new Size(153, 30);
-            editToolStripMenuItem2.Text = "Редактировать";
             // 
             // editStyleToolStripMenuItem
             // 
             editStyleToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { delStyleToolStripMenuItem4, edStyleToolStripMenuItem3, addStyleToolStripMenuItem4 });
             editStyleToolStripMenuItem.Name = "editStyleToolStripMenuItem";
-            editStyleToolStripMenuItem.Size = new Size(149, 30);
-            editStyleToolStripMenuItem.Text = "Стиль";
+            resources.ApplyResources(editStyleToolStripMenuItem, "editStyleToolStripMenuItem");
             // 
             // delStyleToolStripMenuItem4
             // 
             delStyleToolStripMenuItem4.Name = "delStyleToolStripMenuItem4";
-            delStyleToolStripMenuItem4.Size = new Size(181, 30);
-            delStyleToolStripMenuItem4.Text = "Удалить";
+            resources.ApplyResources(delStyleToolStripMenuItem4, "delStyleToolStripMenuItem4");
             delStyleToolStripMenuItem4.Click += delStyle;
             // 
             // edStyleToolStripMenuItem3
             // 
             edStyleToolStripMenuItem3.Name = "edStyleToolStripMenuItem3";
-            edStyleToolStripMenuItem3.Size = new Size(181, 30);
-            edStyleToolStripMenuItem3.Text = "Изменить";
+            resources.ApplyResources(edStyleToolStripMenuItem3, "edStyleToolStripMenuItem3");
             edStyleToolStripMenuItem3.Click += editStyle;
             // 
             // addStyleToolStripMenuItem4
             // 
             addStyleToolStripMenuItem4.Name = "addStyleToolStripMenuItem4";
-            addStyleToolStripMenuItem4.Size = new Size(181, 30);
-            addStyleToolStripMenuItem4.Text = "Добавить";
+            resources.ApplyResources(addStyleToolStripMenuItem4, "addStyleToolStripMenuItem4");
             addStyleToolStripMenuItem4.Click += addStyle;
             // 
             // editColorToolStripMenuItem
             // 
             editColorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { deColorToolStripMenuItem5, edColorToolStripMenuItem4, addColorToolStripMenuItem5 });
             editColorToolStripMenuItem.Name = "editColorToolStripMenuItem";
-            editColorToolStripMenuItem.Size = new Size(149, 30);
-            editColorToolStripMenuItem.Text = "Цвет";
+            resources.ApplyResources(editColorToolStripMenuItem, "editColorToolStripMenuItem");
             // 
             // deColorToolStripMenuItem5
             // 
             deColorToolStripMenuItem5.Name = "deColorToolStripMenuItem5";
-            deColorToolStripMenuItem5.Size = new Size(181, 30);
-            deColorToolStripMenuItem5.Text = "Удалить";
+            resources.ApplyResources(deColorToolStripMenuItem5, "deColorToolStripMenuItem5");
             deColorToolStripMenuItem5.Click += delColor;
             // 
             // edColorToolStripMenuItem4
             // 
             edColorToolStripMenuItem4.Name = "edColorToolStripMenuItem4";
-            edColorToolStripMenuItem4.Size = new Size(181, 30);
-            edColorToolStripMenuItem4.Text = "Изменить";
+            resources.ApplyResources(edColorToolStripMenuItem4, "edColorToolStripMenuItem4");
             edColorToolStripMenuItem4.Click += editColor;
             // 
             // addColorToolStripMenuItem5
             // 
             addColorToolStripMenuItem5.Name = "addColorToolStripMenuItem5";
-            addColorToolStripMenuItem5.Size = new Size(181, 30);
-            addColorToolStripMenuItem5.Text = "Добавить";
+            resources.ApplyResources(addColorToolStripMenuItem5, "addColorToolStripMenuItem5");
             addColorToolStripMenuItem5.Click += addColor;
             // 
             // editSeasonoolStripMenuItem
             // 
             editSeasonoolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { delSeasonToolStripMenuItem6, edSeasonToolStripMenuItem5, addSeasonToolStripMenuItem6 });
             editSeasonoolStripMenuItem.Name = "editSeasonoolStripMenuItem";
-            editSeasonoolStripMenuItem.Size = new Size(149, 30);
-            editSeasonoolStripMenuItem.Text = "Сезон";
+            resources.ApplyResources(editSeasonoolStripMenuItem, "editSeasonoolStripMenuItem");
             // 
             // delSeasonToolStripMenuItem6
             // 
             delSeasonToolStripMenuItem6.Name = "delSeasonToolStripMenuItem6";
-            delSeasonToolStripMenuItem6.Size = new Size(181, 30);
-            delSeasonToolStripMenuItem6.Text = "Удалить";
+            resources.ApplyResources(delSeasonToolStripMenuItem6, "delSeasonToolStripMenuItem6");
             delSeasonToolStripMenuItem6.Click += delSeason;
             // 
             // edSeasonToolStripMenuItem5
             // 
             edSeasonToolStripMenuItem5.Name = "edSeasonToolStripMenuItem5";
-            edSeasonToolStripMenuItem5.Size = new Size(181, 30);
-            edSeasonToolStripMenuItem5.Text = "Изменить";
+            resources.ApplyResources(edSeasonToolStripMenuItem5, "edSeasonToolStripMenuItem5");
             edSeasonToolStripMenuItem5.Click += editSeason;
             // 
             // addSeasonToolStripMenuItem6
             // 
             addSeasonToolStripMenuItem6.Name = "addSeasonToolStripMenuItem6";
-            addSeasonToolStripMenuItem6.Size = new Size(181, 30);
-            addSeasonToolStripMenuItem6.Text = "Добавить";
+            resources.ApplyResources(addSeasonToolStripMenuItem6, "addSeasonToolStripMenuItem6");
             addSeasonToolStripMenuItem6.Click += addSeason;
             // 
             // wardrobeToolStripMenuItem
             // 
             wardrobeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addClotheToolStripMenuItem1, complectsToolStripMenuItem });
-            wardrobeToolStripMenuItem.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            resources.ApplyResources(wardrobeToolStripMenuItem, "wardrobeToolStripMenuItem");
             wardrobeToolStripMenuItem.Name = "wardrobeToolStripMenuItem";
-            wardrobeToolStripMenuItem.Size = new Size(98, 30);
-            wardrobeToolStripMenuItem.Text = "Гардероб";
             // 
             // addClotheToolStripMenuItem1
             // 
             addClotheToolStripMenuItem1.Name = "addClotheToolStripMenuItem1";
-            addClotheToolStripMenuItem1.Size = new Size(237, 30);
-            addClotheToolStripMenuItem1.Text = "Добавить одежду";
+            resources.ApplyResources(addClotheToolStripMenuItem1, "addClotheToolStripMenuItem1");
             addClotheToolStripMenuItem1.Click += Add_Form;
             // 
             // complectsToolStripMenuItem
             // 
             complectsToolStripMenuItem.Name = "complectsToolStripMenuItem";
-            complectsToolStripMenuItem.Size = new Size(237, 30);
-            complectsToolStripMenuItem.Text = "Комплекты";
+            resources.ApplyResources(complectsToolStripMenuItem, "complectsToolStripMenuItem");
             complectsToolStripMenuItem.Click += See_Complects;
             // 
             // statisticToolStripMenuItem
             // 
             statisticToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { colorToolStripMenuItem, styleToolStripMenuItem, seasonToolStripMenuItem });
-            statisticToolStripMenuItem.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            resources.ApplyResources(statisticToolStripMenuItem, "statisticToolStripMenuItem");
             statisticToolStripMenuItem.Name = "statisticToolStripMenuItem";
-            statisticToolStripMenuItem.Size = new Size(134, 30);
-            statisticToolStripMenuItem.Text = "Статистика";
             // 
             // colorToolStripMenuItem
             // 
             colorToolStripMenuItem.Name = "colorToolStripMenuItem";
-            colorToolStripMenuItem.Size = new Size(211, 30);
-            colorToolStripMenuItem.Text = "Цвет одежды";
+            resources.ApplyResources(colorToolStripMenuItem, "colorToolStripMenuItem");
             colorToolStripMenuItem.Click += color_statistic;
             // 
             // styleToolStripMenuItem
             // 
             styleToolStripMenuItem.Name = "styleToolStripMenuItem";
-            styleToolStripMenuItem.Size = new Size(211, 30);
-            styleToolStripMenuItem.Text = "Стиль одежды";
+            resources.ApplyResources(styleToolStripMenuItem, "styleToolStripMenuItem");
             styleToolStripMenuItem.Click += style_statistic;
             // 
             // seasonToolStripMenuItem
             // 
             seasonToolStripMenuItem.Name = "seasonToolStripMenuItem";
-            seasonToolStripMenuItem.Size = new Size(211, 30);
-            seasonToolStripMenuItem.Text = "Сезон Одежды";
+            resources.ApplyResources(seasonToolStripMenuItem, "seasonToolStripMenuItem");
             seasonToolStripMenuItem.Click += season_statistic;
             // 
             // listBox1
             // 
             listBox1.ContextMenuStrip = contextMenuStrip6;
-            listBox1.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            resources.ApplyResources(listBox1, "listBox1");
             listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 26;
-            listBox1.Location = new Point(290, 467);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(211, 30);
             listBox1.Sorted = true;
-            listBox1.TabIndex = 6;
             listBox1.SelectedIndexChanged += selectUp;
             listBox1.DoubleClick += del_Choosen_Up;
             // 
@@ -339,55 +314,41 @@
             contextMenuStrip6.ImageScalingSize = new Size(20, 20);
             contextMenuStrip6.Items.AddRange(new ToolStripItem[] { удалитьИзКомплектаToolStripMenuItem });
             contextMenuStrip6.Name = "contextMenuStrip6";
-            contextMenuStrip6.Size = new Size(232, 28);
+            resources.ApplyResources(contextMenuStrip6, "contextMenuStrip6");
             // 
             // удалитьИзКомплектаToolStripMenuItem
             // 
             удалитьИзКомплектаToolStripMenuItem.Name = "удалитьИзКомплектаToolStripMenuItem";
-            удалитьИзКомплектаToolStripMenuItem.Size = new Size(231, 24);
-            удалитьИзКомплектаToolStripMenuItem.Text = "Удалить из комплекта";
+            resources.ApplyResources(удалитьИзКомплектаToolStripMenuItem, "удалитьИзКомплектаToolStripMenuItem");
             удалитьИзКомплектаToolStripMenuItem.Click += del_Choosen_Up;
             // 
             // pictureBox2
             // 
             pictureBox2.BackColor = SystemColors.ControlLightLight;
-            pictureBox2.Location = new Point(505, 75);
+            resources.ApplyResources(pictureBox2, "pictureBox2");
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(335, 382);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 7;
             pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
             pictureBox3.BackColor = SystemColors.ControlLightLight;
-            pictureBox3.Location = new Point(846, 75);
+            resources.ApplyResources(pictureBox3, "pictureBox3");
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(335, 382);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 8;
             pictureBox3.TabStop = false;
             // 
             // pictureBox4
             // 
             pictureBox4.BackColor = SystemColors.ControlLightLight;
-            pictureBox4.Location = new Point(1187, 75);
+            resources.ApplyResources(pictureBox4, "pictureBox4");
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(335, 382);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 9;
             pictureBox4.TabStop = false;
             // 
             // listBox3
             // 
             listBox3.ContextMenuStrip = contextMenuStrip8;
-            listBox3.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            resources.ApplyResources(listBox3, "listBox3");
             listBox3.FormattingEnabled = true;
-            listBox3.ItemHeight = 26;
-            listBox3.Location = new Point(1004, 464);
             listBox3.Name = "listBox3";
-            listBox3.Size = new Size(177, 30);
-            listBox3.TabIndex = 11;
             listBox3.SelectedIndexChanged += selectSuit;
             listBox3.DoubleClick += del_chosen_suit;
             // 
@@ -396,25 +357,20 @@
             contextMenuStrip8.ImageScalingSize = new Size(20, 20);
             contextMenuStrip8.Items.AddRange(new ToolStripItem[] { удалитьИзКомплектаToolStripMenuItem2 });
             contextMenuStrip8.Name = "contextMenuStrip8";
-            contextMenuStrip8.Size = new Size(232, 28);
+            resources.ApplyResources(contextMenuStrip8, "contextMenuStrip8");
             // 
             // удалитьИзКомплектаToolStripMenuItem2
             // 
             удалитьИзКомплектаToolStripMenuItem2.Name = "удалитьИзКомплектаToolStripMenuItem2";
-            удалитьИзКомплектаToolStripMenuItem2.Size = new Size(231, 24);
-            удалитьИзКомплектаToolStripMenuItem2.Text = "Удалить из комплекта";
+            resources.ApplyResources(удалитьИзКомплектаToolStripMenuItem2, "удалитьИзКомплектаToolStripMenuItem2");
             удалитьИзКомплектаToolStripMenuItem2.Click += del_chosen_suit;
             // 
             // listBox4
             // 
             listBox4.ContextMenuStrip = contextMenuStrip9;
-            listBox4.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            resources.ApplyResources(listBox4, "listBox4");
             listBox4.FormattingEnabled = true;
-            listBox4.ItemHeight = 26;
-            listBox4.Location = new Point(1345, 464);
             listBox4.Name = "listBox4";
-            listBox4.Size = new Size(177, 30);
-            listBox4.TabIndex = 12;
             listBox4.SelectedIndexChanged += selectShoe;
             listBox4.DoubleClick += del_chosen_shoe;
             // 
@@ -423,255 +379,146 @@
             contextMenuStrip9.ImageScalingSize = new Size(20, 20);
             contextMenuStrip9.Items.AddRange(new ToolStripItem[] { удалитьИзКомплектаToolStripMenuItem3 });
             contextMenuStrip9.Name = "contextMenuStrip9";
-            contextMenuStrip9.Size = new Size(232, 28);
+            resources.ApplyResources(contextMenuStrip9, "contextMenuStrip9");
             // 
             // удалитьИзКомплектаToolStripMenuItem3
             // 
             удалитьИзКомплектаToolStripMenuItem3.Name = "удалитьИзКомплектаToolStripMenuItem3";
-            удалитьИзКомплектаToolStripMenuItem3.Size = new Size(231, 24);
-            удалитьИзКомплектаToolStripMenuItem3.Text = "Удалить из комплекта";
+            resources.ApplyResources(удалитьИзКомплектаToolStripMenuItem3, "удалитьИзКомплектаToolStripMenuItem3");
             удалитьИзКомплектаToolStripMenuItem3.Click += del_chosen_shoe;
             // 
             // button4
             // 
             button4.BackColor = SystemColors.Info;
-            button4.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.Location = new Point(8, 773);
+            resources.ApplyResources(button4, "button4");
             button4.Name = "button4";
-            button4.Size = new Size(152, 71);
-            button4.TabIndex = 20;
-            button4.Text = "Добавить комплект";
             button4.UseVisualStyleBackColor = false;
             button4.Click += Add_Complect;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(12, 113);
+            resources.ApplyResources(label1, "label1");
             label1.Name = "label1";
-            label1.Size = new Size(65, 26);
-            label1.TabIndex = 22;
-            label1.Text = "Цвету";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(8, 315);
+            resources.ApplyResources(label2, "label2");
             label2.Name = "label2";
-            label2.Size = new Size(63, 26);
-            label2.TabIndex = 25;
-            label2.Text = "Сезону";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(12, 471);
+            resources.ApplyResources(label3, "label3");
             label3.Name = "label3";
-            label3.Size = new Size(68, 26);
-            label3.TabIndex = 26;
-            label3.Text = "Стилю";
             // 
             // button5
             // 
             button5.BackColor = SystemColors.Info;
-            button5.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.Location = new Point(8, 666);
+            resources.ApplyResources(button5, "button5");
             button5.Name = "button5";
-            button5.Size = new Size(152, 71);
-            button5.TabIndex = 29;
-            button5.Text = "Сбросить фильтр";
             button5.UseVisualStyleBackColor = false;
             button5.Click += clear_filter;
             // 
             // button6
             // 
             button6.BackColor = SystemColors.Info;
-            button6.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button6.Location = new Point(8, 626);
+            resources.ApplyResources(button6, "button6");
             button6.Name = "button6";
-            button6.Size = new Size(152, 34);
-            button6.TabIndex = 30;
-            button6.Text = "Фильтровать";
             button6.UseVisualStyleBackColor = false;
             button6.Click += filter_Start;
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(290, 899);
+            resources.ApplyResources(label5, "label5");
             label5.Name = "label5";
-            label5.Size = new Size(49, 26);
-            label5.TabIndex = 34;
-            label5.Text = "Верх";
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(663, 899);
+            resources.ApplyResources(label6, "label6");
             label6.Name = "label6";
-            label6.Size = new Size(40, 26);
-            label6.TabIndex = 35;
-            label6.Text = "Низ";
             // 
             // label7
             // 
-            label7.AutoSize = true;
+            resources.ApplyResources(label7, "label7");
             label7.BackColor = SystemColors.GradientInactiveCaption;
-            label7.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(963, 899);
             label7.Name = "label7";
-            label7.Size = new Size(152, 26);
-            label7.TabIndex = 36;
-            label7.Text = "Платье/Костюм";
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(1325, 899);
+            resources.ApplyResources(label8, "label8");
             label8.Name = "label8";
-            label8.Size = new Size(59, 26);
-            label8.TabIndex = 37;
-            label8.Text = "Обувь";
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.Location = new Point(461, 353);
+            resources.ApplyResources(label9, "label9");
             label9.Name = "label9";
-            label9.Size = new Size(0, 20);
-            label9.TabIndex = 38;
             // 
             // label10
             // 
-            label10.AutoSize = true;
-            label10.Location = new Point(825, 351);
+            resources.ApplyResources(label10, "label10");
             label10.Name = "label10";
-            label10.Size = new Size(0, 20);
-            label10.TabIndex = 39;
             // 
             // label11
             // 
-            label11.AutoSize = true;
-            label11.Location = new Point(1174, 352);
+            resources.ApplyResources(label11, "label11");
             label11.Name = "label11";
-            label11.Size = new Size(0, 20);
-            label11.TabIndex = 40;
             // 
             // label12
             // 
-            label12.AutoSize = true;
-            label12.Location = new Point(1513, 351);
+            resources.ApplyResources(label12, "label12");
             label12.Name = "label12";
-            label12.Size = new Size(0, 20);
-            label12.TabIndex = 41;
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(8, 87);
+            resources.ApplyResources(label4, "label4");
             label4.Name = "label4";
-            label4.Size = new Size(152, 26);
-            label4.TabIndex = 42;
-            label4.Text = "Фильтровать по:";
             label4.Click += label4_Click;
             // 
             // label13
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(263, 474);
+            resources.ApplyResources(label13, "label13");
             label13.Name = "label13";
-            label13.Size = new Size(23, 26);
-            label13.TabIndex = 43;
-            label13.Text = "0";
             // 
             // label14
             // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(616, 468);
+            resources.ApplyResources(label14, "label14");
             label14.Name = "label14";
-            label14.Size = new Size(23, 26);
-            label14.TabIndex = 44;
-            label14.Text = "0";
             // 
             // label15
             // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label15.Location = new Point(963, 468);
+            resources.ApplyResources(label15, "label15");
             label15.Name = "label15";
-            label15.Size = new Size(23, 26);
-            label15.TabIndex = 45;
-            label15.Text = "0";
             // 
             // label16
             // 
-            label16.AutoSize = true;
-            label16.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label16.Location = new Point(1306, 470);
+            resources.ApplyResources(label16, "label16");
             label16.Name = "label16";
-            label16.Size = new Size(23, 26);
-            label16.TabIndex = 46;
-            label16.Text = "0";
             // 
             // label17
             // 
-            label17.AutoSize = true;
-            label17.Font = new Font("Segoe Print", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label17.Location = new Point(166, 474);
+            resources.ApplyResources(label17, "label17");
             label17.Name = "label17";
-            label17.Size = new Size(91, 23);
-            label17.TabIndex = 47;
-            label17.Text = "в комплект";
             // 
             // label18
             // 
-            label18.AutoSize = true;
-            label18.Font = new Font("Segoe Print", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label18.Location = new Point(519, 471);
+            resources.ApplyResources(label18, "label18");
             label18.Name = "label18";
-            label18.Size = new Size(91, 23);
-            label18.TabIndex = 48;
-            label18.Text = "в комплект";
             // 
             // label19
             // 
-            label19.AutoSize = true;
-            label19.Font = new Font("Segoe Print", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label19.Location = new Point(866, 470);
+            resources.ApplyResources(label19, "label19");
             label19.Name = "label19";
-            label19.Size = new Size(91, 23);
-            label19.TabIndex = 49;
-            label19.Text = "в комплект";
             // 
             // label20
             // 
-            label20.AutoSize = true;
-            label20.Font = new Font("Segoe Print", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label20.Location = new Point(1209, 470);
+            resources.ApplyResources(label20, "label20");
             label20.Name = "label20";
-            label20.Size = new Size(91, 23);
-            label20.TabIndex = 50;
-            label20.Text = "в комплект";
             // 
             // listBox2
             // 
             listBox2.ContextMenuStrip = contextMenuStrip7;
-            listBox2.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            resources.ApplyResources(listBox2, "listBox2");
             listBox2.FormattingEnabled = true;
-            listBox2.ItemHeight = 26;
-            listBox2.Location = new Point(663, 463);
             listBox2.Name = "listBox2";
-            listBox2.Size = new Size(177, 30);
-            listBox2.TabIndex = 51;
             listBox2.SelectedIndexChanged += selectBottom;
             listBox2.DoubleClick += del_chosen_bottom;
             // 
@@ -680,54 +527,41 @@
             contextMenuStrip7.ImageScalingSize = new Size(20, 20);
             contextMenuStrip7.Items.AddRange(new ToolStripItem[] { удалитьИзКомплектаToolStripMenuItem1 });
             contextMenuStrip7.Name = "contextMenuStrip7";
-            contextMenuStrip7.Size = new Size(232, 28);
+            resources.ApplyResources(contextMenuStrip7, "contextMenuStrip7");
             // 
             // удалитьИзКомплектаToolStripMenuItem1
             // 
             удалитьИзКомплектаToolStripMenuItem1.Name = "удалитьИзКомплектаToolStripMenuItem1";
-            удалитьИзКомплектаToolStripMenuItem1.Size = new Size(231, 24);
-            удалитьИзКомплектаToolStripMenuItem1.Text = "Удалить из комплекта";
+            resources.ApplyResources(удалитьИзКомплектаToolStripMenuItem1, "удалитьИзКомплектаToolStripMenuItem1");
             удалитьИзКомплектаToolStripMenuItem1.Click += del_chosen_bottom;
             // 
             // FilterSeasonBox
             // 
-            FilterSeasonBox.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            resources.ApplyResources(FilterSeasonBox, "FilterSeasonBox");
             FilterSeasonBox.FormattingEnabled = true;
-            FilterSeasonBox.Location = new Point(8, 341);
             FilterSeasonBox.Name = "FilterSeasonBox";
-            FilterSeasonBox.Size = new Size(152, 120);
-            FilterSeasonBox.TabIndex = 52;
             FilterSeasonBox.ItemCheck += FilterSeasonBox_ItemCheck;
             // 
             // FilterColorBox
             // 
             FilterColorBox.CheckOnClick = true;
-            FilterColorBox.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            resources.ApplyResources(FilterColorBox, "FilterColorBox");
             FilterColorBox.FormattingEnabled = true;
-            FilterColorBox.Location = new Point(8, 142);
             FilterColorBox.Name = "FilterColorBox";
-            FilterColorBox.Size = new Size(152, 160);
-            FilterColorBox.TabIndex = 53;
             FilterColorBox.ItemCheck += FilterColorBox_ItemCheck;
             // 
             // FilterStyleBox
             // 
-            FilterStyleBox.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            resources.ApplyResources(FilterStyleBox, "FilterStyleBox");
             FilterStyleBox.FormattingEnabled = true;
-            FilterStyleBox.Location = new Point(8, 500);
             FilterStyleBox.Name = "FilterStyleBox";
-            FilterStyleBox.Size = new Size(152, 120);
-            FilterStyleBox.TabIndex = 54;
             FilterStyleBox.ItemCheck += FilterStyleBox_ItemCheck;
             // 
             // listView5
             // 
             listView5.ContextMenuStrip = contextMenuStrip1;
-            listView5.Font = new Font("Segoe Print", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            listView5.Location = new Point(166, 501);
+            resources.ApplyResources(listView5, "listView5");
             listView5.Name = "listView5";
-            listView5.Size = new Size(335, 395);
-            listView5.TabIndex = 55;
             listView5.UseCompatibleStateImageBehavior = false;
             listView5.ItemActivate += Load_see_formUp;
             listView5.MouseClick += UpClick;
@@ -737,37 +571,31 @@
             contextMenuStrip1.ImageScalingSize = new Size(20, 20);
             contextMenuStrip1.Items.AddRange(new ToolStripItem[] { добавитьВКомплектToolStripMenuItem, редактироватьToolStripMenuItem, удалитьToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(227, 76);
+            resources.ApplyResources(contextMenuStrip1, "contextMenuStrip1");
             // 
             // добавитьВКомплектToolStripMenuItem
             // 
             добавитьВКомплектToolStripMenuItem.Name = "добавитьВКомплектToolStripMenuItem";
-            добавитьВКомплектToolStripMenuItem.Size = new Size(226, 24);
-            добавитьВКомплектToolStripMenuItem.Text = "Добавить в комплект";
+            resources.ApplyResources(добавитьВКомплектToolStripMenuItem, "добавитьВКомплектToolStripMenuItem");
             добавитьВКомплектToolStripMenuItem.Click += Load_see_formUpDopA;
             // 
             // редактироватьToolStripMenuItem
             // 
             редактироватьToolStripMenuItem.Name = "редактироватьToolStripMenuItem";
-            редактироватьToolStripMenuItem.Size = new Size(226, 24);
-            редактироватьToolStripMenuItem.Text = "Редактировать";
+            resources.ApplyResources(редактироватьToolStripMenuItem, "редактироватьToolStripMenuItem");
             редактироватьToolStripMenuItem.Click += Load_see_formUpDopE;
             // 
             // удалитьToolStripMenuItem
             // 
             удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
-            удалитьToolStripMenuItem.Size = new Size(226, 24);
-            удалитьToolStripMenuItem.Text = "Удалить";
+            resources.ApplyResources(удалитьToolStripMenuItem, "удалитьToolStripMenuItem");
             удалитьToolStripMenuItem.Click += Load_see_formUpDopD;
             // 
             // listView6
             // 
             listView6.ContextMenuStrip = contextMenuStrip2;
-            listView6.Font = new Font("Segoe Print", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            listView6.Location = new Point(505, 500);
+            resources.ApplyResources(listView6, "listView6");
             listView6.Name = "listView6";
-            listView6.Size = new Size(335, 396);
-            listView6.TabIndex = 56;
             listView6.UseCompatibleStateImageBehavior = false;
             listView6.ItemActivate += Load_see_formBottom;
             // 
@@ -776,37 +604,31 @@
             contextMenuStrip2.ImageScalingSize = new Size(20, 20);
             contextMenuStrip2.Items.AddRange(new ToolStripItem[] { добавитьВКомплектToolStripMenuItem1, редактироватьToolStripMenuItem1, удалитьToolStripMenuItem1 });
             contextMenuStrip2.Name = "contextMenuStrip2";
-            contextMenuStrip2.Size = new Size(227, 76);
+            resources.ApplyResources(contextMenuStrip2, "contextMenuStrip2");
             // 
             // добавитьВКомплектToolStripMenuItem1
             // 
             добавитьВКомплектToolStripMenuItem1.Name = "добавитьВКомплектToolStripMenuItem1";
-            добавитьВКомплектToolStripMenuItem1.Size = new Size(226, 24);
-            добавитьВКомплектToolStripMenuItem1.Text = "Добавить в комплект";
+            resources.ApplyResources(добавитьВКомплектToolStripMenuItem1, "добавитьВКомплектToolStripMenuItem1");
             добавитьВКомплектToolStripMenuItem1.Click += Load_see_formBottomDopA;
             // 
             // редактироватьToolStripMenuItem1
             // 
             редактироватьToolStripMenuItem1.Name = "редактироватьToolStripMenuItem1";
-            редактироватьToolStripMenuItem1.Size = new Size(226, 24);
-            редактироватьToolStripMenuItem1.Text = "Редактировать";
+            resources.ApplyResources(редактироватьToolStripMenuItem1, "редактироватьToolStripMenuItem1");
             редактироватьToolStripMenuItem1.Click += Load_see_formBottomDopE;
             // 
             // удалитьToolStripMenuItem1
             // 
             удалитьToolStripMenuItem1.Name = "удалитьToolStripMenuItem1";
-            удалитьToolStripMenuItem1.Size = new Size(226, 24);
-            удалитьToolStripMenuItem1.Text = "Удалить";
+            resources.ApplyResources(удалитьToolStripMenuItem1, "удалитьToolStripMenuItem1");
             удалитьToolStripMenuItem1.Click += Load_see_formBottomDopD;
             // 
             // listView7
             // 
             listView7.ContextMenuStrip = contextMenuStrip3;
-            listView7.Font = new Font("Segoe Print", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            listView7.Location = new Point(846, 500);
+            resources.ApplyResources(listView7, "listView7");
             listView7.Name = "listView7";
-            listView7.Size = new Size(335, 396);
-            listView7.TabIndex = 57;
             listView7.UseCompatibleStateImageBehavior = false;
             listView7.ItemActivate += Load_see_formSuit;
             // 
@@ -815,37 +637,31 @@
             contextMenuStrip3.ImageScalingSize = new Size(20, 20);
             contextMenuStrip3.Items.AddRange(new ToolStripItem[] { добавитьВКомплектToolStripMenuItem2, редактироватьToolStripMenuItem2, удалитьToolStripMenuItem2 });
             contextMenuStrip3.Name = "contextMenuStrip3";
-            contextMenuStrip3.Size = new Size(227, 76);
+            resources.ApplyResources(contextMenuStrip3, "contextMenuStrip3");
             // 
             // добавитьВКомплектToolStripMenuItem2
             // 
             добавитьВКомплектToolStripMenuItem2.Name = "добавитьВКомплектToolStripMenuItem2";
-            добавитьВКомплектToolStripMenuItem2.Size = new Size(226, 24);
-            добавитьВКомплектToolStripMenuItem2.Text = "Добавить в комплект";
+            resources.ApplyResources(добавитьВКомплектToolStripMenuItem2, "добавитьВКомплектToolStripMenuItem2");
             добавитьВКомплектToolStripMenuItem2.Click += Load_see_formSuitDopA;
             // 
             // редактироватьToolStripMenuItem2
             // 
             редактироватьToolStripMenuItem2.Name = "редактироватьToolStripMenuItem2";
-            редактироватьToolStripMenuItem2.Size = new Size(226, 24);
-            редактироватьToolStripMenuItem2.Text = "Редактировать";
+            resources.ApplyResources(редактироватьToolStripMenuItem2, "редактироватьToolStripMenuItem2");
             редактироватьToolStripMenuItem2.Click += Load_see_formSuitDopE;
             // 
             // удалитьToolStripMenuItem2
             // 
             удалитьToolStripMenuItem2.Name = "удалитьToolStripMenuItem2";
-            удалитьToolStripMenuItem2.Size = new Size(226, 24);
-            удалитьToolStripMenuItem2.Text = "Удалить";
+            resources.ApplyResources(удалитьToolStripMenuItem2, "удалитьToolStripMenuItem2");
             удалитьToolStripMenuItem2.Click += Load_see_formSuitDopD;
             // 
             // listView8
             // 
             listView8.ContextMenuStrip = contextMenuStrip4;
-            listView8.Font = new Font("Segoe Print", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            listView8.Location = new Point(1187, 500);
+            resources.ApplyResources(listView8, "listView8");
             listView8.Name = "listView8";
-            listView8.Size = new Size(335, 396);
-            listView8.TabIndex = 58;
             listView8.UseCompatibleStateImageBehavior = false;
             listView8.ItemActivate += Load_see_formShoe;
             // 
@@ -854,107 +670,68 @@
             contextMenuStrip4.ImageScalingSize = new Size(20, 20);
             contextMenuStrip4.Items.AddRange(new ToolStripItem[] { добавитьВКомплектToolStripMenuItem3, редактироватьToolStripMenuItem3, удалиToolStripMenuItem });
             contextMenuStrip4.Name = "contextMenuStrip4";
-            contextMenuStrip4.Size = new Size(227, 76);
+            resources.ApplyResources(contextMenuStrip4, "contextMenuStrip4");
             // 
             // добавитьВКомплектToolStripMenuItem3
             // 
             добавитьВКомплектToolStripMenuItem3.Name = "добавитьВКомплектToolStripMenuItem3";
-            добавитьВКомплектToolStripMenuItem3.Size = new Size(226, 24);
-            добавитьВКомплектToolStripMenuItem3.Text = "Добавить в комплект";
+            resources.ApplyResources(добавитьВКомплектToolStripMenuItem3, "добавитьВКомплектToolStripMenuItem3");
             добавитьВКомплектToolStripMenuItem3.Click += Load_see_formShoeDopA;
             // 
             // редактироватьToolStripMenuItem3
             // 
             редактироватьToolStripMenuItem3.Name = "редактироватьToolStripMenuItem3";
-            редактироватьToolStripMenuItem3.Size = new Size(226, 24);
-            редактироватьToolStripMenuItem3.Text = "Редактировать";
+            resources.ApplyResources(редактироватьToolStripMenuItem3, "редактироватьToolStripMenuItem3");
             редактироватьToolStripMenuItem3.Click += Load_see_formShoeDopE;
             // 
             // удалиToolStripMenuItem
             // 
             удалиToolStripMenuItem.Name = "удалиToolStripMenuItem";
-            удалиToolStripMenuItem.Size = new Size(226, 24);
-            удалиToolStripMenuItem.Text = "Удалить";
+            resources.ApplyResources(удалиToolStripMenuItem, "удалиToolStripMenuItem");
             удалиToolStripMenuItem.Click += Load_see_formShoeDopD;
             // 
             // label21
             // 
-            label21.AutoSize = true;
-            label21.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label21.Location = new Point(290, 37);
+            resources.ApplyResources(label21, "label21");
             label21.Name = "label21";
-            label21.Size = new Size(64, 35);
-            label21.TabIndex = 59;
-            label21.Text = "Верх";
             // 
             // label22
             // 
-            label22.AutoSize = true;
-            label22.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label22.Location = new Point(633, 37);
+            resources.ApplyResources(label22, "label22");
             label22.Name = "label22";
-            label22.Size = new Size(52, 35);
-            label22.TabIndex = 60;
-            label22.Text = "Низ";
             // 
             // label23
             // 
-            label23.AutoSize = true;
-            label23.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label23.Location = new Point(907, 37);
+            resources.ApplyResources(label23, "label23");
             label23.Name = "label23";
-            label23.Size = new Size(106, 35);
-            label23.TabIndex = 61;
-            label23.Text = "Платье/";
             // 
             // label24
             // 
-            label24.AutoSize = true;
-            label24.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label24.Location = new Point(1308, 37);
+            resources.ApplyResources(label24, "label24");
             label24.Name = "label24";
-            label24.Size = new Size(76, 35);
-            label24.TabIndex = 62;
-            label24.Text = "Обувь";
             // 
             // label25
             // 
-            label25.AutoSize = true;
-            label25.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label25.Location = new Point(1007, 37);
+            resources.ApplyResources(label25, "label25");
             label25.Name = "label25";
-            label25.Size = new Size(110, 35);
-            label25.TabIndex = 63;
-            label25.Text = "Костюм";
             // 
             // label26
             // 
-            label26.AutoSize = true;
-            label26.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label26.Location = new Point(1617, 37);
+            resources.ApplyResources(label26, "label26");
             label26.Name = "label26";
-            label26.Size = new Size(136, 35);
-            label26.TabIndex = 64;
-            label26.Text = "Аксессуары";
             // 
             // pictureBox5
             // 
             pictureBox5.BackColor = SystemColors.ControlLightLight;
-            pictureBox5.Location = new Point(1528, 75);
+            resources.ApplyResources(pictureBox5, "pictureBox5");
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(335, 382);
-            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox5.TabIndex = 65;
             pictureBox5.TabStop = false;
             // 
             // listView1
             // 
             listView1.ContextMenuStrip = contextMenuStrip5;
-            listView1.Font = new Font("Segoe Print", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            listView1.Location = new Point(1528, 500);
+            resources.ApplyResources(listView1, "listView1");
             listView1.Name = "listView1";
-            listView1.Size = new Size(335, 396);
-            listView1.TabIndex = 66;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.ItemActivate += Load_see_formAcc;
             // 
@@ -963,39 +740,32 @@
             contextMenuStrip5.ImageScalingSize = new Size(20, 20);
             contextMenuStrip5.Items.AddRange(new ToolStripItem[] { добавитьВКомплектToolStripMenuItem4, редактироватьToolStripMenuItem4, удалитьToolStripMenuItem3 });
             contextMenuStrip5.Name = "contextMenuStrip5";
-            contextMenuStrip5.Size = new Size(227, 76);
+            resources.ApplyResources(contextMenuStrip5, "contextMenuStrip5");
             // 
             // добавитьВКомплектToolStripMenuItem4
             // 
             добавитьВКомплектToolStripMenuItem4.Name = "добавитьВКомплектToolStripMenuItem4";
-            добавитьВКомплектToolStripMenuItem4.Size = new Size(226, 24);
-            добавитьВКомплектToolStripMenuItem4.Text = "Добавить в комплект";
+            resources.ApplyResources(добавитьВКомплектToolStripMenuItem4, "добавитьВКомплектToolStripMenuItem4");
             добавитьВКомплектToolStripMenuItem4.Click += Load_see_formAccDopA;
             // 
             // редактироватьToolStripMenuItem4
             // 
             редактироватьToolStripMenuItem4.Name = "редактироватьToolStripMenuItem4";
-            редактироватьToolStripMenuItem4.Size = new Size(226, 24);
-            редактироватьToolStripMenuItem4.Text = "Редактировать";
+            resources.ApplyResources(редактироватьToolStripMenuItem4, "редактироватьToolStripMenuItem4");
             редактироватьToolStripMenuItem4.Click += Load_see_formAccDopE;
             // 
             // удалитьToolStripMenuItem3
             // 
             удалитьToolStripMenuItem3.Name = "удалитьToolStripMenuItem3";
-            удалитьToolStripMenuItem3.Size = new Size(226, 24);
-            удалитьToolStripMenuItem3.Text = "Удалить";
+            resources.ApplyResources(удалитьToolStripMenuItem3, "удалитьToolStripMenuItem3");
             удалитьToolStripMenuItem3.Click += Load_see_formAccDopD;
             // 
             // listBox5
             // 
             listBox5.ContextMenuStrip = contextMenuStrip10;
-            listBox5.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            resources.ApplyResources(listBox5, "listBox5");
             listBox5.FormattingEnabled = true;
-            listBox5.ItemHeight = 26;
-            listBox5.Location = new Point(1686, 464);
             listBox5.Name = "listBox5";
-            listBox5.Size = new Size(177, 30);
-            listBox5.TabIndex = 67;
             listBox5.SelectedIndexChanged += selectAcc;
             listBox5.DoubleClick += del_chosen_acc;
             // 
@@ -1004,88 +774,50 @@
             contextMenuStrip10.ImageScalingSize = new Size(20, 20);
             contextMenuStrip10.Items.AddRange(new ToolStripItem[] { удалитьИзКомплектаToolStripMenuItem4 });
             contextMenuStrip10.Name = "contextMenuStrip10";
-            contextMenuStrip10.Size = new Size(232, 28);
+            resources.ApplyResources(contextMenuStrip10, "contextMenuStrip10");
             // 
             // удалитьИзКомплектаToolStripMenuItem4
             // 
             удалитьИзКомплектаToolStripMenuItem4.Name = "удалитьИзКомплектаToolStripMenuItem4";
-            удалитьИзКомплектаToolStripMenuItem4.Size = new Size(231, 24);
-            удалитьИзКомплектаToolStripMenuItem4.Text = "Удалить из комплекта";
+            resources.ApplyResources(удалитьИзКомплектаToolStripMenuItem4, "удалитьИзКомплектаToolStripMenuItem4");
             удалитьИзКомплектаToolStripMenuItem4.Click += del_chosen_acc;
             // 
             // label27
             // 
-            label27.AutoSize = true;
-            label27.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label27.Location = new Point(1646, 468);
+            resources.ApplyResources(label27, "label27");
             label27.Name = "label27";
-            label27.Size = new Size(23, 26);
-            label27.TabIndex = 68;
-            label27.Text = "0";
             // 
             // label28
             // 
-            label28.AutoSize = true;
-            label28.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label28.Location = new Point(1648, 899);
+            resources.ApplyResources(label28, "label28");
             label28.Name = "label28";
-            label28.Size = new Size(105, 26);
-            label28.TabIndex = 69;
-            label28.Text = "Аксессуары";
             // 
             // label29
             // 
-            label29.AutoSize = true;
-            label29.Font = new Font("Segoe Print", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label29.Location = new Point(1549, 470);
+            resources.ApplyResources(label29, "label29");
             label29.Name = "label29";
-            label29.Size = new Size(91, 23);
-            label29.TabIndex = 70;
-            label29.Text = "в комплект";
             // 
             // button1
             // 
             button1.BackColor = SystemColors.Info;
-            button1.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(20, 45);
+            resources.ApplyResources(button1, "button1");
             button1.Name = "button1";
-            button1.Size = new Size(87, 39);
-            button1.TabIndex = 71;
-            button1.Text = "Выйти";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
-            // 
-            // toolStripContainer1
-            // 
-            // 
-            // toolStripContainer1.ContentPanel
-            // 
-            toolStripContainer1.ContentPanel.BackColor = SystemColors.ControlLight;
-            toolStripContainer1.ContentPanel.Size = new Size(1, 0);
-            toolStripContainer1.Location = new Point(383, 8);
-            toolStripContainer1.Name = "toolStripContainer1";
-            toolStripContainer1.Size = new Size(1, 1);
-            toolStripContainer1.TabIndex = 2;
-            toolStripContainer1.Text = "toolStripContainer1";
             // 
             // buttonClearComplect
             // 
             buttonClearComplect.BackColor = SystemColors.Info;
-            buttonClearComplect.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonClearComplect.Location = new Point(8, 855);
+            resources.ApplyResources(buttonClearComplect, "buttonClearComplect");
             buttonClearComplect.Name = "buttonClearComplect";
-            buttonClearComplect.Size = new Size(152, 41);
-            buttonClearComplect.TabIndex = 72;
-            buttonClearComplect.Text = "Очистить";
             buttonClearComplect.UseVisualStyleBackColor = false;
             buttonClearComplect.Click += buttonClearComplect_Click;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
-            ClientSize = new Size(1886, 926);
             Controls.Add(buttonClearComplect);
             Controls.Add(menuStrip1);
             Controls.Add(toolStripContainer1);
@@ -1140,15 +872,13 @@
             Controls.Add(pictureBox2);
             Controls.Add(listBox1);
             Controls.Add(pictureBox1);
-            Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             MaximizeBox = false;
             Name = "Form1";
-            StartPosition = FormStartPosition.Manual;
-            Text = "Гардероб";
             Load += LoadForm;
+            toolStripContainer1.ResumeLayout(false);
+            toolStripContainer1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
@@ -1166,8 +896,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             contextMenuStrip5.ResumeLayout(false);
             contextMenuStrip10.ResumeLayout(false);
-            toolStripContainer1.ResumeLayout(false);
-            toolStripContainer1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }

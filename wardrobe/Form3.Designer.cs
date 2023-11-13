@@ -49,6 +49,8 @@
             button2 = new Button();
             button3 = new Button();
             label7 = new Label();
+            label8 = new Label();
+            textBoxType = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -104,7 +106,7 @@
             // 
             button1.BackColor = SystemColors.Info;
             button1.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(141, 299);
+            button1.Location = new Point(141, 335);
             button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
             button1.Size = new Size(213, 54);
@@ -204,7 +206,7 @@
             // 
             buttonDelete.BackColor = SystemColors.Info;
             buttonDelete.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonDelete.Location = new Point(16, 373);
+            buttonDelete.Location = new Point(16, 396);
             buttonDelete.Margin = new Padding(3, 2, 3, 2);
             buttonDelete.Name = "buttonDelete";
             buttonDelete.Size = new Size(103, 39);
@@ -217,7 +219,7 @@
             // 
             buttonEdit.BackColor = SystemColors.Info;
             buttonEdit.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonEdit.Location = new Point(141, 373);
+            buttonEdit.Location = new Point(141, 393);
             buttonEdit.Margin = new Padding(3, 2, 3, 2);
             buttonEdit.Name = "buttonEdit";
             buttonEdit.Size = new Size(213, 42);
@@ -230,7 +232,7 @@
             // 
             button2.BackColor = SystemColors.Info;
             button2.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(16, 299);
+            button2.Location = new Point(16, 335);
             button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
             button2.Size = new Size(103, 54);
@@ -261,12 +263,32 @@
             label7.TabIndex = 20;
             label7.Text = "Наименование";
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Location = new Point(16, 290);
+            label8.Name = "label8";
+            label8.Size = new Size(64, 26);
+            label8.TabIndex = 21;
+            label8.Text = "Раздел";
+            // 
+            // textBoxType
+            // 
+            textBoxType.Enabled = false;
+            textBoxType.Location = new Point(141, 290);
+            textBoxType.Name = "textBoxType";
+            textBoxType.Size = new Size(213, 27);
+            textBoxType.TabIndex = 22;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(811, 446);
+            Controls.Add(textBoxType);
+            Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -323,5 +345,7 @@
         private Button button2;
         private Button button3;
         private Label label7;
+        private Label label8;
+        private TextBox textBoxType;
     }
 }

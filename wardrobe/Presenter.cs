@@ -59,6 +59,7 @@ namespace wardrobe
             form.see_clothe.LoadStyle += new EventHandler<EventArgs>(LoadStyleToEdit);
             form.see_clothe.LoadSeason += new EventHandler<EventArgs>(LoadSeasonToEdit);
             form.see_clothe.LoadColor += new EventHandler<EventArgs>(LoadColorToEdit);
+            form.see_clothe.LoadTypeClose += new EventHandler<EventArgs>(LoadTypeToEdit);
             form.see_clothe.DeletePhoto += new EventHandler<EventArgs>(DelPhoto);
             form.see_clothe.EditItem += new EventHandler<EventArgs>(EditItem);
             form.see_clotheDop.LoadF7 += new EventHandler<EventArgs>(LoadSeeDopForm);
@@ -67,6 +68,7 @@ namespace wardrobe
             form.see_clotheDop.LoadStyle += new EventHandler<EventArgs>(LoadStyleToEdit);
             form.see_clotheDop.LoadSeason += new EventHandler<EventArgs>(LoadSeasonToEdit);
             form.see_clotheDop.LoadColor += new EventHandler<EventArgs>(LoadColorToEdit);
+            form.see_clotheDop.LoadTypeClose += new EventHandler<EventArgs>(LoadTypeToEdit);
             form.see_clotheDop.DeletePhoto += new EventHandler<EventArgs>(DelPhotoDop);
             form.see_clotheDop.EditItem += new EventHandler<EventArgs>(EditItemDop);
             form.edit_form.LoadEditStyle += new EventHandler<EventArgs>(LoadStyleToEdit);
@@ -109,6 +111,24 @@ namespace wardrobe
                 MessageBox.Show(ex.Message);
             }
         }
+        public void LoadTypeToEdit(object sender, EventArgs e)
+        {
+            try
+            {
+                Wardrobe_Context db = Get_db();
+                var query1 = from b in db.clothes_types
+                             select b;
+                foreach (var p in query1)
+                {
+                    string s = p.Type_name;
+                    if (sender is Form3)
+                        form.see_clothe.SetTypeToEdit(s);               
+                    if (sender is Form7)
+                        form.see_clotheDop.SetTypeToEdit(s);
+                }
+            }
+            catch { }
+        }
         public void LoadAdd(object sender, EventArgs e)
         {
             try
@@ -141,6 +161,7 @@ namespace wardrobe
                     string s = query.ToString();
                     string[]s1=s.Split('~');
                     form.see_clothe.SetName(s1[1]);
+                    form.see_clothe.SetType(s1[2]);
                     form.see_clothe.SetSeason(s1[5]);
                     form.see_clothe.SetStyle(s1[4]);
                     form.see_clothe.SetColor(s1[3]);
@@ -169,6 +190,7 @@ namespace wardrobe
                     string s = query.ToString();
                     string[] s1 = s.Split('~');
                     form.see_clotheDop.SetName(s1[1]);
+                    form.see_clotheDop.SetType(s1[2]);
                     form.see_clotheDop.SetSeason(s1[5]);
                     form.see_clotheDop.SetStyle(s1[4]);
                     form.see_clotheDop.SetColor(s1[3]);
@@ -700,6 +722,24 @@ namespace wardrobe
                 MessageBox.Show(ex.Message);
             }          
         }
+        public void TypeToForm3(Wardrobe_Context db)
+        {
+            try
+            {
+                var query = from b in db.clothes_types
+                            select b;
+
+                foreach (var p in query)
+                {
+                    string s = p.Type_name;
+                    form.see_clothe.SetTypeToEdit(s);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         public void NewSForm(object sender, EventArgs e)
         {
             form.see_clothe.LoadF3 += new EventHandler<EventArgs>(LoadSeeForm);
@@ -710,6 +750,7 @@ namespace wardrobe
             form.see_clothe.LoadColor += new EventHandler<EventArgs>(LoadColorToEdit);
             form.see_clothe.DeletePhoto += new EventHandler<EventArgs>(DelPhoto);
             form.see_clothe.EditItem += new EventHandler<EventArgs>(EditItem);
+            form.see_clothe.LoadTypeClose += new EventHandler<EventArgs>(LoadTypeToEdit);
         }
         public void NewAForm(object sender, EventArgs e)
         {
@@ -812,6 +853,7 @@ namespace wardrobe
             form.see_clotheDop.LoadColor += new EventHandler<EventArgs>(LoadColorToEdit);
             form.see_clotheDop.DeletePhoto += new EventHandler<EventArgs>(DelPhotoDop);
             form.see_clotheDop.EditItem += new EventHandler<EventArgs>(EditItemDop);
+            form.see_clotheDop.LoadTypeClose += new EventHandler<EventArgs>(LoadTypeToEdit);
         }
         public void DeleteItemFromWardrobe(object sender, EventArgs e)
         {
@@ -946,6 +988,13 @@ namespace wardrobe
                     {
                         q.size=form.see_clothe.newSize;
                     }
+                    if (form.see_clothe.newType != form.see_clothe.oldType)
+                    {
+                        var type_query = (from b in db.clothes_types
+                                          where b.Type_name == form.see_clothe.newType
+                                          select b).Single();
+                        q.type = type_query;
+                    }
                     if (form.see_clothe.newphoto != form.see_clothe.oldphoto && form.see_clothe.newphoto !=null )
                     {
                         savePhoto(form.see_clothe.newphoto);
@@ -1006,6 +1055,13 @@ namespace wardrobe
                     if (form.see_clotheDop.newSize != form.see_clotheDop.oldSize)
                     {
                         q.size = form.see_clotheDop.newSize;
+                    }
+                    if (form.see_clotheDop.newType != form.see_clotheDop.oldType)
+                    {
+                        var type_query = (from b in db.clothes_types
+                                          where b.Type_name == form.see_clotheDop.newType
+                                          select b).Single();
+                        q.type = type_query;
                     }
                     if (form.see_clotheDop.newphoto != form.see_clotheDop.oldphoto && form.see_clotheDop.newphoto != null)
                     {

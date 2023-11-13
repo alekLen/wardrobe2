@@ -47,6 +47,8 @@
             button2 = new Button();
             button3Photo = new Button();
             button3 = new Button();
+            label7 = new Label();
+            textBoxType = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -62,9 +64,9 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = SystemColors.ControlLightLight;
-            pictureBox1.Location = new Point(382, 12);
+            pictureBox1.Location = new Point(373, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(344, 339);
+            pictureBox1.Size = new Size(371, 400);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -97,7 +99,7 @@
             // 
             button1.BackColor = SystemColors.Info;
             button1.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(139, 301);
+            button1.Location = new Point(139, 362);
             button1.Name = "button1";
             button1.Size = new Size(215, 50);
             button1.TabIndex = 5;
@@ -192,7 +194,7 @@
             // 
             button2.BackColor = SystemColors.Info;
             button2.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(14, 302);
+            button2.Location = new Point(14, 362);
             button2.Name = "button2";
             button2.Size = new Size(108, 50);
             button2.TabIndex = 18;
@@ -204,9 +206,9 @@
             // 
             button3Photo.BackColor = SystemColors.Info;
             button3Photo.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button3Photo.Location = new Point(83, 232);
+            button3Photo.Location = new Point(52, 322);
             button3Photo.Name = "button3Photo";
-            button3Photo.Size = new Size(140, 64);
+            button3Photo.Size = new Size(234, 34);
             button3Photo.TabIndex = 19;
             button3Photo.Text = "button3";
             button3Photo.UseVisualStyleBackColor = false;
@@ -215,19 +217,39 @@
             // button3
             // 
             button3.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(693, 322);
+            button3.Location = new Point(711, 383);
             button3.Name = "button3";
             button3.Size = new Size(33, 29);
             button3.TabIndex = 20;
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe Print", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Location = new Point(14, 281);
+            label7.Name = "label7";
+            label7.Size = new Size(64, 26);
+            label7.TabIndex = 21;
+            label7.Text = "Раздел";
+            // 
+            // textBoxType
+            // 
+            textBoxType.Enabled = false;
+            textBoxType.Location = new Point(134, 282);
+            textBoxType.Name = "textBoxType";
+            textBoxType.Size = new Size(220, 27);
+            textBoxType.TabIndex = 22;
+            // 
             // Form7
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
-            ClientSize = new Size(744, 363);
+            ClientSize = new Size(756, 424);
+            Controls.Add(textBoxType);
+            Controls.Add(label7);
             Controls.Add(button3);
             Controls.Add(button3Photo);
             Controls.Add(button2);
@@ -278,5 +300,7 @@
         private Button button2;
         private Button button3Photo;
         private Button button3;
+        private Label label7;
+        private TextBox textBoxType;
     }
 }
