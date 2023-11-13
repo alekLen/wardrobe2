@@ -192,7 +192,10 @@ namespace wardrobe
                 comboBoxStyle.Location = textBoxStyle.Location;
                 comboBoxStyle.Size = textBoxStyle.Size;
                 LoadStyle?.Invoke(this, EventArgs.Empty);
-                comboBoxStyle.SelectedText = textBoxStyle.Text;
+                // comboBoxStyle.SelectedText = textBoxStyle.Text;
+                comboBoxStyle.DropDownStyle = ComboBoxStyle.DropDownList;
+                int index = comboBoxStyle.FindStringExact(textBoxStyle.Text);
+                comboBoxStyle.SelectedIndex = index;
                 this.Controls.Remove(textBoxStyle);
                 this.Controls.Add(comboBoxStyle);
             }
@@ -207,7 +210,10 @@ namespace wardrobe
                 comboBoxSeason.Location = textBoxSeason.Location;
                 comboBoxSeason.Size = textBoxSeason.Size;
                 LoadSeason?.Invoke(this, EventArgs.Empty);
-                comboBoxSeason.SelectedText = textBoxSeason.Text;
+                // comboBoxSeason.SelectedText = textBoxSeason.Text;
+                comboBoxSeason.DropDownStyle = ComboBoxStyle.DropDownList;
+                int index = comboBoxSeason.FindStringExact(textBoxSeason.Text);
+                comboBoxSeason.SelectedIndex = index;
                 this.Controls.Remove(textBoxSeason);
                 this.Controls.Add(comboBoxSeason);
             }
@@ -222,7 +228,10 @@ namespace wardrobe
                 comboBoxColor.Location = textBoxColor.Location;
                 comboBoxColor.Size = textBoxColor.Size;
                 LoadColor?.Invoke(this, EventArgs.Empty);
-                comboBoxColor.SelectedText = textBoxColor.Text;
+                // comboBoxColor.SelectedText = textBoxColor.Text;
+                comboBoxColor.DropDownStyle = ComboBoxStyle.DropDownList;
+                int index = comboBoxColor.FindStringExact(textBoxColor.Text);
+                comboBoxColor.SelectedIndex = index;
                 this.Controls.Remove(textBoxColor);
                 this.Controls.Add(comboBoxColor);
             }

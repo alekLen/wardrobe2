@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
@@ -101,7 +103,7 @@ namespace wardrobe
         }
         public void SetPhoto(string s)
         {
-            pictureBox1.Image = Image.FromFile(s);
+            pictureBox1.Image = System.Drawing.Image.FromFile(s);
             oldphoto = s;
         }
 
@@ -149,6 +151,7 @@ namespace wardrobe
             buttonPhoto.Location = button1.Location;
             buttonPhoto.Size = button1.Size;
             buttonPhoto.Text = "Изменить фото";
+            buttonPhoto.Font = new Font("Segoe Print", 9, FontStyle.Bold);
             buttonPhoto.BackColor = button1.BackColor;
             this.Controls.Remove(button1);
             this.Controls.Add(buttonPhoto);
@@ -164,7 +167,10 @@ namespace wardrobe
                 comboBoxStyle.Location = textBoxStyle.Location;
                 comboBoxStyle.Size = textBoxStyle.Size;
                 LoadStyle?.Invoke(this, EventArgs.Empty);
-                comboBoxStyle.SelectedText = textBoxStyle.Text;
+                // comboBoxStyle.SelectedText = textBoxStyle.Text;
+                comboBoxStyle.DropDownStyle = ComboBoxStyle.DropDownList;
+                int index = comboBoxStyle.FindStringExact(textBoxStyle.Text);
+                comboBoxStyle.SelectedIndex = index;
                 this.Controls.Remove(textBoxStyle);
                 this.Controls.Add(comboBoxStyle);
             }
@@ -179,7 +185,10 @@ namespace wardrobe
                 comboBoxSeason.Location = textBoxSeason.Location;
                 comboBoxSeason.Size = textBoxSeason.Size;
                 LoadSeason?.Invoke(this, EventArgs.Empty);
-                comboBoxSeason.SelectedText = textBoxSeason.Text;
+                // comboBoxSeason.SelectedText = textBoxSeason.Text;
+                comboBoxSeason.DropDownStyle = ComboBoxStyle.DropDownList;
+                int index = comboBoxSeason.FindStringExact(textBoxSeason.Text);
+                comboBoxSeason.SelectedIndex = index;
                 this.Controls.Remove(textBoxSeason);
                 this.Controls.Add(comboBoxSeason);
             }
@@ -192,9 +201,12 @@ namespace wardrobe
                 MainForm.see_clothe = this;
                 comboBoxColor = new System.Windows.Forms.ComboBox();
                 comboBoxColor.Location = textBoxColor.Location;
-                comboBoxColor.Size = textBoxColor.Size;
+                comboBoxColor.Size = textBoxColor.Size;               
                 LoadColor?.Invoke(this, EventArgs.Empty);
-                comboBoxColor.SelectedText = textBoxColor.Text;
+                // comboBoxColor.SelectedText = textBoxColor.Text;
+                comboBoxColor.DropDownStyle = ComboBoxStyle.DropDownList;
+                int index = comboBoxColor.FindStringExact(textBoxColor.Text);
+                comboBoxColor.SelectedIndex = index;
                 this.Controls.Remove(textBoxColor);
                 this.Controls.Add(comboBoxColor);
             }
@@ -233,7 +245,7 @@ namespace wardrobe
                 if (newphoto != null)
                 {
                     pictureBox1.Image.Dispose();
-                    pictureBox1.Image = Image.FromFile(oldphoto);
+                    pictureBox1.Image = System.Drawing.Image.FromFile(oldphoto);
                 }
             }
             this.Close();
@@ -248,7 +260,7 @@ namespace wardrobe
                 {
                     newphoto = openFileDialog.FileName;
                     pictureBox1.Image.Dispose();
-                    pictureBox1.Image = Image.FromFile(newphoto);
+                    pictureBox1.Image = System.Drawing.Image.FromFile(newphoto);
                 }
             }
         }
