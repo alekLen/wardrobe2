@@ -259,7 +259,7 @@
     <value>Добавить</value>
   </data>
   <data name="editStyleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 30</value>
+    <value>224, 30</value>
   </data>
   <data name="editStyleToolStripMenuItem.Text" xml:space="preserve">
     <value>Стиль</value>
@@ -283,7 +283,7 @@
     <value>Добавить</value>
   </data>
   <data name="editColorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 30</value>
+    <value>224, 30</value>
   </data>
   <data name="editColorToolStripMenuItem.Text" xml:space="preserve">
     <value>Цвет</value>
@@ -307,19 +307,31 @@
     <value>Добавить</value>
   </data>
   <data name="editSeasonoolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 30</value>
+    <value>224, 30</value>
   </data>
   <data name="editSeasonoolStripMenuItem.Text" xml:space="preserve">
     <value>Сезон</value>
   </data>
   <data name="добавитьToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 30</value>
+    <value>224, 30</value>
   </data>
   <data name="добавитьToolStripMenuItem.Text" xml:space="preserve">
     <value>добавить</value>
   </data>
+  <data name="редактироватьToolStripMenuItem5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 30</value>
+  </data>
+  <data name="редактироватьToolStripMenuItem5.Text" xml:space="preserve">
+    <value>редактировать</value>
+  </data>
+  <data name="удалитьToolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 30</value>
+  </data>
+  <data name="удалитьToolStripMenuItem4.Text" xml:space="preserve">
+    <value>удалить</value>
+  </data>
   <data name="альбомToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 30</value>
+    <value>224, 30</value>
   </data>
   <data name="альбомToolStripMenuItem.Text" xml:space="preserve">
     <value>альбом</value>
@@ -3296,6 +3308,18 @@
     <value>добавитьToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;добавитьToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;редактироватьToolStripMenuItem5.Name" xml:space="preserve">
+    <value>редактироватьToolStripMenuItem5</value>
+  </data>
+  <data name="&gt;&gt;редактироватьToolStripMenuItem5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;удалитьToolStripMenuItem4.Name" xml:space="preserve">
+    <value>удалитьToolStripMenuItem4</value>
+  </data>
+  <data name="&gt;&gt;удалитьToolStripMenuItem4.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;wardrobeToolStripMenuItem.Name" xml:space="preserve">

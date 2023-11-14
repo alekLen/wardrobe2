@@ -36,6 +36,7 @@ namespace wardrobe
         public event EventHandler<EventArgs> DeleteStyle;
         public event EventHandler<EventArgs> DeleteSeason;
         public event EventHandler<EventArgs> DeleteColor;
+        public event EventHandler<EventArgs> DeleteAlbum;
         System.Windows.Forms.ListBox listbox;
         public Form1 MainForm { get; set; }
         public Form4()
@@ -73,7 +74,7 @@ namespace wardrobe
                 {
                     label1.Text = "Альбомы";
                     LoadEditAlbum?.Invoke(this, EventArgs.Empty);
-                    button1.Click += editColor;
+                    button1.Click += editAlbum;
                 }
                 comboBox1.SelectedIndex = 0;
             }
@@ -99,6 +100,12 @@ namespace wardrobe
                     label1.Text = "Цвета";
                     LoadEditColor?.Invoke(this, EventArgs.Empty);
                     button1.Click += deleteColor;
+                }
+                if (category == "album")
+                {
+                    label1.Text = "Альбомы";
+                    LoadEditAlbum?.Invoke(this, EventArgs.Empty);
+                    button1.Click += deleteAlbum;
                 }
                 comboBox1.SelectedIndex = 0;
             }
@@ -211,6 +218,14 @@ namespace wardrobe
             this.Close();
             MessageBox.Show("Цвет исправлен!");
         }
+        private void editAlbum(object sender, EventArgs e)
+        {
+            oldname = comboBox1.SelectedItem.ToString();
+            name = textBox1.Text;
+            EditAlbum?.Invoke(this, EventArgs.Empty);
+            this.Close();
+            MessageBox.Show("Альбом отредактирован!");
+        }
         private void deleteStyle(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Если в гардеробе есть вещи этого стиля\n они тоже будут удалены  безвозвратно\n \nуверены , что хотите удалить ?", "Подтвердите", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -242,6 +257,17 @@ namespace wardrobe
                 DeleteColor?.Invoke(this, EventArgs.Empty);
                 this.Close();
                 MessageBox.Show("Цвет удален!");
+            }
+        }
+        private void deleteAlbum(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Хотите удалить альбом?\n \nкомплекты сохраняться в общей коллекции комплектов!", "Подтвердите", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                oldname = textBox1.Text;
+                DeleteAlbum?.Invoke(this, EventArgs.Empty);
+                this.Close();
+                MessageBox.Show("Альбом удален!");
             }
         }
 

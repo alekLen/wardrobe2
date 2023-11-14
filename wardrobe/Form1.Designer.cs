@@ -48,6 +48,8 @@
             addSeasonToolStripMenuItem6 = new ToolStripMenuItem();
             альбомToolStripMenuItem = new ToolStripMenuItem();
             добавитьToolStripMenuItem = new ToolStripMenuItem();
+            редактироватьToolStripMenuItem5 = new ToolStripMenuItem();
+            удалитьToolStripMenuItem4 = new ToolStripMenuItem();
             wardrobeToolStripMenuItem = new ToolStripMenuItem();
             addClotheToolStripMenuItem1 = new ToolStripMenuItem();
             complectsToolStripMenuItem = new ToolStripMenuItem();
@@ -262,7 +264,7 @@
             // 
             // альбомToolStripMenuItem
             // 
-            альбомToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { добавитьToolStripMenuItem });
+            альбомToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { добавитьToolStripMenuItem, редактироватьToolStripMenuItem5, удалитьToolStripMenuItem4 });
             альбомToolStripMenuItem.Name = "альбомToolStripMenuItem";
             resources.ApplyResources(альбомToolStripMenuItem, "альбомToolStripMenuItem");
             // 
@@ -271,6 +273,18 @@
             добавитьToolStripMenuItem.Name = "добавитьToolStripMenuItem";
             resources.ApplyResources(добавитьToolStripMenuItem, "добавитьToolStripMenuItem");
             добавитьToolStripMenuItem.Click += addAlbumToolStripMenuItem_Click;
+            // 
+            // редактироватьToolStripMenuItem5
+            // 
+            редактироватьToolStripMenuItem5.Name = "редактироватьToolStripMenuItem5";
+            resources.ApplyResources(редактироватьToolStripMenuItem5, "редактироватьToolStripMenuItem5");
+            редактироватьToolStripMenuItem5.Click += редактироватьToolStripMenuItem5_Click;
+            // 
+            // удалитьToolStripMenuItem4
+            // 
+            удалитьToolStripMenuItem4.Name = "удалитьToolStripMenuItem4";
+            resources.ApplyResources(удалитьToolStripMenuItem4, "удалитьToolStripMenuItem4");
+            удалитьToolStripMenuItem4.Click += удалитьToolStripMenuItem4_Click;
             // 
             // wardrobeToolStripMenuItem
             // 
@@ -1029,5 +1043,7 @@
         private ToolStripMenuItem альбомToolStripMenuItem;
         private ToolStripMenuItem добавитьToolStripMenuItem;
         private ToolStripMenuItem альбомыToolStripMenuItem;
+        private ToolStripMenuItem редактироватьToolStripMenuItem5;
+        private ToolStripMenuItem удалитьToolStripMenuItem4;
     }
 }

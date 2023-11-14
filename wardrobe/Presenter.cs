@@ -88,9 +88,11 @@ namespace wardrobe
             form.edit_form.EditStyle += new EventHandler<EventArgs>(EditStyle);
             form.edit_form.EditSeason += new EventHandler<EventArgs>(EditSeason);
             form.edit_form.EditColor += new EventHandler<EventArgs>(EditColor);
+            form.edit_form.EditAlbum += new EventHandler<EventArgs>(EditAlbum);
             form.edit_form.DeleteStyle += new EventHandler<EventArgs>(DeleteStyle);
             form.edit_form.DeleteSeason += new EventHandler<EventArgs>(DeleteSeason);
             form.edit_form.DeleteColor += new EventHandler<EventArgs>(DeleteColor);
+            form.edit_form.DeleteAlbum += new EventHandler<EventArgs>(DeleteAlbum);
             form.complect_form.TakePhoto+=new EventHandler<EventArgs>(PhotoToComplect);
             form.complect_form.SaveComplect += new EventHandler<EventArgs>(SaveComplect);
             form.complects_show_form.CountComplects += new EventHandler<EventArgs>(CountComplects);
@@ -846,13 +848,15 @@ namespace wardrobe
             form.edit_form.AddColor += new EventHandler<EventArgs>(AddColor);
             form.edit_form.EditStyle += new EventHandler<EventArgs>(EditStyle);
             form.edit_form.EditSeason += new EventHandler<EventArgs>(EditSeason);
-            form.edit_form.EditColor += new EventHandler<EventArgs>(EditColor);
+            form.edit_form.EditColor += new EventHandler<EventArgs>(EditColor);          
             form.edit_form.DeleteStyle += new EventHandler<EventArgs>(DeleteStyle);
             form.edit_form.DeleteSeason += new EventHandler<EventArgs>(DeleteSeason);
             form.edit_form.DeleteColor += new EventHandler<EventArgs>(DeleteColor);
             form.edit_form.LoadEditAlbum += new EventHandler<EventArgs>(LoadAlbumToEdit);
             form.edit_form.LoadShowAlbum += new EventHandler<EventArgs>(LoadAlbumToE);
             form.edit_form.AddAlbum += new EventHandler<EventArgs>(AddAlbum);
+            form.edit_form.EditAlbum += new EventHandler<EventArgs>(EditAlbum);
+            form.edit_form.DeleteAlbum += new EventHandler<EventArgs>(DeleteAlbum);
         }
         public void NewСForm(object sender, EventArgs e)
         {
@@ -1311,6 +1315,22 @@ namespace wardrobe
                 MessageBox.Show(ex.Message);
             }
         }
+        public void EditAlbum(object sender, EventArgs e)
+        {
+            try
+            {
+                Wardrobe_Context db = Get_db();
+                var query = (from b in db.albums
+                             where b.album_name == form.edit_form.oldname
+                             select b).Single();
+                query.album_name = form.edit_form.name;
+                db.SaveChanges();              
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         public void DeleteStyle(object sender, EventArgs e)
         {
             try
@@ -1366,7 +1386,27 @@ namespace wardrobe
                 MessageBox.Show(ex.Message);
             }
         }
-    
+        public void DeleteAlbum(object sender, EventArgs e)
+        {
+            try
+            {
+                Wardrobe_Context db = Get_db();
+                var query = (from b in db.albums
+                             where b.album_name == form.edit_form.oldname
+                             select b).Single();
+                var query1 = (from b in db.albums
+                             where b.album_name == form.edit_form.oldname
+                             select b.outfits).Single();
+                query1.Clear();
+                db.Remove(query);
+                db.SaveChanges();              
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         public void SetPhotoUp(object sender, EventArgs e)
         {
            string s= GetPhoto();

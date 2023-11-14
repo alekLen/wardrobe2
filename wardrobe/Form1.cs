@@ -24,7 +24,7 @@ namespace wardrobe
         public Form6 complects_show_form { get; set; } = new Form6();
         public Form7 see_clotheDop { get; set; } = new Form7();
         public Form10 album_form { get; set; } = new Form10();
-        public Form11 Compl_album_form { get; set; } =  new Form11();
+        public Form11 Compl_album_form { get; set; } = new Form11();
         public Form seasonStat { get; set; } = null;
         public Form styleStat { get; set; } = null;
         public Form colorStat { get; set; } = null;
@@ -1357,6 +1357,42 @@ namespace wardrobe
         private void ‡Î¸·ÓÏ˚ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             album_form.ShowDialog();
+        }
+
+        private void Â‰‡ÍÚËÓ‚‡Ú¸ToolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ClearFiltrBox();
+                if (edit_form.IsDisposed || edit_form.Visible)
+                {
+                    edit_form = new Form4();
+                    NewF4?.Invoke(this, EventArgs.Empty);
+                }
+                edit_form.MainForm = this;
+                edit_form.category = "album";
+                edit_form.action = "edit";
+                edit_form.ShowDialog();
+            }
+            catch { }
+        }
+
+        private void Û‰‡ÎËÚ¸ToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ClearFiltrBox();
+                if (edit_form.IsDisposed || edit_form.Visible)
+                {
+                    edit_form = new Form4();
+                    NewF4?.Invoke(this, EventArgs.Empty);
+                }
+                edit_form.MainForm = this;
+                edit_form.category = "album";
+                edit_form.action = "delete";
+                edit_form.ShowDialog();
+            }
+            catch { }
         }
     }
 }

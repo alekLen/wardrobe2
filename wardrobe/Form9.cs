@@ -82,8 +82,8 @@ namespace wardrobe
         private void button1_Click(object sender, EventArgs e)
         {
             MainForm.s = comboBox1.SelectedItem.ToString();
-            if (MainForm.s == "")           
-                MainForm.s = comboBox1.Items[0].ToString();         
+            if (MainForm.s == "")
+                MainForm.s = comboBox1.Items[0].ToString();
             MainForm.n = id;
             AddComplectToAlbum?.Invoke(this, new EventArgs());
             MessageBox.Show("Одежда добавлена в альбом!", "Добавлено", MessageBoxButtons.OK, MessageBoxIcon.Information);
