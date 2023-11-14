@@ -23,6 +23,8 @@ namespace wardrobe
         public Form5 complect_form { get; set; } = new Form5();
         public Form6 complects_show_form { get; set; } = new Form6();
         public Form7 see_clotheDop { get; set; } = new Form7();
+        public Form10 album_form { get; set; } = new Form10();
+        public Form11 Compl_album_form { get; set; } =  new Form11();
         public Form seasonStat { get; set; } = null;
         public Form styleStat { get; set; } = null;
         public Form colorStat { get; set; } = null;
@@ -50,6 +52,7 @@ namespace wardrobe
         public event EventHandler<EventArgs> NewF5;
         public event EventHandler<EventArgs> NewF6;
         public event EventHandler<EventArgs> NewF7;
+        public event EventHandler<EventArgs> NewF10;
         public event EventHandler<EventArgs> Filtr;
         public event EventHandler<EventArgs> Clear_Filtr;
         public event EventHandler<EventArgs> Change_Photo_Up;
@@ -1331,6 +1334,29 @@ namespace wardrobe
                 }
             }
             catch { }
+        }
+
+        private void addAlbumToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ClearFiltrBox();
+                if (edit_form.IsDisposed || edit_form.Visible)
+                {
+                    edit_form = new Form4();
+                    NewF4?.Invoke(this, EventArgs.Empty);
+                }
+                edit_form.MainForm = this;
+                edit_form.category = "album";
+                edit_form.action = "add";
+                edit_form.ShowDialog();
+            }
+            catch { }
+        }
+
+        private void ‡Î¸·ÓÏ˚ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            album_form.ShowDialog();
         }
     }
 }

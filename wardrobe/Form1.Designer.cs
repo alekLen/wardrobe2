@@ -46,9 +46,12 @@
             delSeasonToolStripMenuItem6 = new ToolStripMenuItem();
             edSeasonToolStripMenuItem5 = new ToolStripMenuItem();
             addSeasonToolStripMenuItem6 = new ToolStripMenuItem();
+            альбомToolStripMenuItem = new ToolStripMenuItem();
+            добавитьToolStripMenuItem = new ToolStripMenuItem();
             wardrobeToolStripMenuItem = new ToolStripMenuItem();
             addClotheToolStripMenuItem1 = new ToolStripMenuItem();
             complectsToolStripMenuItem = new ToolStripMenuItem();
+            альбомыToolStripMenuItem = new ToolStripMenuItem();
             statisticToolStripMenuItem = new ToolStripMenuItem();
             colorToolStripMenuItem = new ToolStripMenuItem();
             styleToolStripMenuItem = new ToolStripMenuItem();
@@ -181,7 +184,7 @@
             // 
             // editToolStripMenuItem2
             // 
-            editToolStripMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { editStyleToolStripMenuItem, editColorToolStripMenuItem, editSeasonoolStripMenuItem });
+            editToolStripMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { editStyleToolStripMenuItem, editColorToolStripMenuItem, editSeasonoolStripMenuItem, альбомToolStripMenuItem });
             resources.ApplyResources(editToolStripMenuItem2, "editToolStripMenuItem2");
             editToolStripMenuItem2.Name = "editToolStripMenuItem2";
             // 
@@ -257,9 +260,21 @@
             resources.ApplyResources(addSeasonToolStripMenuItem6, "addSeasonToolStripMenuItem6");
             addSeasonToolStripMenuItem6.Click += addSeason;
             // 
+            // альбомToolStripMenuItem
+            // 
+            альбомToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { добавитьToolStripMenuItem });
+            альбомToolStripMenuItem.Name = "альбомToolStripMenuItem";
+            resources.ApplyResources(альбомToolStripMenuItem, "альбомToolStripMenuItem");
+            // 
+            // добавитьToolStripMenuItem
+            // 
+            добавитьToolStripMenuItem.Name = "добавитьToolStripMenuItem";
+            resources.ApplyResources(добавитьToolStripMenuItem, "добавитьToolStripMenuItem");
+            добавитьToolStripMenuItem.Click += addAlbumToolStripMenuItem_Click;
+            // 
             // wardrobeToolStripMenuItem
             // 
-            wardrobeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addClotheToolStripMenuItem1, complectsToolStripMenuItem });
+            wardrobeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addClotheToolStripMenuItem1, complectsToolStripMenuItem, альбомыToolStripMenuItem });
             resources.ApplyResources(wardrobeToolStripMenuItem, "wardrobeToolStripMenuItem");
             wardrobeToolStripMenuItem.Name = "wardrobeToolStripMenuItem";
             // 
@@ -274,6 +289,12 @@
             complectsToolStripMenuItem.Name = "complectsToolStripMenuItem";
             resources.ApplyResources(complectsToolStripMenuItem, "complectsToolStripMenuItem");
             complectsToolStripMenuItem.Click += See_Complects;
+            // 
+            // альбомыToolStripMenuItem
+            // 
+            альбомыToolStripMenuItem.Name = "альбомыToolStripMenuItem";
+            resources.ApplyResources(альбомыToolStripMenuItem, "альбомыToolStripMenuItem");
+            альбомыToolStripMenuItem.Click += альбомыToolStripMenuItem_Click;
             // 
             // statisticToolStripMenuItem
             // 
@@ -1005,5 +1026,8 @@
         private Button button1;
         private ToolStripContainer toolStripContainer1;
         private Button buttonClearComplect;
+        private ToolStripMenuItem альбомToolStripMenuItem;
+        private ToolStripMenuItem добавитьToolStripMenuItem;
+        private ToolStripMenuItem альбомыToolStripMenuItem;
     }
 }

@@ -67,6 +67,7 @@ namespace wardrobe
         public event EventHandler<EventArgs> NewF5;
         public event EventHandler<EventArgs> NewF6;
         public event EventHandler<EventArgs> NewF7;
+        public event EventHandler<EventArgs> NewF10;
         public event EventHandler<EventArgs> Filtr;
         public event EventHandler<EventArgs> Clear_Filtr;
         public event EventHandler<EventArgs> Change_Photo_Up;
@@ -87,6 +88,8 @@ namespace wardrobe
         public Form5 complect_form { get; set; }
         public Form6 complects_show_form { get; set; }
         public Form7 see_clotheDop { get; set; }
+        public Form10 album_form { get; set; }
+      //  public Form11 Compl_album_form { get; set; }
         public List<int> f_color1 { get; set; }
         public List<int> f_style1 { get; set; } 
         public List<int> f_season1 { get; set; }

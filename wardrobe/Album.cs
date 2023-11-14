@@ -10,6 +10,6 @@ namespace wardrobe
     {
         public int Id { get; set; }
         public string album_name { get; set; }
-        public virtual ICollection<Outfit> outfits { get; set; }
+        public virtual ICollection<Outfit> outfits { get; set; }=new List<Outfit>();
     }
 }

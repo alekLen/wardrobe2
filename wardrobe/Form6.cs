@@ -16,7 +16,13 @@ namespace wardrobe
         public event EventHandler<EventArgs> CountItems;
         public event EventHandler<EventArgs> TakeName;
         public event EventHandler<EventArgs> TakePhoto;
+        public event EventHandler<EventArgs> LoadAlbum;
+        public event EventHandler<EventArgs> AddComplToAlbum;
         public event EventHandler<EventArgs> DeleteComplect;
+     
+        public Form9 album_form { get; set; } = new Form9();
+       
+
         public int a { get; set; }
         public int b { get; set; }
         public int c { get; set; }
@@ -29,6 +35,11 @@ namespace wardrobe
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+            album_form.CountItems += SetCountItems;
+            album_form.TakeName += SetName;
+            album_form.TakePhoto += SetPhoto;
+            album_form.LoadAlbums += LoadAlbums;
+            album_form.AddComplectToAlbum += AddComplectToAlbum;
         }
 
         private void LoadF6(object sender, EventArgs e)
@@ -75,11 +86,32 @@ namespace wardrobe
                     button.Click += Button_Click;
                     button.Location = new System.Drawing.Point(250 + x * 120 + 150, y);
                     this.Controls.Add(button);
+                    Button button1 = new Button();
+                    button1.Text = "Добавить в альбом";
+                    button1.Name = "button1." + i;
+                    button1.Width = 150;
+                    button1.Height =85;
+                    button1.BackColor = System.Drawing.Color.LightYellow;
+                    button1.Click += Button1_Click;
+                    button1.Location = new System.Drawing.Point(450 + x * 120 + 150, y);
+                    this.Controls.Add(button1);
                     y += 120;
                     c++;
                 }
             }
             catch { }
+        }
+        private void SetCountItems(object sender, EventArgs e)
+        {
+            CountItems?.Invoke(this, new EventArgs());
+        }
+        private void SetName(object sender, EventArgs e)
+        {
+            TakeName?.Invoke(this, new EventArgs());
+        }
+        private void SetPhoto(object sender, EventArgs e)
+        {
+            TakePhoto?.Invoke(this, new EventArgs());
         }
         private void Button_Click(object sender, EventArgs e)
         {
@@ -94,10 +126,50 @@ namespace wardrobe
                 this.Close();
             }
         }
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            if (album_form.IsDisposed || album_form.Visible)
+            {
+                album_form = new Form9();
+                album_form.CountItems += SetCountItems;
+                album_form.TakeName += SetName;
+                album_form.TakePhoto += SetPhoto;
+                album_form.LoadAlbums += LoadAlbums;
+                album_form.AddComplectToAlbum += AddComplectToAlbum;
+            }
+            Button clickedButton = sender as Button;
+            string s = clickedButton.Name;
+            string[] s1 = s.Split('.');
+            n = int.Parse(s1[1]);
+            Items.Clear();
+            album_form.MainForm = this;
+            album_form.ShowDialog();
+        }
+        private void LoadAlbums(object sender, EventArgs e)
+        {
+            LoadAlbum?.Invoke(this, new EventArgs());
+        }
+        private void AddComplectToAlbum(object sender, EventArgs e)
+        {
+            AddComplToAlbum?.Invoke(this, new EventArgs());
+        }
 
         private void Form6_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Dispose();
         }
+        public void ShowAlbum(string s)
+        {
+            album_form.SetAlbum(s);
+        }
+        public void SelectAlbum(int i)
+        {
+            if(i>0)
+            album_form.SelectAlbum();
+            else
+               MessageBox.Show("У вас не создано ни одного альбома!", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+
     }
 }

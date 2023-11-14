@@ -32,7 +32,9 @@ namespace wardrobe
             form.NewF4 += new EventHandler<EventArgs>(NewEForm);
             form.NewF5 += new EventHandler<EventArgs>(NewСForm);
             form.NewF6 += new EventHandler<EventArgs>(NewСcForm);
-            form.NewF7 += new EventHandler<EventArgs>(NewSDopForm);
+            form.NewF7 += new EventHandler<EventArgs>(NewSDopForm);          
+            form.NewF10 += new EventHandler<EventArgs>(NewAlbumForm);
+        
             form.LoadUp += new EventHandler<EventArgs>(Load_Up);
             form.LoadBottom += new EventHandler<EventArgs>(Load_Bottom);
             form.LoadSuit += new EventHandler<EventArgs>(Load_Suit);
@@ -74,12 +76,15 @@ namespace wardrobe
             form.edit_form.LoadEditStyle += new EventHandler<EventArgs>(LoadStyleToEdit);
             form.edit_form.LoadEditSeason += new EventHandler<EventArgs>(LoadSeasonToEdit);
             form.edit_form.LoadEditColor += new EventHandler<EventArgs>(LoadColorToEdit);
+            form.edit_form.LoadEditAlbum += new EventHandler<EventArgs>(LoadAlbumToEdit);
             form.edit_form.LoadShowStyle += new EventHandler<EventArgs>(LoadStyleToE);
             form.edit_form.LoadShowSeason += new EventHandler<EventArgs>(LoadSeasonToE);
             form.edit_form.LoadShowColor += new EventHandler<EventArgs>(LoadColorToE);
-           form.edit_form.AddStyle += new EventHandler<EventArgs>(AddStyle);
+            form.edit_form.LoadShowAlbum += new EventHandler<EventArgs>(LoadAlbumToE);
+            form.edit_form.AddStyle += new EventHandler<EventArgs>(AddStyle);
            form.edit_form.AddSeason += new EventHandler<EventArgs>(AddSeason);
             form.edit_form.AddColor += new EventHandler<EventArgs>(AddColor);
+            form.edit_form.AddAlbum += new EventHandler<EventArgs>(AddAlbum);
             form.edit_form.EditStyle += new EventHandler<EventArgs>(EditStyle);
             form.edit_form.EditSeason += new EventHandler<EventArgs>(EditSeason);
             form.edit_form.EditColor += new EventHandler<EventArgs>(EditColor);
@@ -92,7 +97,16 @@ namespace wardrobe
             form.complects_show_form.CountItems += new EventHandler<EventArgs>(CountItems);
             form.complects_show_form.TakeName += new EventHandler<EventArgs>(TakeName);
             form.complects_show_form.TakePhoto += new EventHandler<EventArgs>(TakePhoto);
+            form.complects_show_form.LoadAlbum += new EventHandler<EventArgs>(LoadAlbumTocompl);
+            form.complects_show_form.AddComplToAlbum += new EventHandler<EventArgs>(AddComplToAlbum);
             form.complects_show_form.DeleteComplect += new EventHandler<EventArgs>(DeleteComplect);
+            form.album_form.LoadF10+= new EventHandler<EventArgs>(LoadAlbumForm);
+           // form.album_form.ShowComplects += new EventHandler<EventArgs>(ShowComplectsInAlbum);
+            form.album_form.formcomplInAlbum.CountComplects += new EventHandler<EventArgs>(CountComplectsAl);
+            form.album_form.formcomplInAlbum.CountItems += new EventHandler<EventArgs>(CountItemsAl);
+            form.album_form.formcomplInAlbum.TakeName += new EventHandler<EventArgs>(TakeNameAl);
+            form.album_form.formcomplInAlbum.TakePhoto += new EventHandler<EventArgs>(TakePhotoAl);
+            form.album_form.NewF11 += new EventHandler<EventArgs>(NewComplAlbumForm);
         }
         public void LoadAll(object sender, EventArgs e)
         {
@@ -637,6 +651,86 @@ namespace wardrobe
                 MessageBox.Show(ex.Message);
             }
         }
+        public void LoadAlbumToEdit(object sender, EventArgs e)
+        {
+            try
+            {
+                Wardrobe_Context db = Get_db();
+                var query = from b in db.albums
+                            select b;
+
+                foreach (var p in query)
+                {
+                    string s = p.album_name;
+                        form.edit_form.SetCategory(s);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void LoadAlbumToE(object sender, EventArgs e)
+        {
+            try
+            {
+                Wardrobe_Context db = Get_db();
+                var query = from b in db.albums
+                            select b;
+
+                foreach (var p in query)
+                {
+                    string s = p.album_name;
+                    form.edit_form.ShowCategory(s);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void LoadAlbumTocompl(object sender, EventArgs e)
+        {
+            try
+            {
+                Wardrobe_Context db = Get_db();
+                var query = from b in db.albums
+                            select b;
+
+                foreach (var p in query)
+                {
+                    string s = p.album_name;
+                    form.complects_show_form.ShowAlbum(s);
+                }
+                form.complects_show_form.SelectAlbum(query.Count());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void AddComplToAlbum(object sender, EventArgs e)
+        {
+            try
+            {
+                Wardrobe_Context db = Get_db();
+                var query = (from b in db.albums
+                             where b.album_name == form.complects_show_form.s
+                             select b).Single();
+                var q = (from b in db.outfits
+                         where b.Id == form.complects_show_form.Complects[form.complects_show_form.n]
+                         select b).Single();
+
+                query.outfits.Add(q);
+                db.albums.Update(query);
+                db.SaveChanges();   
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         Wardrobe_Context Get_db()
         {
             var builder = new ConfigurationBuilder();
@@ -721,25 +815,7 @@ namespace wardrobe
             {
                 MessageBox.Show(ex.Message);
             }          
-        }
-        public void TypeToForm3(Wardrobe_Context db)
-        {
-            try
-            {
-                var query = from b in db.clothes_types
-                            select b;
-
-                foreach (var p in query)
-                {
-                    string s = p.Type_name;
-                    form.see_clothe.SetTypeToEdit(s);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+        }      
         public void NewSForm(object sender, EventArgs e)
         {
             form.see_clothe.LoadF3 += new EventHandler<EventArgs>(LoadSeeForm);
@@ -774,6 +850,9 @@ namespace wardrobe
             form.edit_form.DeleteStyle += new EventHandler<EventArgs>(DeleteStyle);
             form.edit_form.DeleteSeason += new EventHandler<EventArgs>(DeleteSeason);
             form.edit_form.DeleteColor += new EventHandler<EventArgs>(DeleteColor);
+            form.edit_form.LoadEditAlbum += new EventHandler<EventArgs>(LoadAlbumToEdit);
+            form.edit_form.LoadShowAlbum += new EventHandler<EventArgs>(LoadAlbumToE);
+            form.edit_form.AddAlbum += new EventHandler<EventArgs>(AddAlbum);
         }
         public void NewСForm(object sender, EventArgs e)
         {
@@ -787,6 +866,21 @@ namespace wardrobe
             form.complects_show_form.TakeName += new EventHandler<EventArgs>(TakeName);
             form.complects_show_form.TakePhoto += new EventHandler<EventArgs>(TakePhoto);
             form.complects_show_form.DeleteComplect += new EventHandler<EventArgs>(DeleteComplect);
+            form.complects_show_form.LoadAlbum += new EventHandler<EventArgs>(LoadAlbumTocompl);
+            form.complects_show_form.AddComplToAlbum += new EventHandler<EventArgs>(AddComplToAlbum);
+        }
+        public void NewAlbumForm(object sender, EventArgs e)
+        {
+            form.album_form.LoadF10 += new EventHandler<EventArgs>(LoadAlbumForm);
+            form.album_form.NewF11 += new EventHandler<EventArgs>(NewComplAlbumForm);
+        }
+        public void NewComplAlbumForm(object sender, EventArgs e)
+        {
+            form.album_form.formcomplInAlbum.CountComplects += new EventHandler<EventArgs>(CountComplectsAl);
+            form.album_form.formcomplInAlbum.CountItems += new EventHandler<EventArgs>(CountItemsAl);
+            form.album_form.formcomplInAlbum.TakeName += new EventHandler<EventArgs>(TakeNameAl);
+            form.album_form.formcomplInAlbum.TakePhoto += new EventHandler<EventArgs>(TakePhotoAl);
+          
         }
         public void Chose(int id)
         {
@@ -1128,6 +1222,41 @@ namespace wardrobe
                 MessageBox.Show(ex.Message);
             }
         }
+        public void AddAlbum(object sender, EventArgs e)
+        {
+            try
+            {
+                Wardrobe_Context db = Get_db();
+                Album a = new Album();
+                a.album_name = form.edit_form.name;
+                db.Add(a);
+                db.SaveChanges();              
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void LoadAlbumForm(object sender, EventArgs e)
+        {
+            try
+            {
+                Wardrobe_Context db = Get_db();
+                var query = from b in db.albums
+                            select b;
+
+                foreach (var p in query)
+                {
+                    string s = p.album_name;
+                    form.album_form.ShowAlbum(s);
+                }
+                form.album_form.SelectAlbum(query.Count());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         public void EditStyle(object sender, EventArgs e)
         {
             try
@@ -1400,6 +1529,89 @@ namespace wardrobe
                              where b.Id == form.complects_show_form.Items[form.complects_show_form.n]
                              select b.photo).Single();
                     form.complects_show_form.s = q;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void CountComplectsAl(object sender, EventArgs e)
+        {
+            try
+            {
+                Wardrobe_Context db = Get_db();
+                using (db)
+                {
+                    form.album_form.formcomplInAlbum.a = db.outfits.Count();
+                    var q = from b in db.outfits
+                            where b.album.album_name == form.album_form.formcomplInAlbum.name
+                            select b.Id;
+                    foreach (int i in q)
+                        form.album_form.formcomplInAlbum.Complects.Add(i);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void CountItemsAl(object sender, EventArgs e)
+        {
+            try
+            {
+                Wardrobe_Context db = Get_db();
+                using (db)
+                {
+                    var q = db.outfits
+                            .Where(c => c.Id == form.album_form.formcomplInAlbum.Complects[form.album_form.formcomplInAlbum.c])
+                            .SelectMany(c => c.clothes_items)
+                            .ToList();
+                    form.album_form.formcomplInAlbum.b = q.Count();
+                    foreach (var i in q)
+                    {
+                        var q1 = (from b in db.clothes_items
+                                  where b == i
+                                  select b.Id).Single();
+                        form.album_form.formcomplInAlbum.Items.Add(q1);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void TakeNameAl(object sender, EventArgs e)
+        {
+            try
+            {
+                Wardrobe_Context db = Get_db();
+                using (db)
+                {
+                    var q = (from b in db.outfits
+                             where b.Id == form.album_form.formcomplInAlbum.Complects[form.album_form.formcomplInAlbum.c]
+                             select b.outfit_name).Single();
+                    form.album_form.formcomplInAlbum.s = q;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void TakePhotoAl(object sender, EventArgs e)
+        {
+            try
+            {
+                Wardrobe_Context db = Get_db();
+                using (db)
+                {
+                    var q = (from b in db.clothes_items
+                             where b.Id == form.album_form.formcomplInAlbum.Items[form.album_form.formcomplInAlbum.n]
+                             select b.photo).Single();
+                    form.album_form.formcomplInAlbum.s = q;
                 }
             }
             catch (Exception ex)

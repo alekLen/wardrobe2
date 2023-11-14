@@ -20,15 +20,19 @@ namespace wardrobe
         public event EventHandler<EventArgs> LoadEditStyle;
         public event EventHandler<EventArgs> LoadEditColor;
         public event EventHandler<EventArgs> LoadEditSeason;
+        public event EventHandler<EventArgs> LoadEditAlbum;
         public event EventHandler<EventArgs> LoadShowStyle;
         public event EventHandler<EventArgs> LoadShowSeason;
         public event EventHandler<EventArgs> LoadShowColor;
+        public event EventHandler<EventArgs> LoadShowAlbum;
         public event EventHandler<EventArgs> AddStyle;
         public event EventHandler<EventArgs> AddSeason;
         public event EventHandler<EventArgs> AddColor;
+        public event EventHandler<EventArgs> AddAlbum;
         public event EventHandler<EventArgs> EditStyle;
         public event EventHandler<EventArgs> EditSeason;
         public event EventHandler<EventArgs> EditColor;
+        public event EventHandler<EventArgs> EditAlbum;
         public event EventHandler<EventArgs> DeleteStyle;
         public event EventHandler<EventArgs> DeleteSeason;
         public event EventHandler<EventArgs> DeleteColor;
@@ -63,6 +67,12 @@ namespace wardrobe
                 {
                     label1.Text = "Цвета";
                     LoadEditColor?.Invoke(this, EventArgs.Empty);
+                    button1.Click += editColor;
+                }
+                if (category == "album")
+                {
+                    label1.Text = "Альбомы";
+                    LoadEditAlbum?.Invoke(this, EventArgs.Empty);
                     button1.Click += editColor;
                 }
                 comboBox1.SelectedIndex = 0;
@@ -119,6 +129,13 @@ namespace wardrobe
                     LoadShowColor?.Invoke(this, EventArgs.Empty);
                     button1.Click += addColor;
                 }
+                if (category == "album")
+                {
+                    label1.Text = "Альбомы";
+                    label2.Text = "Новый альбом";
+                    LoadShowAlbum?.Invoke(this, EventArgs.Empty);
+                    button1.Click += addAlbum;
+                }
             }
         }
         public void SetCategory(string s)
@@ -162,6 +179,13 @@ namespace wardrobe
             AddColor?.Invoke(this, EventArgs.Empty);
             this.Close();
             MessageBox.Show("Цвет добавлен!");
+        }
+        private void addAlbum(object sender, EventArgs e)
+        {
+            name = textBox1.Text;
+            AddAlbum?.Invoke(this, EventArgs.Empty);
+            this.Close();
+            MessageBox.Show("Альбом добавлен!");
         }
         private void editStyle(object sender, EventArgs e)
         {
